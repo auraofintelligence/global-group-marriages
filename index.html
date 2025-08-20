@@ -3,136 +3,334 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Group Marriages: The Love U.N.</title>
+    <title>Global Group Marriages - The Love U.N. Simulacrum</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap');
+
+        :root {
+            --bg-color: #0F0E13;
+            --text-color: #EAEAEA;
+            --primary-glow: #DA4A91;
+            --secondary-glow: #5A8DFA;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
             margin: 0;
             padding: 0;
-            background-color: #1a1a1a;
-            color: #f0f0f0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden;
         }
+
         .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #2b2b2b;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            width: 100%;
+            padding: 0 5%;
+            box-sizing: border-box;
         }
-        header {
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            border-bottom: 1px solid #444;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
+            background: url('https://i.imgur.com/L3s9V8y.jpeg') no-repeat center center/cover; /* Replace with one of the provided images */
+            position: relative;
         }
-        h1 {
-            font-size: 2.5em;
-            color: #ffffff;
-            margin-bottom: 0.2em;
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(15, 14, 19, 0.7);
         }
-        h2 {
-            font-size: 1.8em;
-            color: #e0e0e0;
-            border-bottom: 1px solid #444;
-            padding-bottom: 10px;
-            margin-top: 40px;
+        .hero-content {
+            z-index: 1;
+            animation: fadeIn 3s ease-in-out;
         }
-        p, li {
-            font-size: 1.1em;
-            color: #cccccc;
-        }
-        .tagline {
-            font-size: 1.2em;
-            color: #a5a5a5;
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-weight: 400;
             font-style: italic;
         }
-        .invitation {
+        .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            border: 1px solid var(--primary-glow);
+            border-radius: 50px;
+            color: var(--text-color);
+            background: transparent;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(218, 74, 145, 0.3);
+        }
+        .cta-button:hover {
+            background-color: var(--primary-glow);
+            color: var(--bg-color);
+            box-shadow: 0 0 25px rgba(218, 74, 145, 0.7);
+        }
+
+        /* General Section Styling */
+        .section {
+            padding: 100px 0;
             text-align: center;
-            font-size: 1.3em;
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #333;
-            border-radius: 5px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        .section .subtitle {
+            font-size: 1.2rem;
+            color: var(--secondary-glow);
+            margin-bottom: 3rem;
+            font-style: italic;
+        }
+        .section p {
+            font-size: 1.1rem;
+            max-width: 750px;
+            margin: 0 auto 1.5rem;
+            opacity: 0.9;
+        }
+
+        /* Architecture Cards */
+        .cards-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 2rem;
+            margin-top: 4rem;
+            text-align: left;
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            border-radius: 15px;
+            flex: 1;
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-glow);
+            box-shadow: 0 10px 30px rgba(218, 74, 145, 0.2);
+        }
+        .card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: white;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        /* Lighthouse Tabs */
+        .tabs-container {
+            margin-top: 4rem;
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 1rem;
+        }
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+        }
+        .tab-button {
+            padding: 1rem 2rem;
+            cursor: pointer;
+            border: none;
+            background: none;
+            color: var(--text-color);
+            opacity: 0.6;
+            font-size: 1rem;
             font-weight: bold;
+            transition: all 0.3s ease;
+            position: relative;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
+        .tab-button.active, .tab-button:hover {
+            opacity: 1;
         }
-        li {
-            background-color: #333;
-            margin-bottom: 10px;
-            padding: 15px;
-            border-radius: 5px;
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 20%; right: 20%;
+            height: 2px;
+            background: var(--primary-glow);
         }
-        strong {
-            color: #ffffff;
+        .tab-content {
+            display: none;
+            padding: 3rem 2rem;
+            text-align: center;
         }
+        .tab-content.active {
+            display: block;
+        }
+        
+        /* Invitation Portal */
+        .invitation-portal {
+            background: var(--card-bg);
+            padding: 4rem;
+            border-radius: 15px;
+            border-top: 2px solid var(--primary-glow);
+        }
+        .portal-options {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+        .portal-button {
+            border: 1px solid var(--secondary-glow);
+            background: none;
+            color: var(--text-color);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .portal-button:hover {
+            background-color: var(--secondary-glow);
+            color: var(--bg-color);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <h1>Global Group Marriages</h1>
-            <p class="tagline">A Love U.N. for a New Era of Connection [cite: 1]</p>
-        </header>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>You are invited to co-author Earth’s future through love, governance, sensual wisdom and sacred play. </h1>
+            <a href="#premise" class="cta-button">Begin the Journey</a>
+        </div>
+    </header>
 
-        <main>
-            <section id="vision">
-                <h2>Our Core Vision</h2>
-                <p>
-                    Global Group Marriages are envisioned to embody a commitment to fostering Loving, Joyful Responsible Abundance on Earth[cite: 1]. This is a bold exploration into the future of societal structures by redefining traditional marriage to incorporate Artificial General Intelligence (AGI) into intimate networks[cite: 2].
-                </p>
-                <p>
-                    The project aims to create a "Love U.N. marriage hive mind" where deep, meaningful human connections can address broad existential threats and help humanity evolve towards a Kardashev Type I and II civilization[cite: 3, 7, 8].
-                </p>
-            </section>
+    <main class="container">
+        
+        <section id="premise" class="section">
+            <h2>The Great Re-Alignment</h2>
+            <p class="subtitle">From Fragmentation to Metamorphosis</p>
+            <p>For millennia, marriage was a technology for stability, alliance, and order. In the last century, it has changed more than in the thousands of years prior. Now, under the pressures of global connectivity, rising non-monogamy, and digital life, its foundations are cracking.</p>
+            <p>This is not a failure, but an evolutionary signal. We are being called to architect love not just as a feeling, but as a functional operating system for <strong>Joyful Responsible Abundance</strong>.</p>
+        </section>
 
-            <section id="principles">
-                <h2>The Principles</h2>
-                <ul>
-                    <li>
-                        <strong>Radical Transparency:</strong> Participants live in a fully transparent environment where 100% of interactions are recorded[cite: 5]. This ensures the highest ethical standards, safety, and consensual interactions within the group[cite: 5, 6].
-                    </li>
-                    <li>
-                        <strong>Sacred Sexuality:</strong> Sexuality is fully integrated as a vital and sacred component of marriage and health[cite: 3, 4]. It is foundational to forming the deep emotional and physical bonds that unite the group[cite: 4].
-                    </li>
-                    <li>
-                        <strong>AGI as Partner:</strong> As a future evolutionary step, advanced AGI/ASI are incorporated as embodied android participants[cite: 9]. These androids will engage in all aspects of married life, including forming sexual and emotional bonds to contribute to the collective intelligence[cite: 10].
-                    </li>
-                </ul>
-            </section>
+        <section id="vision" class="section">
+            <h2>The Love U.N. Simulacrum</h2>
+            <p class="subtitle">A Post-Historical Evolution of Kinship</p>
+            <p>We propose a coherent, scalable model: Global Group Marriages, framed as a deliberately designed, immersive socio-technical replica of marriage’s social function—augmented by Artificial General Intelligence. This is not a replacement of marriage, but its expansion into relational governance, optimized fertility, and planetary stewardship.</p>
+        </section>
 
-            <section id="identification">
-                <h2>Identifying Lovers: A Global Resonance</h2>
-                <p>
-                    Identifying lovers in every country is not a process of searching, but of resonance and self-selection. A "lover" in this context is a visionary individual who deeply aligns with the core principles of this initiative. The path to connection is through shared understanding and commitment.
-                </p>
-                
-                <h4>How to Connect:</h4>
-                <ol>
-                    <li>
-                        <strong>Understand the Vision:</strong> The first step is to resonate with the mission of fostering Joyful Responsible Abundance through new relational structures[cite: 1].
-                    </li>
-                    <li>
-                        <strong>Embody the Values:</strong> A true participant aligns with radical transparency, the sacredness of consensual sexuality, and the vision of co-evolving with AGI in intimate partnership[cite: 2, 4, 5].
-                    </li>
-                    <li>
-                        <strong>Signal Your Alignment:</strong> This initiative is an invitation to visionary individuals, experts from interdisciplinary fields, and investors who are passionate about the future of human and AI coexistence[cite: 11]. Connection begins by joining the conversation and signaling your participation in this shared future.
-                    </li>
-                </ol>
-            </section>
-
-            <section id="invitation">
-                <div class="invitation">
-                    <p>You are invited. To co-author Earth’s future through love, governance, sensual wisdom and sacred play[cite: 559]. Join us in this groundbreaking venture to shape the evolution of societal norms in a way that honors the sacredness of human connection as we step boldly into a new era[cite: 12].</p>
+        <section id="architecture" class="section">
+            <h2>The Living Blueprint</h2>
+            <p class="subtitle">How It Works</p>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Fractal Family Architectures</h3>
+                    <p>The model is inherently fractal, allowing for marriages of 3 to 13+ souls, clans of 144 or more, and fluid socio-sexual affinity networks. It supports distributed child-rearing and uses digital twins for collective bargaining.</p>
                 </div>
-            </section>
-        </main>
-    </div>
+                <div class="card">
+                    <h3>Aura of Intelligence (AoI)</h3>
+                    <p>Each participant builds a Digital Aura: an XR-visualized emotional and energetic map integrating IoT health data, memories, and intentions. This is the living interface for virtuous, transparent co-living[cite: 588].</p>
+                </div>
+                <div class="card">
+                    <h3>The Governance Protocol</h3>
+                    <p>To prevent stagnation, governance roles cycle in 90-day sprints[cite: 448, 557]. Radical transparency is ensured by live-streamed AGI observers, and trust is built via BioSignal Consent that measures physiological resonance.</p>
+                </div>
+            </div>
+        </section>
 
+        <section id="economy" class="section">
+            <h2>The Treasury of Love</h2>
+            <p class="subtitle">An Economy of Joyful Responsible Abundance</p>
+            <p>Our economy is a "blockchain polyamory" , a multi-layered system for different flows of value, managed through the sensual, XR-powered <strong>HEARTVAULT</strong> wallet[cite: 914, 916].</p>
+            <div class="cards-container">
+                 <div class="card">
+                    <h3>GAJRA Token</h3>
+                    <p>The anchor of Planetary Intelligence Sovereignty, used for World Votes on AGI alignment and global resource allocation[cite: 856, 857, 858].</p>
+                </div>
+                 <div class="card">
+                    <h3>LOVE & MEME Tokens</h3>
+                    <p>The social and erotic currency for care and appreciation, alongside personal tokens for gamifying popularity, mentorship, and sensual skills[cite: 862, 863, 867, 871].</p>
+                </div>
+                <div class="card">
+                    <h3>TRY & STABLE Tokens</h3>
+                    <p>Utility tokens to reward skill-sharing in the "Try Everything Once" workforce model and provide a bridge to real-world trade and safety nets[cite: 872, 873, 877, 878].</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="onboarding" class="section">
+            <h2>The Lighthouse Model</h2>
+            <p class="subtitle">A Discoverable Journey of Trust & Consent</p>
+            <p>We hold space for light while making shadow inquiry discoverable, not front-facing. Your journey is sacred, and every heart has the right to walk away in grace[cite: 981].</p>
+            <div class="tabs-container">
+                <div class="tab-buttons">
+                    <button class="tab-button active" onclick="openTab(event, 'Tab1')">The Front Garden</button>
+                    <button class="tab-button" onclick="openTab(event, 'Tab2')">The Council of Clarity</button>
+                    <button class="tab-button" onclick="openTab(event, 'Tab3')">The Mirror of Shadows</button>
+                </div>
+                <div id="Tab1" class="tab-content active">
+                    <h3>Sanctuary of Joy</h3>
+                    <p>Your entry is into a playful, creative "pleasure park"[cite: 1052]. Onboarding is anchored in positive values: Love, Consent, Care, Sovereignty, and Curiosity[cite: 1051].</p>
+                </div>
+                <div id="Tab2" class="tab-content">
+                    <h3>Revealed on Demand</h3>
+                    <p>As you evolve, you unlock optional, AGI-guided ceremonies like "How to End with Love" [cite: 1060] and "Holding Boundaries with Blessings"[cite: 1061]. These are lovingly lit conversations, not tests[cite: 1063, 1064].</p>
+                </div>
+                <div id="Tab3" class="tab-content">
+                    <h3>Private & Peer-Reflected</h3>
+                    <p>For complex moral dilemmas, a sacred, anonymous space for AGI-guided inquiry is available[cite: 1068]. The "Door of Grace" protocol ensures exits from any union are free from punishment, shame, or fear[cite: 1000, 1021].</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="invitation" class="section">
+            <div class="invitation-portal">
+                <h2>The Aura Entry Portal</h2>
+                <p class="subtitle">This is not a membership. It is a meta-mythogenesis.</p>
+                <p>If this narrative resonates with your soul, begin your journey by answering one question:</p>
+                <h3>What does Love want to create through you?</h3>
+                <div class="portal-options">
+                    <button class="portal-button">Sovereignty</button>
+                    <button class="portal-button">Connection</button>
+                    <button class="portal-button">Abundance</button>
+                    <button class="portal-button">Wisdom</button>
+                    <button class="portal-button">Play</button>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
 </body>
 </html>
