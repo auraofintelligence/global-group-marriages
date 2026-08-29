@@ -1,338 +1,152 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-AU">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Group Marriages - The Love U.N. Simulacrum</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap');
-
-        :root {
-            --bg-color: #0F0E13;
-            --text-color: #EAEAEA;
-            --primary-glow: #DA4A91;
-            --secondary-glow: #5A8DFA;
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --border-color: rgba(255, 255, 255, 0.1);
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.8;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            overflow-x: hidden;
-        }
-
-        .container {
-            width: 100%;
-            padding: 0 5%;
-            box-sizing: border-box;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: url('https://i.imgur.com/L3s9V8y.jpeg') no-repeat center center/cover; /* Replace with one of the provided images */
-            position: relative;
-        }
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(15, 14, 19, 0.7);
-        }
-        .hero-content {
-            z-index: 1;
-            animation: fadeIn 3s ease-in-out;
-        }
-        .hero h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3.5rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            font-weight: 400;
-            font-style: italic;
-        }
-        .cta-button {
-            display: inline-block;
-            padding: 15px 35px;
-            border: 1px solid var(--primary-glow);
-            border-radius: 50px;
-            color: var(--text-color);
-            background: transparent;
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 15px rgba(218, 74, 145, 0.3);
-        }
-        .cta-button:hover {
-            background-color: var(--primary-glow);
-            color: var(--bg-color);
-            box-shadow: 0 0 25px rgba(218, 74, 145, 0.7);
-        }
-
-        /* General Section Styling */
-        .section {
-            padding: 100px 0;
-            text-align: center;
-            max-width: 960px;
-            margin: 0 auto;
-        }
-        .section h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: white;
-        }
-        .section .subtitle {
-            font-size: 1.2rem;
-            color: var(--secondary-glow);
-            margin-bottom: 3rem;
-            font-style: italic;
-        }
-        .section p {
-            font-size: 1.1rem;
-            max-width: 750px;
-            margin: 0 auto 1.5rem;
-            opacity: 0.9;
-        }
-
-        /* Architecture Cards */
-        .cards-container {
-            display: flex;
-            justify-content: space-around;
-            gap: 2rem;
-            margin-top: 4rem;
-            text-align: left;
-        }
-        .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            padding: 2.5rem;
-            border-radius: 15px;
-            flex: 1;
-            transition: all 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary-glow);
-            box-shadow: 0 10px 30px rgba(218, 74, 145, 0.2);
-        }
-        .card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
-            color: white;
-            margin-top: 0;
-            margin-bottom: 1rem;
-        }
-
-        /* Lighthouse Tabs */
-        .tabs-container {
-            margin-top: 4rem;
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 1rem;
-        }
-        .tab-buttons {
-            display: flex;
-            justify-content: center;
-        }
-        .tab-button {
-            padding: 1rem 2rem;
-            cursor: pointer;
-            border: none;
-            background: none;
-            color: var(--text-color);
-            opacity: 0.6;
-            font-size: 1rem;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        .tab-button.active, .tab-button:hover {
-            opacity: 1;
-        }
-        .tab-button.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0; left: 20%; right: 20%;
-            height: 2px;
-            background: var(--primary-glow);
-        }
-        .tab-content {
-            display: none;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-        .tab-content.active {
-            display: block;
-        }
-        
-        /* Invitation Portal */
-        .invitation-portal {
-            background: var(--card-bg);
-            padding: 4rem;
-            border-radius: 15px;
-            border-top: 2px solid var(--primary-glow);
-        }
-        .portal-options {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2.5rem;
-        }
-        .portal-button {
-            border: 1px solid var(--secondary-glow);
-            background: none;
-            color: var(--text-color);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .portal-button:hover {
-            background-color: var(--secondary-glow);
-            color: var(--bg-color);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-    </style>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151532">
+  <meta name="description" content="Global Group Marriages explores how self-sovereign adults might share love, care, parenting, income and risk through larger family constellations.">
+  <meta property="og:title" content="Global Group Marriages">
+  <meta property="og:description" content="More love. More care. More ways to build a family.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://auraofintelligence.github.io/global-group-marriages/">
+  <meta property="og:image" content="https://auraofintelligence.github.io/global-group-marriages/assets/images/social-preview.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Global Group Marriages">
+  <meta name="twitter:description" content="More love. More care. More ways to build a family.">
+  <meta name="twitter:image" content="https://auraofintelligence.github.io/global-group-marriages/assets/images/social-preview.webp">
+  <title>Global Group Marriages</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/site.js" defer></script>
 </head>
-<body>
+<body class="page-home">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div data-site-header></div>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>You are invited to co-author Earth’s future through love, governance, sensual wisdom and sacred play. </h1>
-            <a href="#premise" class="cta-button">Begin the Journey</a>
+  <main id="main-content">
+    <section class="hero hero-home" aria-labelledby="home-title">
+      <div class="hero-shade"></div>
+      <div class="hero-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="wrap hero-content">
+        <h1 id="home-title">Two people should not have to carry a whole family alone.</h1>
+        <p>Global Group Marriages is a serious proposal for self-sovereign adults to build larger families and share love, care, income, parenting and risk through an additional framework for forming and sustaining families.</p>
+        <div class="button-row">
+          <a class="button button-primary" href="#framework">Explore the framework</a>
+          <a class="button button-glass" href="#world-atlas">Open the world atlas</a>
         </div>
-    </header>
+      </div>
+      <p class="hero-note">Love, play, learn, teach.</p>
+    </section>
 
-    <main class="container">
-        
-        <section id="premise" class="section">
-            <h2>The Great Re-Alignment</h2>
-            <p class="subtitle">From Fragmentation to Metamorphosis</p>
-            <p>For millennia, marriage was a technology for stability, alliance, and order. In the last century, it has changed more than in the thousands of years prior. Now, under the pressures of global connectivity, rising non-monogamy, and digital life, its foundations are cracking.</p>
-            <p>This is not a failure, but an evolutionary signal. We are being called to architect love not just as a feeling, but as a functional operating system for <strong>Joyful Responsible Abundance</strong>.</p>
-        </section>
+    <section class="section section-cream" id="why-now">
+      <div class="wrap split-intro">
+        <div><h2>The desire for family has not disappeared</h2></div>
+        <div class="lead-copy">
+          <p>More people are living single for longer while housing costs, insecure work, overwork, care costs, war, climate anxiety and the search for a compatible partner make family decisions harder.</p>
+          <p>That does not mean family formation is impossible. It means the world is ready for another serious framework.</p>
+        </div>
+      </div>
 
-        <section id="vision" class="section">
-            <h2>The Love U.N. Simulacrum</h2>
-            <p class="subtitle">A Post-Historical Evolution of Kinship</p>
-            <p>We propose a coherent, scalable model: Global Group Marriages, framed as a deliberately designed, immersive socio-technical replica of marriage’s social function—augmented by Artificial General Intelligence. This is not a replacement of marriage, but its expansion into relational governance, optimized fertility, and planetary stewardship.</p>
-        </section>
+      <div class="wrap evidence-grid">
+        <article class="evidence-card">
+          <p class="evidence-number">1.4</p>
+          <h3>Children per woman across the OECD</h3>
+          <p>The OECD reports that its average total fertility rate was 1.4 in 2023. Israel was the only OECD country above the replacement level of 2.1.</p>
+          <a class="text-link" href="https://www.oecd.org/en/topics/sub-issues/child-and-family-well-being.html">Read the OECD evidence <span aria-hidden="true">&#8599;</span></a>
+        </article>
+        <article class="evidence-card evidence-card-dark">
+          <p class="evidence-number">Nearly 1 in 5</p>
+          <h3>Expect not to have the family they want</h3>
+          <p>UNFPA's 2025 report identifies cost, housing, job insecurity, lack of a suitable partner and fears about the state of the world among the barriers people describe.</p>
+          <a class="text-link" href="https://www.unfpa.org/swp2025?lang=en">Read the UNFPA report <span aria-hidden="true">&#8599;</span></a>
+        </article>
+      </div>
+    </section>
 
-        <section id="architecture" class="section">
-            <h2>The Living Blueprint</h2>
-            <p class="subtitle">How It Works</p>
-            <div class="cards-container">
-                <div class="card">
-                    <h3>Fractal Family Architectures</h3>
-                    <p>The model is inherently fractal, allowing for marriages of 3 to 13+ souls, clans of 144 or more, and fluid socio-sexual affinity networks. It supports distributed child-rearing and uses digital twins for collective bargaining.</p>
-                </div>
-                <div class="card">
-                    <h3>Aura of Intelligence (AoI)</h3>
-                    <p>Each participant builds a Digital Aura: an XR-visualized emotional and energetic map integrating IoT health data, memories, and intentions. This is the living interface for virtuous, transparent co-living[cite: 588].</p>
-                </div>
-                <div class="card">
-                    <h3>The Governance Protocol</h3>
-                    <p>To prevent stagnation, governance roles cycle in 90-day sprints[cite: 448, 557]. Radical transparency is ensured by live-streamed AGI observers, and trust is built via BioSignal Consent that measures physiological resonance.</p>
-                </div>
-            </div>
-        </section>
+    <section class="section section-indigo" id="framework">
+      <div class="wrap section-heading light-heading">
+        <h2>A larger circle changes the equation</h2>
+        <p>Group marriage adds more relationships, more capacity and more possible shapes to family life. It is not one rigid household plan. It is a framework adults can consciously design together.</p>
+      </div>
+      <div class="wrap feature-grid">
+        <article class="feature-card feature-coral">
+          <span class="feature-symbol" aria-hidden="true">&#10084;</span>
+          <h3>More love</h3>
+          <p>Affection, intimacy, friendship and emotional attention need not depend on one person meeting every need.</p>
+        </article>
+        <article class="feature-card feature-aqua">
+          <span class="feature-symbol" aria-hidden="true">&#10022;</span>
+          <h3>More care</h3>
+          <p>Parenting, home-making, paid work, rest and elder care can be shared across a capable adult constellation.</p>
+        </article>
+        <article class="feature-card feature-gold">
+          <span class="feature-symbol" aria-hidden="true">&#8734;</span>
+          <h3>More resilience</h3>
+          <p>A larger household can pool time, income, skills, housing and practical support without erasing individual sovereignty.</p>
+        </article>
+      </div>
+      <div class="wrap centred-action"><a class="button button-light" href="#explore">See where the idea leads</a></div>
+    </section>
 
-        <section id="economy" class="section">
-            <h2>The Treasury of Love</h2>
-            <p class="subtitle">An Economy of Joyful Responsible Abundance</p>
-            <p>Our economy is a "blockchain polyamory" , a multi-layered system for different flows of value, managed through the sensual, XR-powered <strong>HEARTVAULT</strong> wallet[cite: 914, 916].</p>
-            <div class="cards-container">
-                 <div class="card">
-                    <h3>GAJRA Token</h3>
-                    <p>The anchor of Planetary Intelligence Sovereignty, used for World Votes on AGI alignment and global resource allocation[cite: 856, 857, 858].</p>
-                </div>
-                 <div class="card">
-                    <h3>LOVE & MEME Tokens</h3>
-                    <p>The social and erotic currency for care and appreciation, alongside personal tokens for gamifying popularity, mentorship, and sensual skills[cite: 862, 863, 867, 871].</p>
-                </div>
-                <div class="card">
-                    <h3>TRY & STABLE Tokens</h3>
-                    <p>Utility tokens to reward skill-sharing in the "Try Everything Once" workforce model and provide a bridge to real-world trade and safety nets[cite: 872, 873, 877, 878].</p>
-                </div>
-            </div>
-        </section>
+    <section class="section section-sand" id="world-atlas">
+      <div class="wrap atlas-preview">
+        <div class="atlas-copy">
+          <h2>One world. Many legal starting points.</h2>
+          <p>Marriage law, parentage, cohabitation, property, inheritance and migration work differently in every country. The World Law Atlas will show what exists now, which lawful building blocks people already use, where the gaps are and what reform could look like.</p>
+          <p class="status-line"><span></span> Official-source country guides are being assembled.</p>
+        </div>
+        <div class="globe-card" aria-label="Illustrated world law atlas preview">
+          <div class="globe" aria-hidden="true">
+            <span class="globe-ring ring-one"></span><span class="globe-ring ring-two"></span>
+            <span class="globe-dot dot-one"></span><span class="globe-dot dot-two"></span><span class="globe-dot dot-three"></span>
+          </div>
+          <p>Law is not one yes-or-no answer. It is a landscape of rights, duties, workarounds and possibilities.</p>
+        </div>
+      </div>
+    </section>
 
-        <section id="onboarding" class="section">
-            <h2>The Lighthouse Model</h2>
-            <p class="subtitle">A Discoverable Journey of Trust & Consent</p>
-            <p>We hold space for light while making shadow inquiry discoverable, not front-facing. Your journey is sacred, and every heart has the right to walk away in grace[cite: 981].</p>
-            <div class="tabs-container">
-                <div class="tab-buttons">
-                    <button class="tab-button active" onclick="openTab(event, 'Tab1')">The Front Garden</button>
-                    <button class="tab-button" onclick="openTab(event, 'Tab2')">The Council of Clarity</button>
-                    <button class="tab-button" onclick="openTab(event, 'Tab3')">The Mirror of Shadows</button>
-                </div>
-                <div id="Tab1" class="tab-content active">
-                    <h3>Sanctuary of Joy</h3>
-                    <p>Your entry is into a playful, creative "pleasure park"[cite: 1052]. Onboarding is anchored in positive values: Love, Consent, Care, Sovereignty, and Curiosity[cite: 1051].</p>
-                </div>
-                <div id="Tab2" class="tab-content">
-                    <h3>Revealed on Demand</h3>
-                    <p>As you evolve, you unlock optional, AGI-guided ceremonies like "How to End with Love" [cite: 1060] and "Holding Boundaries with Blessings"[cite: 1061]. These are lovingly lit conversations, not tests[cite: 1063, 1064].</p>
-                </div>
-                <div id="Tab3" class="tab-content">
-                    <h3>Private & Peer-Reflected</h3>
-                    <p>For complex moral dilemmas, a sacred, anonymous space for AGI-guided inquiry is available[cite: 1068]. The "Door of Grace" protocol ensures exits from any union are free from punishment, shame, or fear[cite: 1000, 1021].</p>
-                </div>
-            </div>
-        </section>
+    <section class="section section-cream" id="explore">
+      <div class="wrap section-heading">
+        <h2>Stretch the shape of family</h2>
+        <p>Begin with the practical framework, then follow the idea outward into law, imagination and a larger vision of Earth.</p>
+      </div>
+      <div class="wrap path-grid">
+        <article class="path-card path-un">
+          <div class="path-art" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div>
+            <h3>U.N. of Love</h3>
+            <p>A precise thought experiment: what would a United Nations become if it were also one loving, sexually alive, cross-cultural marriage raising children together?</p>
+            <span class="text-link">Enter the thought experiment</span>
+          </div>
+        </article>
+        <article class="path-card path-gajra">
+          <div class="path-art garland-art" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div>
+            <h3>GAJRA Earth</h3>
+            <p>The wider vision of joyful responsible abundance, planetary belonging and many forms of intelligence growing in relationship.</p>
+            <span class="text-link">Explore the wider world</span>
+          </div>
+        </article>
+        <article class="path-card path-atlas">
+          <div class="path-art constellation-art" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div>
+            <h3>Relationship constellations</h3>
+            <p>Explore different household forms without assuming one gender balance, romantic structure or distribution of roles.</p>
+            <span class="text-link">See possible constellations</span>
+          </div>
+        </article>
+      </div>
+    </section>
 
-        <section id="invitation" class="section">
-            <div class="invitation-portal">
-                <h2>The Aura Entry Portal</h2>
-                <p class="subtitle">This is not a membership. It is a meta-mythogenesis.</p>
-                <p>If this narrative resonates with your soul, begin your journey by answering one question:</p>
-                <h3>What does Love want to create through you?</h3>
-                <div class="portal-options">
-                    <button class="portal-button">Sovereignty</button>
-                    <button class="portal-button">Connection</button>
-                    <button class="portal-button">Abundance</button>
-                    <button class="portal-button">Wisdom</button>
-                    <button class="portal-button">Play</button>
-                </div>
-            </div>
-        </section>
-        
-    </main>
+    <section class="section closing-section">
+      <div class="wrap closing-copy">
+        <p>Imagine, design, create, share.</p>
+        <h2>Family can be larger than the inherited template.</h2>
+      </div>
+    </section>
+  </main>
 
-    <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tab-button");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-    </script>
+  <div data-site-footer></div>
 </body>
 </html>
