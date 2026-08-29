@@ -58,11 +58,8 @@ h3 { font-size: clamp(1.5rem, 2.3vw, 2.15rem); letter-spacing: -0.025em; }
 .button-glass:hover { background: rgba(255, 255, 255, 0.22); }
 .button-light { background: var(--cream); color: var(--ink); }
 .hero-note { position: absolute; z-index: 3; right: max(1.25rem, calc((100vw - 1180px) / 2)); bottom: 1.5rem; margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 1rem; font-style: italic; letter-spacing: 0.04em; }
-.hero-orbit { position: absolute; z-index: 2; right: -7vw; bottom: -30vw; width: min(68vw, 850px); aspect-ratio: 1; border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 50%; }
-.hero-orbit span { position: absolute; border-radius: 50%; }
-.hero-orbit span:nth-child(1) { inset: 11%; border: 1px solid rgba(88, 215, 203, 0.38); }
-.hero-orbit span:nth-child(2) { inset: 27%; border: 1px solid rgba(238, 102, 119, 0.45); }
-.hero-orbit span:nth-child(3) { top: 27%; left: 2%; width: 1rem; aspect-ratio: 1; background: var(--gold); box-shadow: 0 0 28px rgba(230, 183, 80, 0.85); }
+.hero-statement { max-width: 760px !important; margin-bottom: 0.7rem !important; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.55rem, 3vw, 2.45rem) !important; line-height: 1.22 !important; color: var(--white) !important; }
+.hero-description { max-width: 720px !important; }
 
 .section { padding: clamp(5.5rem, 10vw, 9rem) 0; }
 .section-cream { background: var(--cream); }
