@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en-AU" data-root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151532">
+  <meta name="description" content="A private browser-based tool for sketching a group-marriage household, care system, decision process and next conversation.">
+  <link rel="canonical" href="https://auraofintelligence.github.io/global-group-marriages/household-lab.html">
+  <meta property="og:title" content="Private Household Lab | Global Group Marriages">
+  <meta property="og:description" content="A private browser-based tool for sketching a group-marriage household, care system, decision process and next conversation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://auraofintelligence.github.io/global-group-marriages/household-lab.html">
+  <meta property="og:image" content="https://auraofintelligence.github.io/global-group-marriages/assets/images/hero-household-lab.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Private Household Lab | Global Group Marriages">
+  <meta name="twitter:description" content="A private browser-based tool for sketching a group-marriage household, care system, decision process and next conversation.">
+  <meta name="twitter:image" content="https://auraofintelligence.github.io/global-group-marriages/assets/images/hero-household-lab.webp">
+  <title>Private Household Lab | Global Group Marriages</title>
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/styles.css?v=20260829-royal">
+  <script src="assets/lab.js?v=20260829-royal" defer></script>
+  <script src="assets/site.js?v=20260829-royal" defer></script>
+</head>
+<body class="page-household-lab">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div data-site-header></div>
+  <main id="main-content">
+    <section class="page-hero" aria-labelledby="page-title">
+      <img class="page-hero-image" src="assets/images/hero-household-lab.webp" alt="Concept artwork of adults around a table with notebooks, choice cards and a warm model of a shared home." fetchpriority="high" decoding="async">
+      <div class="hero-shade"></div>
+      <div class="wrap page-hero-content">
+        <h1 id="page-title">Design the household before the household designs you.</h1>
+        <p>Use this private lab to turn a large idea into a first shared sketch. Your answers remain in this browser unless you choose to copy them.</p>
+      </div>
+      <p class="concept-art-note">Concept artwork</p>
+    </section>
+
+    <section class="content-section section-cream">
+      <div class="wrap lab-layout">
+        <form class="household-form" data-household-form>
+          <div class="lab-progress" role="progressbar" aria-label="Household sketch progress" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1"><span data-lab-progress>1 of 4</span><div><i data-lab-bar></i></div></div>
+
+          <fieldset class="lab-step is-active" data-lab-step="1">
+            <legend>What is the family trying to make possible?</legend>
+            <p>Choose the purposes that matter most right now.</p>
+            <div class="choice-grid">
+              <label><input type="checkbox" name="purpose" value="A loving long-term partnership"> A loving long-term partnership</label>
+              <label><input type="checkbox" name="purpose" value="Raising children together"> Raising children together</label>
+              <label><input type="checkbox" name="purpose" value="A resilient shared home"> A resilient shared home</label>
+              <label><input type="checkbox" name="purpose" value="Cross-cultural family life"> Cross-cultural family life</label>
+              <label><input type="checkbox" name="purpose" value="Shared care across generations"> Shared care across generations</label>
+              <label><input type="checkbox" name="purpose" value="Creative and spiritual growth"> Creative and spiritual growth</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="lab-step" data-lab-step="2">
+            <legend>What shape are you exploring?</legend>
+            <label class="field-label">Number of adult partners <input type="number" name="adults" min="3" max="20" value="4"></label>
+            <label class="field-label">Homes
+              <select name="homes"><option>One shared home</option><option>Two connected homes</option><option>A local network of homes</option><option>Homes across countries</option><option>Still open</option></select>
+            </label>
+            <label class="field-label">Children and future children
+              <select name="children"><option>Central to the family vision</option><option>Part of the conversation</option><option>Not currently planned</option><option>Already part of the household</option><option>Different adults hold different hopes</option></select>
+            </label>
+          </fieldset>
+
+          <fieldset class="lab-step" data-lab-step="3">
+            <legend>Which practical layers need the first conversation?</legend>
+            <div class="choice-grid">
+              <label><input type="checkbox" name="layers" value="Time, work and rest"> Time, work and rest</label>
+              <label><input type="checkbox" name="layers" value="Money, property and debt"> Money, property and debt</label>
+              <label><input type="checkbox" name="layers" value="Parenting and care"> Parenting and care</label>
+              <label><input type="checkbox" name="layers" value="Love, intimacy and privacy"> Love, intimacy and privacy</label>
+              <label><input type="checkbox" name="layers" value="Decisions and conflict repair"> Decisions and conflict repair</label>
+              <label><input type="checkbox" name="layers" value="Law, migration and documents"> Law, migration and documents</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="lab-step" data-lab-step="4">
+            <legend>Write the next honest conversation</legend>
+            <label class="field-label">A sentence you want the group to begin with
+              <textarea name="conversation" rows="5" placeholder="What would become easier if we designed this as a family rather than a set of separate couples?"></textarea>
+            </label>
+            <label class="field-label">A principle nobody should lose
+              <input type="text" name="principle" placeholder="For example: private time remains real">
+            </label>
+          </fieldset>
+
+          <div class="lab-actions">
+            <button class="button button-outline" type="button" data-lab-back disabled>Back</button>
+            <button class="button button-primary" type="button" data-lab-next>Next question</button>
+          </div>
+        </form>
+
+        <aside class="lab-summary">
+          <span class="evidence-label proposal-label">Private local sketch</span>
+          <h2 tabindex="-1" data-lab-summary-heading>Your household starting point</h2>
+          <div data-lab-output><p>Your choices will form a clear conversation brief here.</p></div>
+          <button class="button button-light" type="button" data-lab-copy hidden>Copy as Markdown</button>
+          <p class="privacy-note">Nothing is sent anywhere. Refreshing the page clears the sketch.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="content-section section-sand">
+      <div class="wrap prose-intro">
+        <h2>A sketch is an invitation to think together</h2>
+        <p class="large-copy">It is not a test, a matching score or an authority over anyone's feelings. The adults involved remain the source of their own choices, and children remain people whose interests deserve direct attention.</p>
+      </div>
+    </section>
+    <nav class="page-journey wrap" aria-label="Continue through the site">
+      <a href="world-atlas.html"><span>Previous</span><strong>World Law Atlas</strong></a>
+      <a class="next-link" href="sovereignty-care.html"><span>Next</span><strong>Sovereignty and care</strong></a>
+    </nav>
+  </main>
+  <div data-site-footer></div>
+</body>
+</html>

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#151532">
   <meta name="description" content="Global Group Marriages explores how self-sovereign adults might share love, care, parenting, income and risk through larger family constellations.">
+  <link rel="canonical" href="https://auraofintelligence.github.io/global-group-marriages/">
   <meta property="og:title" content="Global Group Marriages">
   <meta property="og:description" content="More love. More care. More ways to build a family.">
   <meta property="og:type" content="website">
@@ -15,10 +16,11 @@
   <meta name="twitter:description" content="More love. More care. More ways to build a family.">
   <meta name="twitter:image" content="https://auraofintelligence.github.io/global-group-marriages/assets/images/social-preview.webp">
   <title>Global Group Marriages</title>
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="assets/styles.css">
-  <script src="assets/site.js" defer></script>
+  <link rel="stylesheet" href="assets/styles.css?v=20260829-royal">
+  <script src="assets/site.js?v=20260829-royal" defer></script>
 </head>
 <body class="page-home">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -26,17 +28,19 @@
 
   <main id="main-content">
     <section class="hero hero-home" aria-labelledby="home-title">
+      <img class="hero-background" src="assets/images/hero-home.webp" alt="Concept artwork of a loving multi-adult family and children gathering at a circular coastal home at sunrise." fetchpriority="high" decoding="async">
       <div class="hero-shade"></div>
       <div class="wrap hero-content">
         <h1 id="home-title">Global Group Marriages</h1>
         <p class="hero-statement">One or two people should not have to carry a whole family.</p>
         <p class="hero-description">A serious proposal for self-sovereign adults to build larger families and share love, care, income, parenting and risk through an additional framework for forming and sustaining families.</p>
         <div class="button-row">
-          <a class="button button-primary" href="#framework">Explore the framework</a>
-          <a class="button button-glass" href="#world-atlas">Open the world atlas</a>
+          <a class="button button-primary" href="framework.html">Explore the framework</a>
+          <a class="button button-glass" href="world-atlas.html">Open the world atlas</a>
         </div>
       </div>
       <p class="hero-note">Love, play, learn, teach.</p>
+      <p class="concept-art-note home-art-note">Concept artwork</p>
     </section>
 
     <section class="section section-cream" id="why-now">
@@ -75,36 +79,37 @@
       </div>
       <div class="wrap feature-grid">
         <article class="feature-card feature-coral">
-          <span class="feature-symbol" aria-hidden="true">&#10084;</span>
+          <span class="feature-symbol" aria-hidden="true">01</span>
           <h3>More love</h3>
           <p>Affection, intimacy, friendship and emotional attention need not depend on one person meeting every need.</p>
         </article>
         <article class="feature-card feature-aqua">
-          <span class="feature-symbol" aria-hidden="true">&#10022;</span>
+          <span class="feature-symbol" aria-hidden="true">02</span>
           <h3>More care</h3>
           <p>Parenting, home-making, paid work, rest and elder care can be shared across a capable adult constellation.</p>
         </article>
         <article class="feature-card feature-gold">
-          <span class="feature-symbol" aria-hidden="true">&#8734;</span>
+          <span class="feature-symbol" aria-hidden="true">03</span>
           <h3>More resilience</h3>
           <p>A larger household can pool time, income, skills, housing and practical support without erasing individual sovereignty.</p>
         </article>
       </div>
-      <div class="wrap centred-action"><a class="button button-light" href="#explore">See where the idea leads</a></div>
+      <div class="wrap centred-action"><a class="button button-light" href="framework.html">Continue into the full framework</a></div>
     </section>
 
     <section class="section section-sand" id="world-atlas">
       <div class="wrap atlas-preview">
         <div class="atlas-copy">
           <h2>One world. Many legal starting points.</h2>
-          <p>Marriage law, parentage, cohabitation, property, inheritance and migration work differently in every country. The World Law Atlas will show what exists now, which lawful building blocks people already use, where the gaps are and what reform could look like.</p>
-          <p class="status-line"><span></span> Official-source country guides are being assembled.</p>
+          <p>Marriage law, parentage, cohabitation, property, inheritance and migration work differently in every country. The World Law Atlas shows what exists now, which lawful building blocks people already use, where the gaps are and what reform could look like.</p>
+          <p class="status-line">Six official-source country guides are ready to explore.</p>
+          <a class="button button-primary" href="world-atlas.html">Open the World Law Atlas</a>
         </div>
         <div class="recognition-card" data-recognition-spectrum>
           <h3>Explore one legal spectrum</h3>
           <p class="spectrum-question">Adult relationship recognition</p>
-          <output class="spectrum-output" data-spectrum-title>Overlapping pairwise rights</output>
-          <input class="spectrum-range" type="range" min="0" max="4" step="1" value="2" aria-label="Move across the adult relationship recognition spectrum" data-spectrum-range>
+          <output class="spectrum-output" for="recognition-range" aria-live="polite" data-spectrum-title>Overlapping pairwise rights</output>
+          <input class="spectrum-range" id="recognition-range" type="range" min="0" max="4" step="1" value="2" aria-label="Move across the adult relationship recognition spectrum" data-spectrum-range>
           <div class="spectrum-ends" aria-hidden="true"><span>Private relationship</span><span>Multi-adult civil status</span></div>
           <p data-spectrum-description>Several pairwise relationships may hold legal weight, but the law does not recognise the family as one group.</p>
           <p class="spectrum-note">This is one dimension only. Parentage, property, migration and healthcare each have their own spectrum.</p>
@@ -118,30 +123,30 @@
         <p>Begin with the practical framework, then follow the idea outward into law, imagination and a larger vision of Earth.</p>
       </div>
       <div class="wrap path-grid">
-        <article class="path-card path-un">
-          <div class="path-art" aria-hidden="true"><span></span><span></span><span></span></div>
+        <a class="path-card path-un" href="un-of-love.html">
+          <img class="path-image" src="assets/images/hero-un-of-love.webp" alt="" loading="lazy" decoding="async">
           <div>
             <h3>U.N. of Love</h3>
             <p>A precise thought experiment: what would a United Nations become if it were also one loving, sexually alive, cross-cultural marriage raising children together?</p>
             <span class="text-link">Enter the thought experiment</span>
           </div>
-        </article>
-        <article class="path-card path-gajra">
-          <div class="path-art garland-art" aria-hidden="true"><span></span><span></span><span></span></div>
+        </a>
+        <a class="path-card path-gajra" href="gajra-earth.html">
+          <img class="path-image" src="assets/images/hero-gajra-earth.webp" alt="" loading="lazy" decoding="async">
           <div>
             <h3>GAJRA Earth</h3>
             <p>The wider vision of joyful responsible abundance, planetary belonging and many forms of intelligence growing in relationship.</p>
             <span class="text-link">Explore the wider world</span>
           </div>
-        </article>
-        <article class="path-card path-atlas">
-          <div class="path-art constellation-art" aria-hidden="true"><span></span><span></span><span></span></div>
+        </a>
+        <a class="path-card path-atlas" href="constellations.html">
+          <img class="path-image" src="assets/images/hero-constellations.webp" alt="" loading="lazy" decoding="async">
           <div>
             <h3>Relationship constellations</h3>
             <p>Explore different household forms without assuming one gender balance, romantic structure or distribution of roles.</p>
             <span class="text-link">See possible constellations</span>
           </div>
-        </article>
+        </a>
       </div>
     </section>
 
