@@ -74,4 +74,27 @@
         </div>
       </footer>`;
   }
+
+  const spectrum = document.querySelector('[data-recognition-spectrum]');
+  if (spectrum) {
+    const range = spectrum.querySelector('[data-spectrum-range]');
+    const title = spectrum.querySelector('[data-spectrum-title]');
+    const description = spectrum.querySelector('[data-spectrum-description]');
+    const positions = [
+      ['Private relationship', 'The relationship is real to the people involved, while public law gives the group no shared adult status.'],
+      ['Private legal tools', 'Contracts, co-ownership, wills and appointments organise selected rights without creating a family status.'],
+      ['Overlapping pairwise rights', 'Several pairwise relationships may hold legal weight, but the law does not recognise the family as one group.'],
+      ['Limited plural recognition', 'A local, customary or issue-specific rule recognises part of a multi-adult family without full civil status.'],
+      ['Multi-adult civil status', 'The law recognises the adult family as one relationship with shared public rights and duties.']
+    ];
+
+    const updateSpectrum = () => {
+      const [nextTitle, nextDescription] = positions[Number(range.value)];
+      title.textContent = nextTitle;
+      description.textContent = nextDescription;
+    };
+
+    range.addEventListener('input', updateSpectrum);
+    updateSpectrum();
+  }
 })();
