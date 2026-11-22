@@ -687,3 +687,11 @@ main [id] { scroll-margin-top: 6rem; }
 .source-repo-grid p { margin-block: 0 0.8rem; }
 .source-repo-grid a { text-underline-offset: 0.2em; }
 @media (max-width: 720px) { .source-repo-grid { grid-template-columns: 1fr; } }
+
+/* Luke's vision and celebration on United Nations of Love. */
+.page-un-of-love .founder-intro { align-items: center; }
+.page-un-of-love .founder-portrait { max-width: 480px; margin: 0; }
+.page-un-of-love .founder-portrait img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; }
+.page-un-of-love .celebration-scene { margin-block: 2rem 0; }
+.page-un-of-love .celebration-scene img { width: 100%; height: auto; border-radius: 1.5rem; }
+@media (max-width: 780px) { .page-un-of-love .founder-portrait { max-width: 560px; margin-inline: auto; } }

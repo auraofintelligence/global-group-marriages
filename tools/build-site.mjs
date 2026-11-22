@@ -211,7 +211,7 @@ const pages = [
       <div class="wrap prose-intro">
         <span class="evidence-label proposal-label">Global research design</span>
         <h2>One family can cross several legal worlds</h2>
-        <p class="large-copy">This is a way to ask better questions about marriage, family, personal autonomy and a group’s shared enterprise wherever its members live or travel. It is a proposed adaptation of Luke Nathan Hayes’s Australian citizen research, not a completed global law database or a verdict on any particular relationship.</p>
+        <p class="large-copy">Luke's <a href="un-of-love.html">United Nations of Love</a> is the motivating dream for this method: a cross-cultural group marriage, family and enterprise with each person's freedom intact. The questions can be adapted for other groups wherever their members live or travel. This draws on Luke Nathan Hayes's Australian citizen research; it is not a completed global law database or a verdict on a relationship.</p>
         <div class="link-pair"><a class="button button-primary" href="household-lab.html">Sketch a group in the Household Lab</a><a class="button button-outline" href="research-method.html">How evidence is handled</a></div>
       </div>
       <div class="wrap compact-grid atlas-lenses">
@@ -276,7 +276,7 @@ const pages = [
       <div class="wrap prose-intro">
         <span class="evidence-label proposal-label">A private group planning sketch</span>
         <h2>Give the group a plan without taking anyone’s agency</h2>
-        <p class="large-copy">Start with the people and their choices, then separate the marriage vision, family commitments, personal sovereignty, shared business and legal questions. This global adaptation draws on Luke’s Australian household, legal and travel work. It does not calculate legal status, eligibility or a bill saving.</p>
+        <p class="large-copy">This lab begins with Luke's <a href="un-of-love.html">United Nations of Love</a> dream, then lets any group describe its own marriage vision, family commitments, personal sovereignty, shared enterprise and local questions. It draws on Luke's Australian household, legal and travel work. It does not calculate legal status, eligibility or bill savings.</p>
       </div>
       <div class="wrap compact-grid">
         <article><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy"><h3>Relationships</h3><p>What marriage or recognition means to the group, and what each adult chooses independently.</p></article>
@@ -564,14 +564,26 @@ const pages = [
     title: 'United Nations of Love',
     description: 'Luke Nathan Hayes proposes a cross-cultural love marriage and family enterprise that contributes to world peace through Joyful Responsible Abundance.',
     heading: 'United Nations of Love',
-    lead: 'The family business and love marriage across cultures that Luke Nathan Hayes wants to build.',
-    heroAlt: 'Concept artwork of adults from many cultures gathered in a circular pavilion.',
+    lead: 'My dream: a chosen cross-cultural group marriage, family enterprise and joyful contribution to peace.',
+    styleVersion: '20261123-luke',
+    heroImage: 'un-of-love-luke-waterfront.webp',
+    heroAlt: 'AI illustration based on Luke with long hair and glasses, with two fictional women beside a waterfront.',
+    imageNote: 'AI concept based on Luke’s likeness; companions are fictional.',
     body: `
     <section class="content-section section-cream" aria-labelledby="my-vision">
-      <div class="wrap prose-intro">
-        <h2 id="my-vision">The family I want to build</h2>
-        <p class="large-copy">I'd like to build a family with people from different cultures who choose to share love, care and enterprise. We'd work out what we want to make together and what each person wants to pursue in their own life.</p>
-        <p>This is my proposal within the wider <a href="framework.html">Global Group Marriages framework</a>. Other people can form their own groups, starting with a throuple and growing to whatever size works for them. This kind of marriage will suit some people and add one more possibility to the many ways families already live.</p>
+      <div class="wrap split-intro founder-intro">
+        <figure class="editorial-photo founder-portrait">
+          <img src="assets/images/un-of-love-luke-portrait.webp" alt="Real photograph of Luke Nathan Hayes wearing glasses with his long hair tied back." loading="lazy" decoding="async" width="1000" height="1250">
+          <figcaption>Luke Nathan Hayes, photographed. <a href="https://auraofintelligence.github.io/strange-but-true/assets/luke-formal.webp">Original portrait</a>.</figcaption>
+        </figure>
+        <div class="lead-copy">
+          <span class="evidence-label proposal-label">Luke Nathan Hayes's dream</span>
+          <h2 id="my-vision">The United Nations of Love is my dream</h2>
+          <p class="large-copy">I want to build a cross-cultural family whose members choose each other, care for children and one another, and create a joyful, responsible abundance together. I want to be part of it, with my own voice and my own relationships, while every other person has theirs.</p>
+          <p>The family enterprise and the marriage are related, but nobody's place in love should depend on a job or a business stake. We would work out what we want to make together and what each person wants to pursue independently.</p>
+          <p>This is my proposal within the wider <a href="framework.html">Global Group Marriages framework</a>. Other groups may take their own shape and grow without a preset cap. The people taking on commitments decide who joins them.</p>
+          <div class="editorial-links"><a href="prospectus.html">Read my prospectus</a><a href="music.html">Hear the music behind the dream</a></div>
+        </div>
       </div>
     </section>
 
@@ -584,6 +596,17 @@ const pages = [
         <article><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>My romantic relationships</h3><p>I want to choose the women who also choose me. Each person has the same freedom to choose their own partners.</p></article>
         <article><img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>How the group grows</h3><p>I encourage women in the group to vet and invite men they'd like to join. I'd have the same say as any other partner. The people taking on each shared commitment decide together, on equal terms.</p></article>
       </div>
+    </section>
+
+    <section class="content-section section-cream" aria-labelledby="celebrating">
+      <div class="wrap prose-intro">
+        <h2 id="celebrating">Love deserves a celebration too</h2>
+        <p class="large-copy">I imagine ceremonies and gatherings shaped by the cultures and choices of the people involved. Joy, music, family and responsibility can all be present in the same room. A group marriage has room for more than one kind of bond and more than one way to celebrate.</p>
+      </div>
+      <figure class="wrap editorial-photo celebration-scene">
+        <img src="assets/images/un-of-love-seacliff-luke.png" alt="AI concept scene of Luke with long hair and glasses, three women and other guests celebrating a Celtic-inspired ribbon-knot ceremony by the sea." loading="lazy" decoding="async" width="1536" height="1024">
+        <figcaption>AI concept art based on Luke's likeness. The other adults and the ceremony are imagined, not a record of actual partners or an event.</figcaption>
+      </figure>
     </section>
 
     <section class="content-section section-sand" aria-labelledby="shared-practice">
@@ -603,12 +626,12 @@ const pages = [
     <section class="content-section section-cream" aria-labelledby="peace">
       <div class="wrap split-intro">
         <figure class="editorial-photo full-art">
-          <img src="assets/images/inland-festival.webp" alt="Two women talking at an arts gathering in a mountain valley." loading="lazy" decoding="async" width="756" height="500">
-          <figcaption>AI-generated illustration of a gathering for music and art.</figcaption>
+          <img src="assets/images/un-of-love-luke-reception.webp" alt="AI concept scene based on Luke with his hair down and glasses, speaking with two fictional women at a reception." loading="lazy" decoding="async" width="1536" height="1024">
+          <figcaption>AI concept scene based on Luke's likeness from <a href="https://auraofintelligence.github.io/australiansire/assets/theatre-reception.webp">Australian Sire</a>. Other people are fictional.</figcaption>
         </figure>
         <div class="lead-copy">
           <h2 id="peace">A cultural contribution to world peace</h2>
-          <p>The name draws on the idea of coming together across borders. Our contribution would come through Joyful Responsible Abundance in daily life. We'd share food and hospitality, make music and stories, build businesses and keep turning up for people across cultures.</p>
+          <p>The name draws on people coming together across borders. This family would be one place to practise Joyful Responsible Abundance: sharing hospitality, making music and stories, building enterprises and turning up for people across cultures. My wider <a href="gajra-earth.html">GAJRA Earth</a> ambition carries that spirit into global art, music and collective values, including a proposed 2035 gathering.</p>
           <p>I'd like us to see how close we can come to unconditional love by caring about each other through change. Each person would keep the freedom to set boundaries, choose their relationships and decide which commitments they want to make.</p>
           <div class="editorial-links">
             <a href="prospectus.html">Read my business prospectus</a>
@@ -853,7 +876,7 @@ function renderPage(page) {
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="assets/styles.css?v=${assetVersion}">
+  <link rel="stylesheet" href="assets/styles.css?v=${page.styleVersion ?? assetVersion}">
   ${page.script ? `<script src="${page.script}?v=${assetVersion}" defer></script>` : ''}
   <script src="assets/site.js?v=${assetVersion}" defer></script>
 </head>
