@@ -54,12 +54,6 @@ const pages = [
         <h2>Share the practical work of family life</h2>
         <p class="large-copy">A larger marriage does not remove cost, grief, conflict or uncertainty. It changes how many adults meet them together. More incomes, more carers, more skills and more enduring relationships create a different starting equation.</p>
       </div>
-      <div class="wrap inline-scene-band">
-        <figure class="editorial-photo inline-scene">
-          <img src="assets/images/hero-framework.webp" alt="Several adults work together around a household table as children play nearby." loading="lazy" decoding="async">
-          <figcaption>AI-generated illustration of adults sharing the work of a household.</figcaption>
-        </figure>
-      </div>
       <div class="wrap statement-panel">
         <p>Global group marriage is an additional framework for people who see strength, love and possibility in a larger family constellation.</p>
         <a class="button button-primary" href="framework.html">See how the framework works</a>
@@ -74,7 +68,8 @@ const pages = [
     description: 'A practical pro-group-marriage framework for sharing love, parenting, money, time, care and risk.',
     heading: 'How adults could build a larger family together',
     lead: 'Independent groups of three or more adults can build families around the relationships they choose. Each group decides what size and shape work for them.',
-    heroAlt: 'Concept artwork of several adults weaving colourful fabric together around a household table while children play nearby.',
+    heroImage: 'framework-planning.webp',
+    heroAlt: 'Two adults review a floor plan and calendar as they discuss how a household could work.',
     body: `
     <section class="content-section section-cream">
       <div class="wrap prose-intro">
@@ -337,12 +332,6 @@ const pages = [
     </section>
 
     <section class="content-section section-sand">
-      <div class="wrap inline-scene-band">
-        <figure class="editorial-photo inline-scene">
-          <img src="assets/images/shared-life.webp" alt="Two women look over an open map at a table." loading="lazy" decoding="async">
-          <figcaption>AI-generated illustration of a planning conversation.</figcaption>
-        </figure>
-      </div>
       <div class="wrap prose-intro">
         <h2>A sketch is an invitation to think together</h2>
         <p class="large-copy">It is not a test, a matching score or an authority over anyone's feelings. The adults involved remain the source of their own choices, and children remain people whose interests deserve direct attention.</p>
@@ -714,6 +703,7 @@ const readingOrder = [
   ...countries.map(({ slug, name }) => [`countries/${slug}.html`, name]),
   ...mainRoutes.slice(atlasEnd),
   documents,
+  ['music.html', 'Music'],
   references
 ];
 const primaryLinks = [
@@ -724,6 +714,7 @@ const primaryLinks = [
   ['household-lab.html', 'Household Lab'],
   ['possible-futures.html', 'Possible futures'],
   ['documents.html', 'Documents'],
+  ['music.html', 'Music'],
   ['references.html', 'References']
 ];
 const footerGroups = [
@@ -950,12 +941,6 @@ ${renderHeader(route, '../')}
           <p>These are the places where present law does not match a chosen multi-adult family.</p>
           <ul class="country-list">${gaps}</ul>
         </div>
-      </div>
-      <div class="wrap country-planning-visual">
-        <figure class="editorial-photo">
-          <img src="../assets/images/shared-life.webp" alt="Two women looking over a map at a kitchen table." loading="lazy" decoding="async" width="756" height="500">
-          <figcaption>Concept artwork. <a href="../household-lab.html">Use the Household Lab to work through practical arrangements together.</a></figcaption>
-        </figure>
       </div>
     </section>
 
