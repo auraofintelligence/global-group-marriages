@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-AU" data-root="">
+<html lang="en-AU" id="site-top">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,13 +19,27 @@
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="assets/styles.css?v=20261122">
+  <link rel="stylesheet" href="assets/styles.css?v=20261122-nav">
 
-  <script src="assets/site.js?v=20261122" defer></script>
+  <script src="assets/site.js?v=20261122-nav" defer></script>
 </head>
 <body class="page-un-of-love">
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <div data-site-header></div>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="index.html" aria-label="Global Group Marriages home">
+        <img src="assets/favicon-192.png" alt="">
+        <span>Global Group Marriages</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="prospectus.html">Prospectus</a>
+        <a href="framework.html">Families</a>
+        <a href="ai-and-sovereignty.html">Aura</a>
+        <a href="world-atlas.html">Atlas</a>
+        <a href="documents.html">Library</a>
+      </nav>
+    </div>
+  </header>
   <main id="main-content">
     <section class="page-hero" aria-labelledby="page-title">
       <img class="page-hero-image" src="assets/images/hero-un-of-love.webp" alt="Concept artwork of adult women and men from many cultures gathered as one loving family in a circular world pavilion, with no official emblems." fetchpriority="high" decoding="async">
@@ -110,11 +124,54 @@
       </div>
       <div class="wrap centred-action"><a class="button button-light" href="gajra-earth.html">Continue into GAJRA Earth</a></div>
     </section>
-    <nav class="page-journey wrap" aria-label="Continue through the site">
-      <a href="research-method.html"><span>Previous</span><strong>Research</strong></a>
-      <a class="next-link" href="gajra-earth.html"><span>Next</span><strong>GAJRA Earth</strong></a>
-    </nav>
   </main>
-  <div data-site-footer></div>
+  <footer class="site-footer">
+    <nav class="page-journey wrap" aria-label="Continue through the site">
+      <a href="research-method.html" rel="prev"><span>Previous</span><strong>Research</strong></a>
+      <a class="next-link" href="gajra-earth.html" rel="next"><span>Next</span><strong>GAJRA Earth</strong></a>
+    </nav>
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-brand">Global Group Marriages</p>
+        <p>An invitation to build businesses and explore a shared life across countries.</p>
+        <a href="prospectus.html">Read the prospectus</a>
+      </div>
+      <div>
+        <h2>Aura of Intelligence</h2>
+        <a href="ai-and-sovereignty.html#aura">How Aura fits in</a>
+        <a href="https://auraofintelligence.github.io/">Aura of Intelligence</a>
+        <a href="https://auraofintelligence.github.io/aura-genesis-geode-atlas/index.html">Aura Genesis Protocol</a>
+        <a href="https://auraofintelligence.github.io/aura-verse-box/">Verse Box</a>
+      </div>
+      <div>
+        <h2>Families and law</h2>
+        <a href="why-now.html">Why now</a>
+        <a href="framework.html">Family framework</a>
+        <a href="constellations.html">Relationship constellations</a>
+        <a href="world-atlas.html">World Law Atlas</a>
+        <a href="household-lab.html">Household Lab</a>
+        <a href="sovereignty-care.html">Consent and care</a>
+      </div>
+      <div>
+        <h2>Ideas and research</h2>
+        <a href="ai-and-sovereignty.html">AI and self-sovereignty</a>
+        <a href="possible-futures.html">Possible futures</a>
+        <a href="un-of-love.html">U.N. of Love</a>
+        <a href="gajra-earth.html">GAJRA Earth</a>
+        <a href="research-method.html">Research method</a>
+      </div>
+      <div>
+        <h2>Sources</h2>
+        <a href="documents.html">Document library</a>
+        <a href="references.html">References and image credits</a>
+        <a href="LICENSE">Strange But True Public Source Licence</a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>Concept by Luke Nathan Hayes / Aura of Intelligence</span>
+      <a class="back-to-top" href="#site-top">Back to top</a>
+    </div>
+  </footer>
+  <a class="floating-top" href="#site-top" hidden><span aria-hidden="true">↑</span> Back to top</a>
 </body>
 </html>

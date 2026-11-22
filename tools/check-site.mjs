@@ -52,6 +52,15 @@ const requiredImages = [
 ];
 
 const prospectusPages = ['prospectus.html', 'ai-and-sovereignty.html', 'documents.html', 'references.html'];
+const sitemap = await readFile(path.join(rootDirectory, 'sitemap.xml'), 'utf8');
+const sitemapRoutes = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(([, location]) => (
+  new URL(location.trim()).pathname.slice(1) || 'index.html'
+));
+const sitemapPages = new Set(sitemapRoutes);
+const pageJourneys = new Map();
+if (sitemapPages.size !== sitemapRoutes.length) errors.push('sitemap.xml: duplicate page locations');
+if (!sitemapPages.has('index.html')) errors.push('sitemap.xml: missing the home page');
+
 const pageIds = new Map();
 for (const file of htmlFiles) {
   const html = await readFile(file, 'utf8');
@@ -107,16 +116,46 @@ for (const file of htmlFiles) {
       errors.push(`${relative}: broken local reference ${link}`);
     }
   }
+
+  const journeys = [...html.matchAll(/<nav\b[^>]*\bclass="page-journey(?:\s[^"]*)?"[^>]*>[\s\S]*?<\/nav>/g)];
+  if (!sitemapPages.has(relative)) {
+    if (journeys.length) errors.push(`${relative}: footer navigation page is missing from the sitemap`);
+    continue;
+  }
+  const footer = html.match(/<footer\b[^>]*>[\s\S]*?<\/footer>/)?.[0];
+  if (journeys.length !== 1 || !footer?.includes(journeys[0][0])) {
+    errors.push(`${relative}: expected one previous and next navigation inside the footer`);
+    continue;
+  }
+  const directions = new Map();
+  for (const [anchor] of journeys[0][0].matchAll(/<a\b[^>]*>/g)) {
+    const direction = anchor.match(/\srel="(prev|next)"/)?.[1];
+    if (!direction) continue;
+    const href = anchor.match(/\shref="([^"]+)"/)?.[1];
+    const target = href && path.posix.normalize(path.posix.join(path.posix.dirname(relative), href));
+    if (!sitemapPages.has(target)) errors.push(`${relative}: footer ${direction} link must point to a sitemap page`);
+    if (directions.has(direction)) errors.push(`${relative}: more than one footer ${direction} link`);
+    directions.set(direction, target);
+  }
+  pageJourneys.set(relative, directions);
 }
 
-const siteScript = await readFile(path.join(rootDirectory, 'assets', 'site.js'), 'utf8');
-for (const generatedLink of [...siteScript.matchAll(/href="\$\{rootPath\}([^"]+)"/g)].map((match) => match[1])) {
-  const target = path.join(rootDirectory, generatedLink);
-  try {
-    await access(target);
-  } catch {
-    errors.push(`assets/site.js: broken generated navigation target ${generatedLink}`);
+const visitedPages = new Set();
+let page = 'index.html';
+let previous;
+while (page && sitemapPages.has(page) && !visitedPages.has(page)) {
+  const journey = pageJourneys.get(page);
+  if (!journey) break;
+  if (journey.get('prev') !== previous) {
+    errors.push(`${page}: footer previous link must point to ${previous ?? 'no page before Home'}`);
   }
+  visitedPages.add(page);
+  previous = page;
+  page = journey.get('next');
+}
+if (visitedPages.has(page)) errors.push(`${page}: footer next link creates a loop`);
+for (const route of sitemapPages) {
+  if (!visitedPages.has(route)) errors.push(`${route}: missing from the footer reading order`);
 }
 
 const heroHashes = new Map();

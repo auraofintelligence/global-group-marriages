@@ -1,86 +1,9 @@
 (() => {
-  const headerTarget = document.querySelector('[data-site-header]');
-  const footerTarget = document.querySelector('[data-site-footer]');
-  const rootPath = document.documentElement.dataset.root || '';
+  const header = document.querySelector('.site-header');
+  const floatingTop = document.querySelector('.floating-top');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  if (headerTarget) {
-    headerTarget.innerHTML = `
-      <header class="site-header">
-        <div class="site-header-inner">
-          <a class="brand" href="${rootPath}index.html" aria-label="Global Group Marriages home">
-            <img src="${rootPath}assets/favicon-192.png" alt="">
-            <span>Global Group Marriages</span>
-          </a>
-          <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
-          <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-            <a href="${rootPath}prospectus.html">Prospectus</a>
-            <a href="${rootPath}framework.html">Family framework</a>
-            <a href="${rootPath}ai-and-sovereignty.html">AI and self-sovereignty</a>
-            <a href="${rootPath}world-atlas.html">World Law Atlas</a>
-            <a href="${rootPath}household-lab.html">Household Lab</a>
-            <a href="${rootPath}documents.html">Documents</a>
-            <a href="${rootPath}references.html">References</a>
-          </nav>
-        </div>
-      </header>`;
-
-    const menuButton = headerTarget.querySelector('.menu-button');
-    const nav = headerTarget.querySelector('.site-nav');
-    const brand = headerTarget.querySelector('.brand');
-    const mobileNavigation = window.matchMedia('(max-width: 1120px)');
-    const backgroundRegions = [document.querySelector('main'), footerTarget].filter(Boolean);
-    const setBackgroundInert = (inert) => backgroundRegions.forEach((region) => region.toggleAttribute('inert', inert));
-    const syncNavigationState = () => {
-      const menuIsOpen = menuButton.getAttribute('aria-expanded') === 'true';
-      nav.toggleAttribute('inert', mobileNavigation.matches && !menuIsOpen);
-    };
-    const closeMenu = ({ returnFocus = false } = {}) => {
-      menuButton.setAttribute('aria-expanded', 'false');
-      menuButton.setAttribute('aria-label', 'Open menu');
-      nav.classList.remove('is-open');
-      document.body.classList.remove('menu-open');
-      brand.removeAttribute('inert');
-      setBackgroundInert(false);
-      syncNavigationState();
-      if (returnFocus && mobileNavigation.matches) menuButton.focus();
-    };
-
-    menuButton.addEventListener('click', () => {
-      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-      menuButton.setAttribute('aria-expanded', String(!isOpen));
-      menuButton.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
-      nav.classList.toggle('is-open', !isOpen);
-      document.body.classList.toggle('menu-open', !isOpen);
-      brand.toggleAttribute('inert', !isOpen);
-      setBackgroundInert(!isOpen);
-      syncNavigationState();
-      if (!isOpen) window.requestAnimationFrame(() => nav.querySelector('a')?.focus());
-    });
-
-    nav.addEventListener('click', (event) => {
-      if (event.target.closest('a')) closeMenu();
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') closeMenu({ returnFocus: true });
-    });
-
-    mobileNavigation.addEventListener('change', () => {
-      if (!mobileNavigation.matches) closeMenu();
-      else syncNavigationState();
-    });
-    syncNavigationState();
-
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    nav.querySelectorAll('a').forEach((link) => {
-      const linkPage = link.getAttribute('href').split('/').pop();
-      if (linkPage === currentPage) {
-        link.setAttribute('aria-current', 'page');
-      } else if (document.body.classList.contains('country-page') && linkPage === 'world-atlas.html') {
-        link.setAttribute('aria-current', 'location');
-      }
-    });
-
+  if (header) {
     const progress = document.createElement('div');
     progress.className = 'scroll-progress';
     progress.setAttribute('aria-hidden', 'true');
@@ -89,62 +12,25 @@
     const progressLine = progress.querySelector('i');
     const heroImage = document.querySelector('.hero-background, .page-hero-image');
     let scrollFramePending = false;
+
     const updateScrollEffects = () => {
       const scrollTop = window.scrollY;
       const available = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
-      headerTarget.querySelector('.site-header').classList.toggle('is-scrolled', scrollTop > 24);
+      header.classList.toggle('is-scrolled', scrollTop > 24);
+      if (floatingTop) floatingTop.hidden = scrollTop < 360;
       progressLine.style.setProperty('--scroll-progress', String(Math.min(scrollTop / available, 1)));
-      if (heroImage && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        heroImage.style.setProperty('--hero-parallax', `${Math.min(scrollTop * 0.035, 30)}px`);
+      if (heroImage && !reducedMotion.matches) {
+        heroImage.style.setProperty('--hero-parallax', Math.min(scrollTop * 0.035, 30) + 'px');
       }
       scrollFramePending = false;
     };
+
     window.addEventListener('scroll', () => {
       if (scrollFramePending) return;
       scrollFramePending = true;
       window.requestAnimationFrame(updateScrollEffects);
     }, { passive: true });
     updateScrollEffects();
-  }
-
-  if (footerTarget) {
-    footerTarget.innerHTML = `
-      <footer class="site-footer">
-        <div class="wrap footer-grid">
-          <div>
-            <p class="footer-brand">Global Group Marriages</p>
-            <p>An invitation to build businesses and explore a shared life across countries.</p>
-            <a href="${rootPath}prospectus.html">Read the prospectus</a>
-          </div>
-          <div>
-            <h2>Families and law</h2>
-            <a href="${rootPath}why-now.html">Why now</a>
-            <a href="${rootPath}framework.html">Family framework</a>
-            <a href="${rootPath}constellations.html">Relationship constellations</a>
-            <a href="${rootPath}world-atlas.html">World Law Atlas</a>
-            <a href="${rootPath}household-lab.html">Household Lab</a>
-            <a href="${rootPath}sovereignty-care.html">Consent and care</a>
-          </div>
-          <div>
-            <h2>Ideas and research</h2>
-            <a href="${rootPath}ai-and-sovereignty.html">AI and self-sovereignty</a>
-            <a href="${rootPath}possible-futures.html">Possible futures</a>
-            <a href="${rootPath}un-of-love.html">U.N. of Love</a>
-            <a href="${rootPath}gajra-earth.html">GAJRA Earth</a>
-            <a href="${rootPath}research-method.html">Research method</a>
-          </div>
-          <div>
-            <h2>Sources</h2>
-            <a href="${rootPath}documents.html">Document library</a>
-            <a href="${rootPath}references.html">References and image credits</a>
-            <a href="${rootPath}LICENSE">Strange But True Public Source Licence</a>
-          </div>
-        </div>
-        <div class="wrap footer-bottom">
-          <span>Concept by Luke Nathan Hayes / Aura of Intelligence</span>
-          <a class="back-to-top" href="#main-content">Back to top</a>
-        </div>
-      </footer>`;
   }
 
   const spectrum = document.querySelector('[data-recognition-spectrum]');
@@ -174,7 +60,6 @@
     updateSpectrum();
   }
 
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const revealTargets = [...document.querySelectorAll([
     '.split-intro > *',
     '.section-heading',
@@ -203,7 +88,7 @@
     target.style.setProperty('--reveal-delay', `${(index % 5) * 70}ms`);
   });
 
-  if (reducedMotion || !('IntersectionObserver' in window)) {
+  if (reducedMotion.matches || !('IntersectionObserver' in window)) {
     revealTargets.forEach((target) => target.classList.add('is-visible'));
   } else {
     const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -217,7 +102,7 @@
   }
 
   const lightPanel = document.querySelector('.recognition-card');
-  if (lightPanel && window.matchMedia('(hover: hover) and (pointer: fine)').matches && !reducedMotion) {
+  if (lightPanel && window.matchMedia('(hover: hover) and (pointer: fine)').matches && !reducedMotion.matches) {
     lightPanel.addEventListener('pointermove', (event) => {
       const bounds = lightPanel.getBoundingClientRect();
       const position = ((event.clientX - bounds.left) / bounds.width) - 0.5;

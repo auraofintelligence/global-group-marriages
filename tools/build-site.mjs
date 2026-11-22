@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { countries } from '../content/countries.mjs';
@@ -7,6 +7,7 @@ import { prospectusPages } from '../content/prospectus.mjs';
 const toolDirectory = path.dirname(fileURLToPath(import.meta.url));
 const rootDirectory = path.resolve(toolDirectory, '..');
 const cleanGeneratedText = (text) => text.replace(/[ \t]+$/gm, '');
+const assetVersion = '20261122-nav';
 
 const pages = [
   ...prospectusPages,
@@ -705,19 +706,112 @@ function escapeXml(value) {
     .replaceAll("'", '&apos;');
 }
 
-function renderPage(page, index) {
+const [home, documents, references] = [
+  ['index.html', 'Home'],
+  ['documents.html', 'Document library'],
+  ['references.html', 'References and image credits']
+];
+const mainRoutes = pages.map(({ slug, shortTitle }) => [`${slug}.html`, shortTitle]);
+const atlasEnd = mainRoutes.findIndex(([route]) => route === 'world-atlas.html') + 1;
+const readingOrder = [
+  home,
+  ...mainRoutes.slice(0, atlasEnd),
+  ...countries.map(({ slug, name }) => [`countries/${slug}.html`, name]),
+  ...mainRoutes.slice(atlasEnd),
+  documents,
+  references
+];
+const primaryLinks = [
+  ['prospectus.html', 'Prospectus'],
+  ['framework.html', 'Families'],
+  ['ai-and-sovereignty.html', 'Aura'],
+  ['world-atlas.html', 'Atlas'],
+  ['documents.html', 'Library']
+];
+const footerGroups = [
+  ['Aura of Intelligence', [
+    ['ai-and-sovereignty.html#aura', 'How Aura fits in'],
+    ['https://auraofintelligence.github.io/', 'Aura of Intelligence'],
+    ['https://auraofintelligence.github.io/aura-genesis-geode-atlas/index.html', 'Aura Genesis Protocol'],
+    ['https://auraofintelligence.github.io/aura-verse-box/', 'Verse Box']
+  ]],
+  ['Families and law', [
+    ['why-now.html', 'Why now'],
+    ['framework.html', 'Family framework'],
+    ['constellations.html', 'Relationship constellations'],
+    ['world-atlas.html', 'World Law Atlas'],
+    ['household-lab.html', 'Household Lab'],
+    ['sovereignty-care.html', 'Consent and care']
+  ]],
+  ['Ideas and research', [
+    ['ai-and-sovereignty.html', 'AI and self-sovereignty'],
+    ['possible-futures.html', 'Possible futures'],
+    ['un-of-love.html', 'U.N. of Love'],
+    ['gajra-earth.html', 'GAJRA Earth'],
+    ['research-method.html', 'Research method']
+  ]],
+  ['Sources', [
+    documents,
+    references,
+    ['LICENSE', 'Strange But True Public Source Licence']
+  ]]
+];
+
+function renderHeader(route, rootPath) {
+  const links = primaryLinks.map(([href, label]) => {
+    const current = href === route ? ' aria-current="page"'
+      : rootPath && href === 'world-atlas.html' ? ' aria-current="location"' : '';
+    return `        <a href="${rootPath}${href}"${current}>${escapeXml(label)}</a>`;
+  }).join('\n');
+  return `  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="${rootPath}index.html" aria-label="Global Group Marriages home">
+        <img src="${rootPath}assets/favicon-192.png" alt="">
+        <span>Global Group Marriages</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+${links}
+      </nav>
+    </div>
+  </header>`;
+}
+
+function renderFooter(route, rootPath) {
+  const index = readingOrder.findIndex(([href]) => href === route);
+  const previous = readingOrder[index - 1];
+  const next = readingOrder[index + 1];
+  const sectionLinks = footerGroups.map(([heading, links]) => `      <div>
+        <h2>${escapeXml(heading)}</h2>
+${links.map(([href, label]) => `        <a href="${href.startsWith('https:') ? href : rootPath + href}">${escapeXml(label)}</a>`).join('\n')}
+      </div>`).join('\n');
+  return `  <footer class="site-footer">
+    <nav class="page-journey wrap" aria-label="Continue through the site">
+      ${previous ? `<a href="${rootPath}${previous[0]}" rel="prev"><span>Previous</span><strong>${escapeXml(previous[1])}</strong></a>` : ''}
+      ${next ? `<a class="next-link" href="${rootPath}${next[0]}" rel="next"><span>Next</span><strong>${escapeXml(next[1])}</strong></a>`
+    : `<a class="next-link" href="${rootPath}index.html"><span>Return to</span><strong>Home</strong></a>`}
+    </nav>
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-brand">Global Group Marriages</p>
+        <p>An invitation to build businesses and explore a shared life across countries.</p>
+        <a href="${rootPath}prospectus.html">Read the prospectus</a>
+      </div>
+${sectionLinks}
+    </div>
+    <div class="wrap footer-bottom">
+      <span>Concept by Luke Nathan Hayes / Aura of Intelligence</span>
+      <a class="back-to-top" href="#site-top">Back to top</a>
+    </div>
+  </footer>
+  <a class="floating-top" href="#site-top" hidden><span aria-hidden="true">↑</span> Back to top</a>`;
+}
+
+function renderPage(page) {
   const heroImage = page.heroImage ?? `hero-${page.slug}.webp`;
-  const previous = index > 0 ? pages[index - 1] : null;
-  const next = index < pages.length - 1 ? pages[index + 1] : null;
-  const previousLink = previous
-    ? `<a href="${previous.slug}.html"><span>Previous</span><strong>${previous.shortTitle}</strong></a>`
-    : `<a href="index.html"><span>Previous</span><strong>Home</strong></a>`;
-  const nextLink = next
-    ? `<a class="next-link" href="${next.slug}.html"><span>Next</span><strong>${next.shortTitle}</strong></a>`
-    : `<a class="next-link" href="index.html"><span>Next</span><strong>Home</strong></a>`;
+  const route = `${page.slug}.html`;
 
   return `<!doctype html>
-<html lang="en-AU" data-root="">
+<html lang="en-AU" id="site-top">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -737,13 +831,13 @@ function renderPage(page, index) {
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="assets/styles.css?v=20261122">
+  <link rel="stylesheet" href="assets/styles.css?v=${assetVersion}">
   ${page.script ? `<script src="${page.script}?v=20261122" defer></script>` : ''}
-  <script src="assets/site.js?v=20261122" defer></script>
+  <script src="assets/site.js?v=${assetVersion}" defer></script>
 </head>
 <body class="page-${page.slug}">
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <div data-site-header></div>
+${renderHeader(route, '')}
   <main id="main-content">
     <section class="page-hero" aria-labelledby="page-title">
       <img class="page-hero-image" src="assets/images/${heroImage}" alt="${page.heroAlt}" fetchpriority="high" decoding="async">
@@ -755,20 +849,15 @@ function renderPage(page, index) {
       <p class="concept-art-note">${page.imageNote ?? 'Concept artwork'}</p>
     </section>
     ${page.body}
-    <nav class="page-journey wrap" aria-label="Continue through the site">
-      ${previousLink}
-      ${nextLink}
-    </nav>
   </main>
-  <div data-site-footer></div>
+${renderFooter(route, '')}
 </body>
 </html>
 `;
 }
 
-function renderCountryPage(country, index) {
-  const previous = countries[index - 1] ?? countries[countries.length - 1];
-  const next = countries[index + 1] ?? countries[0];
+function renderCountryPage(country) {
+  const route = `countries/${country.slug}.html`;
   const statusCards = country.statuses
     .map(([label, value]) => `<article><span>${label}</span><p>${value}</p></article>`)
     .join('\n');
@@ -786,7 +875,7 @@ function renderCountryPage(country, index) {
     .join('\n');
 
   return `<!doctype html>
-<html lang="en-AU" data-root="../">
+<html lang="en-AU" id="site-top">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -806,12 +895,12 @@ function renderCountryPage(country, index) {
   <link rel="icon" href="../assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="../assets/styles.css?v=20261122">
-  <script src="../assets/site.js?v=20261122" defer></script>
+  <link rel="stylesheet" href="../assets/styles.css?v=${assetVersion}">
+  <script src="../assets/site.js?v=${assetVersion}" defer></script>
 </head>
 <body class="country-page country-${country.slug}">
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <div data-site-header></div>
+${renderHeader(route, '../')}
   <main id="main-content">
     <section class="page-hero country-hero" aria-labelledby="country-title">
       <img class="page-hero-image" src="../assets/images/hero-country-${country.slug}.webp" alt="${country.heroAlt}" fetchpriority="high" decoding="async">
@@ -862,12 +951,8 @@ function renderCountryPage(country, index) {
       </div>
     </section>
 
-    <nav class="page-journey wrap" aria-label="Continue through country guides">
-      <a href="${previous.slug}.html"><span>Previous country</span><strong>${previous.name}</strong></a>
-      <a class="next-link" href="${next.slug}.html"><span>Next country</span><strong>${next.name}</strong></a>
-    </nav>
   </main>
-  <div data-site-footer></div>
+${renderFooter(route, '../')}
 </body>
 </html>
 `;
@@ -875,25 +960,33 @@ function renderCountryPage(country, index) {
 
 await mkdir(path.join(rootDirectory, 'countries'), { recursive: true });
 
-for (const [index, page] of pages.entries()) {
-  await writeFile(path.join(rootDirectory, `${page.slug}.html`), cleanGeneratedText(renderPage(page, index)), 'utf8');
+for (const page of pages) {
+  await writeFile(path.join(rootDirectory, `${page.slug}.html`), cleanGeneratedText(renderPage(page)), 'utf8');
 }
 
-for (const [index, country] of countries.entries()) {
+for (const country of countries) {
   await writeFile(
     path.join(rootDirectory, 'countries', `${country.slug}.html`),
-    cleanGeneratedText(renderCountryPage(country, index)),
+    cleanGeneratedText(renderCountryPage(country)),
     'utf8'
   );
 }
 
-const sitemapEntries = [
-  '',
-  ...pages.map((page) => `${page.slug}.html`),
-  'documents.html',
-  'references.html',
-  ...countries.map((country) => `countries/${country.slug}.html`)
-]
+for (const [route] of [home, documents, references]) {
+  const file = path.join(rootDirectory, route);
+  let html = await readFile(file, 'utf8');
+  for (const [section, markup] of [['header', renderHeader(route, '')], ['footer', renderFooter(route, '')]]) {
+    const start = `  <!-- site-${section}:start -->`;
+    const end = `  <!-- site-${section}:end -->`;
+    const bounds = new RegExp(`${start}[\\s\\S]*?${end}`);
+    if (!bounds.test(html)) throw new Error(`${route} is missing the site-${section} markers.`);
+    html = html.replace(bounds, () => `${start}\n${markup}\n${end}`);
+  }
+  html = html.replace(/(assets\/(?:styles\.css|site\.js))\?v=[\w-]+/g, (_match, asset) => `${asset}?v=${assetVersion}`);
+  await writeFile(file, cleanGeneratedText(html), 'utf8');
+}
+
+const sitemapEntries = readingOrder.map(([route]) => route === 'index.html' ? '' : route)
   .map((pathname) => `  <url><loc>https://globalgroupmarriages.com/${escapeXml(pathname)}</loc></url>`)
   .join('\n');
 

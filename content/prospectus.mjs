@@ -17,6 +17,7 @@ export const prospectusPages = [
           <p>I want to build businesses with women who are interested in Global Group Marriages. Consenting adults can form lasting relationships across countries and decide together how to share love, work, homes, care and resources. I want to explore that life for myself and share what we learn with others who want something similar.</p>
           <p>I’ve worked in trades, transport, events and web design, lived in India for long stretches, and made music about Minjerribah, where I live. People I care about live far apart. I want more time for those ties, for family, for travel and for the work we would enjoy doing together.</p>
           <p>I turn 44 on 3 December 2026. I call the year ahead <em>A Protopian Gambit</em>. For me that means putting time, work and resources into ideas that leave the people involved with more choices.</p>
+          <p>Aura of Intelligence is central to what I want to build. Each person would control their own memories, values, plans and AI tools. We could share what we agree is useful for travelling, working or caring for each other. <a href="ai-and-sovereignty.html#aura">See how Aura fits into shared life</a>.</p>
           <div class="button-row">
             <a class="button button-primary" href="#respond">Express interest</a>
             <a class="button button-outline" href="documents.html">Find the Word prospectus</a>
@@ -182,15 +183,19 @@ export const prospectusPages = [
           <figcaption>AI-generated illustration of a personal computing workshop.</figcaption>
         </figure>
         <div class="lead-copy">
-          <h2 id="aura">Keep control of your own records</h2>
-          <p>Aura of Intelligence proposes a personal computing environment. Its digital twin is a record and model of parts of your life that you choose to keep, such as memories, projects, values, skills and practical knowledge. You could take those records with you when you change device, AI provider or country.</p>
+          <h2 id="aura">Aura of Intelligence in shared life</h2>
+          <p>Aura of Intelligence is the personal AI environment at the centre of this proposal. Your Aura would connect your memories, projects, values, skills and practical knowledge with the AI tools you choose. Its digital twin would be a record and model of the parts of your life you choose to keep. You could take a usable copy of your records with you when you change device, AI provider or country.</p>
           <p>Level Zero is your own private space. You choose what to collect, which parts to share, who can use them and when an agent needs your approval. You should be able to check access, correct a record, take a usable copy and withdraw access where practicable.</p>
           <p>People could keep an agreed shared record for a household or business. For example, a care plan could include what a person wants their supporters to know, and a business record could hold the terms for paying contributors and using each other’s work.</p>
+          <h3>Aura Genesis Protocol</h3>
+          <p>Genesis is a proposed opt-in programme for adults who want to develop a more detailed personal twin and learn to work with it. Participants would choose which measurements and experiences to record and learn through practice, reflection and correction. An everyday Aura could develop independently of Genesis.</p>
+          <h3>Verse Box</h3>
+          <p>The Verse Box is a proposed portable station using suitable reused equipment. It would offer a practical way to try building a personal Aura and start with an everyday learning or creative project. You would decide which devices and services to use for the Aura you take forward and which information to keep in your own private environment.</p>
           <div class="editorial-links">
-            <a href="sovereignty-care.html">Sovereignty and care</a>
             <a href="https://auraofintelligence.github.io/">Aura of Intelligence</a>
-            <a href="https://auraofintelligence.github.io/aura-genesis-geode-atlas/">Aura Genesis and Geode Atlas</a>
-            <a href="https://github.com/auraofintelligence/aura-verse-box">Verse Box proposal</a>
+            <a href="https://auraofintelligence.github.io/aura-genesis-geode-atlas/index.html">Aura Genesis Protocol</a>
+            <a href="https://auraofintelligence.github.io/aura-verse-box/">Verse Box</a>
+            <a href="sovereignty-care.html">Sovereignty and care</a>
           </div>
         </div>
       </div>
