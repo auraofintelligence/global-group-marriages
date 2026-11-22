@@ -706,16 +706,16 @@ function renderPage(page, index) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#151532">
   <meta name="description" content="${page.description}">
-  <link rel="canonical" href="https://auraofintelligence.github.io/global-group-marriages/${page.slug}.html">
+  <link rel="canonical" href="https://globalgroupmarriages.com/${page.slug}.html">
   <meta property="og:title" content="${page.title} | Global Group Marriages">
   <meta property="og:description" content="${page.description}">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://auraofintelligence.github.io/global-group-marriages/${page.slug}.html">
-  <meta property="og:image" content="https://auraofintelligence.github.io/global-group-marriages/assets/images/${heroImage}">
+  <meta property="og:url" content="https://globalgroupmarriages.com/${page.slug}.html">
+  <meta property="og:image" content="https://globalgroupmarriages.com/assets/images/${heroImage}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${page.title} | Global Group Marriages">
   <meta name="twitter:description" content="${page.description}">
-  <meta name="twitter:image" content="https://auraofintelligence.github.io/global-group-marriages/assets/images/${heroImage}">
+  <meta name="twitter:image" content="https://globalgroupmarriages.com/assets/images/${heroImage}">
   <title>${page.title} | Global Group Marriages</title>
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
@@ -775,17 +775,17 @@ function renderCountryPage(country, index) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#151532">
   <meta name="description" content="${country.snapshot}">
-  <link rel="canonical" href="https://auraofintelligence.github.io/global-group-marriages/countries/${country.slug}.html">
+  <link rel="canonical" href="https://globalgroupmarriages.com/countries/${country.slug}.html">
   <title>${country.name} | World Law Atlas | Global Group Marriages</title>
   <meta property="og:title" content="${country.name} | World Law Atlas">
   <meta property="og:description" content="${country.snapshot}">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://auraofintelligence.github.io/global-group-marriages/countries/${country.slug}.html">
-  <meta property="og:image" content="https://auraofintelligence.github.io/global-group-marriages/assets/images/hero-country-${country.slug}.webp">
+  <meta property="og:url" content="https://globalgroupmarriages.com/countries/${country.slug}.html">
+  <meta property="og:image" content="https://globalgroupmarriages.com/assets/images/hero-country-${country.slug}.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${country.name} | World Law Atlas">
   <meta name="twitter:description" content="${country.snapshot}">
-  <meta name="twitter:image" content="https://auraofintelligence.github.io/global-group-marriages/assets/images/hero-country-${country.slug}.webp">
+  <meta name="twitter:image" content="https://globalgroupmarriages.com/assets/images/hero-country-${country.slug}.webp">
   <link rel="icon" href="../assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
@@ -877,7 +877,7 @@ const sitemapEntries = [
   'references.html',
   ...countries.map((country) => `countries/${country.slug}.html`)
 ]
-  .map((pathname) => `  <url><loc>https://auraofintelligence.github.io/global-group-marriages/${escapeXml(pathname)}</loc></url>`)
+  .map((pathname) => `  <url><loc>https://globalgroupmarriages.com/${escapeXml(pathname)}</loc></url>`)
   .join('\n');
 
 await writeFile(
@@ -894,7 +894,7 @@ await writeFile(
   path.join(rootDirectory, 'robots.txt'),
   `User-agent: *
 Allow: /
-Sitemap: https://auraofintelligence.github.io/global-group-marriages/sitemap.xml
+Sitemap: https://globalgroupmarriages.com/sitemap.xml
 `,
   'utf8'
 );

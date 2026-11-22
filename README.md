@@ -10,8 +10,7 @@ Global Group Marriages is Luke Nathan Hayes's invitation to build businesses and
 - Current v2 rebuild began: 29 August 2026, at commit [`316744c`](https://github.com/auraofintelligence/global-group-marriages/commit/316744c).
 - Current v2 public release: 29 August 2026, at commit [`912361d`](https://github.com/auraofintelligence/global-group-marriages/commit/912361d).
 - GitHub repository: [Global Group Marriages](https://github.com/auraofintelligence/global-group-marriages).
-- Current public site: [visit Global Group Marriages v2](https://auraofintelligence.github.io/global-group-marriages/).
-- Legacy domain: [globalgroupmarriages.com](https://globalgroupmarriages.com/) remains separate until it is deliberately connected to the v2 replacement.
+- Public site: [Global Group Marriages](https://globalgroupmarriages.com/).
 
 <!-- github-organisation:end -->
 
@@ -34,21 +33,21 @@ Global Group Marriages is Luke Nathan Hayes's invitation to build businesses and
 
 ## Explore the current public v2 site
 
-- [Home](https://auraofintelligence.github.io/global-group-marriages/)
-- [Business Prospectus](https://auraofintelligence.github.io/global-group-marriages/prospectus.html)
-- [AI and Self-sovereignty](https://auraofintelligence.github.io/global-group-marriages/ai-and-sovereignty.html)
-- [Document Library](https://auraofintelligence.github.io/global-group-marriages/documents.html)
-- [References and Image Credits](https://auraofintelligence.github.io/global-group-marriages/references.html)
-- [Why now](https://auraofintelligence.github.io/global-group-marriages/why-now.html)
-- [Framework](https://auraofintelligence.github.io/global-group-marriages/framework.html)
-- [Constellations](https://auraofintelligence.github.io/global-group-marriages/constellations.html)
-- [Household Lab](https://auraofintelligence.github.io/global-group-marriages/household-lab.html)
-- [Sovereignty and Care](https://auraofintelligence.github.io/global-group-marriages/sovereignty-care.html)
-- [Research Method](https://auraofintelligence.github.io/global-group-marriages/research-method.html)
-- [World Law Atlas](https://auraofintelligence.github.io/global-group-marriages/world-atlas.html)
-- [GAJRA Earth](https://auraofintelligence.github.io/global-group-marriages/gajra-earth.html)
-- [Possible Futures](https://auraofintelligence.github.io/global-group-marriages/possible-futures.html)
-- [U.N. of Love](https://auraofintelligence.github.io/global-group-marriages/un-of-love.html)
+- [Home](https://globalgroupmarriages.com/)
+- [Business Prospectus](https://globalgroupmarriages.com/prospectus.html)
+- [AI and Self-sovereignty](https://globalgroupmarriages.com/ai-and-sovereignty.html)
+- [Document Library](https://globalgroupmarriages.com/documents.html)
+- [References and Image Credits](https://globalgroupmarriages.com/references.html)
+- [Why now](https://globalgroupmarriages.com/why-now.html)
+- [Framework](https://globalgroupmarriages.com/framework.html)
+- [Constellations](https://globalgroupmarriages.com/constellations.html)
+- [Household Lab](https://globalgroupmarriages.com/household-lab.html)
+- [Sovereignty and Care](https://globalgroupmarriages.com/sovereignty-care.html)
+- [Research Method](https://globalgroupmarriages.com/research-method.html)
+- [World Law Atlas](https://globalgroupmarriages.com/world-atlas.html)
+- [GAJRA Earth](https://globalgroupmarriages.com/gajra-earth.html)
+- [Possible Futures](https://globalgroupmarriages.com/possible-futures.html)
+- [U.N. of Love](https://globalgroupmarriages.com/un-of-love.html)
 
 ## Connected public projects
 
@@ -96,9 +95,7 @@ npm run check
 
 ## Public site
 
-<https://auraofintelligence.github.io/global-group-marriages/>
-
-The original WordPress site at <https://globalgroupmarriages.com/> remains separate until the replacement has been reviewed and the domain is deliberately connected.
+<https://globalgroupmarriages.com/>
 
 ## Licence
 
