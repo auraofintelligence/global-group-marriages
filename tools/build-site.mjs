@@ -7,7 +7,7 @@ import { prospectusPages } from '../content/prospectus.mjs';
 const toolDirectory = path.dirname(fileURLToPath(import.meta.url));
 const rootDirectory = path.resolve(toolDirectory, '..');
 const cleanGeneratedText = (text) => text.replace(/[ \t]+$/gm, '');
-const assetVersion = '20261122-menu';
+const assetVersion = '20261123-global';
 
 const pages = [
   ...prospectusPages,
@@ -201,147 +201,159 @@ const pages = [
   {
     slug: 'world-atlas',
     shortTitle: 'World Law Atlas',
-    title: 'World Law Atlas',
-    description: 'Country-by-country legal starting points for group marriage, cohabitation, property, parenting, migration and care.',
-    heading: 'Love crosses borders. Law does not move as easily.',
-    lead: 'The World Law Atlas separates adult relationship status, property, parentage, immigration, healthcare and reform. No country fits honestly into one simple legal-or-illegal label.',
+    title: 'World Law Atlas: A Global Method',
+    description: 'A global research framework for group marriage, family, self sovereignty, enterprise and the laws of each place.',
+    heading: 'Follow the people, the places and the commitments.',
+    lead: 'A global method for exploring group marriage, family, self sovereignty and enterprise through the laws and protocols of each place.',
     heroAlt: 'Concept artwork of an illuminated world map, civic landscapes and open legal source books.',
-    script: 'assets/atlas.js',
     body: `
     <section class="content-section section-cream">
       <div class="wrap prose-intro">
-        <span class="evidence-label">Documented reality</span>
-        <h2>Six starting points</h2>
-        <p class="large-copy">These first guides use official government, legislation and court sources checked on 29 August 2026. They explain the present landscape and the lawful building blocks people may investigate with local professional advice.</p>
+        <span class="evidence-label proposal-label">Global research design</span>
+        <h2>One family can cross several legal worlds</h2>
+        <p class="large-copy">This is a way to ask better questions about marriage, family, personal autonomy and a group’s shared enterprise wherever its members live or travel. It is a proposed adaptation of Luke Nathan Hayes’s Australian citizen research, not a completed global law database or a verdict on any particular relationship.</p>
+        <div class="link-pair"><a class="button button-primary" href="household-lab.html">Sketch a group in the Household Lab</a><a class="button button-outline" href="research-method.html">How evidence is handled</a></div>
       </div>
-      <div class="wrap atlas-controls">
-        <label for="country-search">Find a country guide</label>
-        <input id="country-search" type="search" placeholder="Search country or legal feature" autocomplete="off" data-country-search>
-        <div class="filter-buttons" data-atlas-filters>
-          <button class="filter-button is-active" type="button" data-atlas-filter="all">All guides</button>
-          <button class="filter-button" type="button" data-atlas-filter="plural-status">Plural status</button>
-          <button class="filter-button" type="button" data-atlas-filter="multi-parent">Multi-parent pathways</button>
-          <button class="filter-button" type="button" data-atlas-filter="contracts">Contract building blocks</button>
-        </div>
+      <div class="wrap compact-grid atlas-lenses">
+        <article><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy"><h3>Marriage and recognition</h3><p>Ask which relationships the place recognises, what it prohibits, and which commitments people can make without treating private agreements as marriage.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy"><h3>Families and care</h3><p>Track parentage, children’s interests, guardianship, succession, housing, healthcare and responsibilities across the whole group.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/aura.webp" alt="" width="48" height="48" loading="lazy"><h3>Self sovereignty</h3><p>Record each adult’s consent, privacy, independent resources, mobility and ability to revise or leave an arrangement.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/compute.webp" alt="" width="48" height="48" loading="lazy"><h3>Group enterprise</h3><p>Distinguish the family from any cooperative, company, trust or other venture: membership, work, ownership, liability, accounting and exit need their own rules.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/atlas.webp" alt="" width="48" height="48" loading="lazy"><h3>Law of the land</h3><p>Follow citizenship, residence, the site of an event or asset, local rules, cultural protocols and any customary authority. A national headline alone cannot answer a local question.</p></article>
       </div>
-      <div class="wrap country-grid" data-country-grid>
-        <a class="country-card" href="countries/australia.html" data-tags="australia oceania contracts multi-parent"><img src="assets/images/hero-country-australia.webp" alt="" loading="lazy" decoding="async"><span>Oceania</span><h3>Australia</h3><p>De facto pathways, state-based parentage and a federal marriage framework.</p><strong>Open guide</strong></a>
-        <a class="country-card" href="countries/new-zealand.html" data-tags="new zealand oceania contracts"><img src="assets/images/hero-country-new-zealand.webp" alt="" loading="lazy" decoding="async"><span>Oceania</span><h3>New Zealand</h3><p>Dyadic adult status with relationship-property and care planning questions.</p><strong>Open guide</strong></a>
-        <a class="country-card" href="countries/canada.html" data-tags="canada north america contracts multi-parent"><img src="assets/images/hero-country-canada.webp" alt="" loading="lazy" decoding="async"><span>North America</span><h3>Canada</h3><p>Federal criminal law, provincial family law and emerging multi-parent decisions.</p><strong>Open guide</strong></a>
-        <a class="country-card" href="countries/united-states.html" data-tags="united states north america contracts multi-parent plural-status"><img src="assets/images/hero-country-united-states.webp" alt="" loading="lazy" decoding="async"><span>North America</span><h3>United States</h3><p>State-by-state variation, local multi-person registries and limited multi-parent routes.</p><strong>Open guide</strong></a>
-        <a class="country-card" href="countries/netherlands.html" data-tags="netherlands europe contracts multi-parent"><img src="assets/images/hero-country-netherlands.webp" alt="" loading="lazy" decoding="async"><span>Europe</span><h3>Netherlands</h3><p>Dyadic status with active 2026 work towards three- and four-parent recognition.</p><strong>Open guide</strong></a>
-        <a class="country-card" href="countries/south-africa.html" data-tags="south africa contracts multi-parent plural-status"><img src="assets/images/hero-country-south-africa.webp" alt="" loading="lazy" decoding="async"><span>Africa</span><h3>South Africa</h3><p>Recognised customary polygyny and unusually flexible child-centred mechanisms.</p><strong>Open guide</strong></a>
-      </div>
-      <p class="wrap no-results" role="status" data-atlas-empty hidden>No current guide matches that search.</p>
     </section>
 
     <section class="content-section section-indigo">
       <div class="wrap section-heading light-heading">
-        <h2>Every guide asks the same questions</h2>
-        <p>Consistency makes country differences visible without pretending that private contracts reproduce marriage.</p>
+        <span class="evidence-label proposal-label">A reusable pathway</span>
+        <h2>From a lived situation to a sourced question</h2>
+        <p>Each fork starts with its own people and places. The original Australian work supplies methods, while the local branch needs its own sources and review.</p>
       </div>
-      <div class="wrap compact-grid">
-        <article><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Adult status</h3><p>Marriage, civil union, customary marriage, cohabitation and offence provisions.</p></article>
-        <article><img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Home and resources</h3><p>Property, inheritance, tax, contracts, pensions and what happens on exit.</p></article>
-        <article><img class="inline-topic-icon" src="assets/images/icons/documents.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Children</h3><p>Parentage, parental responsibility, adoption, guardianship and child-centred orders.</p></article>
-        <article><img class="inline-topic-icon" src="assets/images/icons/atlas.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Movement and care</h3><p>Immigration sponsorship, healthcare authority and end-of-life decisions.</p></article>
-      </div>
+      <ol class="wrap method-list">
+        <li><strong>Map the group and its places</strong><p>List members, citizenships, residences, children, homes, assets, ventures and planned travel. Note whose law or protocol may apply to each event.</p></li>
+        <li><strong>Use a relevance ladder</strong><p>Gather, chomp, sort, plan and act on what matters to those people. This adapts Luke’s 2012–13 Australian personal filing method; it does not make the old documents current law elsewhere.</p></li>
+        <li><strong>Trace authority and time</strong><p>Record a publisher, exact provision or policy, jurisdiction, version or effective date, and the date it was checked. Keep binding law, official guidance, practice, protocol and proposed reform in separate lanes.</p></li>
+        <li><strong>Test the practical instruments</strong><p>Check bills, contracts, property and business documents clause by clause: who pays, who may decide, what renews, and what happens on exit or a move.</p></li>
+        <li><strong>Leave unknowns visible</strong><p>Write the unresolved question, source still needed and person who could review it. Export a brief for a local adviser or a separately chosen research tool; do not turn missing evidence into a universal answer.</p></li>
+      </ol>
     </section>
 
     <section class="content-section section-sand">
-      <div class="wrap source-callout">
-        <p><strong>Important:</strong> the atlas is public legal information, not personal legal advice. Law changes, facts matter, and local language may carry meanings an English summary misses. Every guide shows its checked date, official sources, known gaps and next verification step.</p>
+      <div class="wrap prose-intro">
+        <h2>A record that travels without pretending places are identical</h2>
+        <p class="large-copy">A group might form in one country, share care in another and own a venture in a third. Keep one scenario, then attach a separate evidence record to each place and authority. A local fork can change the questions, language and institutions while preserving links back to the original work.</p>
       </div>
+      <div class="wrap compact-grid">
+        <article><h3>Situation</h3><p>Who is involved, what they want to do, and which person or entity makes each choice?</p></article>
+        <article><h3>Place and authority</h3><p>Where does the event happen, and which state, local, Indigenous, customary or other authority is relevant?</p></article>
+        <article><h3>Evidence</h3><p>What primary source supports the statement, what version was checked, and what remains uncertain?</p></article>
+        <article><h3>Action</h3><p>What conversation, document, professional review or fresh source check comes next?</p></article>
+      </div>
+    </section>
+
+    <section class="content-section section-cream">
+      <div class="wrap prose-intro"><span class="evidence-label">Sources of the method</span><h2>Four Australian-origin systems, one global question</h2><p>Luke originally developed these around his Australian citizen situation and related local work. This page infers a reusable relationship among them; it does not claim the repositories already provide a complete global service.</p></div>
+      <div class="wrap source-repo-grid">
+        <article><h3><a href="https://github.com/auraofintelligence/australian-law-2012-lukes-relevance">Australian Law 2012: Luke’s Relevance</a></h3><p>The personal circumstance-first Relevance Ladder and local brief become the entry point for each person’s question.</p><a href="https://github.com/auraofintelligence/australian-law-2012-lukes-relevance/blob/main/pages/the-method.html">Read the method</a></article>
+        <article><h3><a href="https://github.com/auraofintelligence/australian-legal-engine">Australian Legal Engine</a></h3><p>A citation-first way to index law already in hand, with provision addresses, source authority and currency. A global fork would need local jurisdiction profiles and source review.</p><a href="https://github.com/auraofintelligence/australian-legal-engine/blob/main/docs/DESIGN.md">Read the design</a></article>
+        <article><h3><a href="https://github.com/auraofintelligence/household-bill-check">Household Bill Check</a></h3><p>Private comparison of household bills and terms adds the money, contracts, renewal and exit layer to family and enterprise plans.</p><a href="https://github.com/auraofintelligence/household-bill-check/blob/main/docs/how-it-works.md">Read how it works</a></article>
+        <article><h3><a href="https://github.com/auraofintelligence/world-travel-patterns">World Travel Patterns</a></h3><p>A nested map of countries, regions and local places suggests where legal, family and cultural questions should be rechecked while travelling.</p><a href="https://github.com/auraofintelligence/world-travel-patterns/blob/main/patterns/README.md">Read the pattern model</a></article>
+      </div>
+      <div class="wrap source-callout"><p><strong>Use and adaptation:</strong> the linked work is available for attributed non-commercial personal and community adaptation under its stated licences. Commercial, corporate, institutional, government, startup, agency or employer use requires a separate written agreement with Luke Nathan Hayes. Review the <a href="LICENSE">site licence</a> and each original repository’s licence before forking.</p></div>
     </section>`
   },
   {
     slug: 'household-lab',
     shortTitle: 'Household Lab',
-    title: 'Private Household Lab',
-    description: 'A private browser-based tool for sketching a group-marriage household, care system, decision process and next conversation.',
-    heading: 'Design the household before the household designs you.',
-    lead: 'Use this private lab to turn a large idea into a first shared sketch. Your answers remain in this browser unless you choose to copy them.',
+    title: 'Global Household Lab',
+    description: 'A private group planning brief for marriage, family, sovereignty, shared enterprise, household terms and local law questions.',
+    heading: 'Plan a shared life without losing the people in it.',
+    lead: 'Sketch the group’s chosen commitments, business structure, household terms and place-specific questions. Your answers remain in this browser unless you choose to copy them.',
     heroAlt: 'Concept artwork of adults around a table with notebooks, choice cards and a warm model of a shared home.',
     script: 'assets/lab.js',
     body: `
     <section class="content-section section-cream">
-      <div class="wrap lab-layout">
-        <form class="household-form" data-household-form>
-          <div class="lab-progress" role="progressbar" aria-label="Household sketch progress" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1"><span data-lab-progress>1 of 4</span><div><i data-lab-bar></i></div></div>
-
-          <fieldset class="lab-step is-active" data-lab-step="1">
-            <legend>What is the family trying to make possible?</legend>
-            <p>Choose the purposes that matter most right now.</p>
-            <div class="choice-grid">
-              <label><input type="checkbox" name="purpose" value="A loving long-term partnership"> A loving long-term partnership</label>
-              <label><input type="checkbox" name="purpose" value="Raising children together"> Raising children together</label>
-              <label><input type="checkbox" name="purpose" value="A resilient shared home"> A resilient shared home</label>
-              <label><input type="checkbox" name="purpose" value="Cross-cultural family life"> Cross-cultural family life</label>
-              <label><input type="checkbox" name="purpose" value="Shared care across generations"> Shared care across generations</label>
-              <label><input type="checkbox" name="purpose" value="Creative and spiritual growth"> Creative and spiritual growth</label>
-            </div>
-          </fieldset>
-
-          <fieldset class="lab-step" data-lab-step="2">
-            <legend>What shape are you exploring?</legend>
-            <label class="field-label">Number of adult partners <input type="number" name="adults" min="3" max="20" value="4"></label>
-            <label class="field-label">Homes
-              <select name="homes"><option>One shared home</option><option>Two connected homes</option><option>A local network of homes</option><option>Homes across countries</option><option>Still open</option></select>
-            </label>
-            <label class="field-label">Children and future children
-              <select name="children"><option>Central to the family vision</option><option>Part of the conversation</option><option>Not currently planned</option><option>Already part of the household</option><option>Different adults hold different hopes</option></select>
-            </label>
-          </fieldset>
-
-          <fieldset class="lab-step" data-lab-step="3">
-            <legend>Which practical layers need the first conversation?</legend>
-            <div class="choice-grid">
-              <label><input type="checkbox" name="layers" value="Time, work and rest"> Time, work and rest</label>
-              <label><input type="checkbox" name="layers" value="Money, property and debt"> Money, property and debt</label>
-              <label><input type="checkbox" name="layers" value="Parenting and care"> Parenting and care</label>
-              <label><input type="checkbox" name="layers" value="Love, intimacy and privacy"> Love, intimacy and privacy</label>
-              <label><input type="checkbox" name="layers" value="Decisions and conflict repair"> Decisions and conflict repair</label>
-              <label><input type="checkbox" name="layers" value="Law, migration and documents"> Law, migration and documents</label>
-            </div>
-          </fieldset>
-
-          <fieldset class="lab-step" data-lab-step="4">
-            <legend>Write the next honest conversation</legend>
-            <label class="field-label">A sentence you want the group to begin with
-              <textarea name="conversation" rows="5" placeholder="What would become easier if we designed this as a family rather than a set of separate couples?"></textarea>
-            </label>
-            <label class="field-label">A principle nobody should lose
-              <input type="text" name="principle" placeholder="For example: private time remains real">
-            </label>
-          </fieldset>
-
-          <div class="lab-actions">
-            <button class="button button-outline" type="button" data-lab-back disabled>Back</button>
-            <button class="button button-primary" type="button" data-lab-next>Next question</button>
-          </div>
-        </form>
-
-        <aside class="lab-summary">
-          <span class="evidence-label proposal-label">Private local sketch</span>
-          <h2 tabindex="-1" data-lab-summary-heading>Your household starting point</h2>
-          <div data-lab-output><p>Your choices will form a clear conversation brief here.</p></div>
-          <button class="button button-light" type="button" data-lab-copy hidden>Copy as Markdown</button>
-          <p class="privacy-note">Nothing is sent anywhere. Refreshing the page clears the sketch.</p>
-        </aside>
+      <div class="wrap prose-intro">
+        <span class="evidence-label proposal-label">A private group planning sketch</span>
+        <h2>Give the group a plan without taking anyone’s agency</h2>
+        <p class="large-copy">Start with the people and their choices, then separate the marriage vision, family commitments, personal sovereignty, shared business and legal questions. This global adaptation draws on Luke’s Australian household, legal and travel work. It does not calculate legal status, eligibility or a bill saving.</p>
+      </div>
+      <div class="wrap compact-grid">
+        <article><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy"><h3>Relationships</h3><p>What marriage or recognition means to the group, and what each adult chooses independently.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy"><h3>Family and home</h3><p>Children, care, housing, time, costs, privacy and plans when circumstances change.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/compute.webp" alt="" width="48" height="48" loading="lazy"><h3>Business structure</h3><p>Keep work, ownership, funding, liabilities and membership distinct from love or parenting.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/atlas.webp" alt="" width="48" height="48" loading="lazy"><h3>Local checks</h3><p>Find the right place, authority, source and version before acting on a legal or travel assumption.</p></article>
       </div>
     </section>
 
     <section class="content-section section-sand">
-      <div class="wrap inline-scene-band">
-        <figure class="editorial-photo inline-scene">
-          <img src="assets/images/shared-life.webp" alt="Two women look over an open map at a table." loading="lazy" decoding="async">
-          <figcaption>AI-generated illustration of a planning conversation.</figcaption>
-        </figure>
+      <div class="wrap prose-intro"><h2>Make a first brief together</h2><p>All entries stay in this browser tab. The Markdown copy action is yours to choose; refreshing clears the sketch. Use broad descriptions here and leave sensitive facts for a secure conversation.</p></div>
+      <div class="wrap lab-layout">
+        <form class="household-form" data-household-form>
+          <div class="lab-progress" role="progressbar" aria-label="Household sketch progress" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1"><span data-lab-progress>1 of 5</span><div><i data-lab-bar></i></div></div>
+          <fieldset class="lab-step is-active" data-lab-step="1">
+            <legend>What are you trying to make possible?</legend>
+            <p>Choose as many purposes as fit. The group does not have a preset size or shape.</p>
+            <div class="choice-grid">
+              <label><input type="checkbox" name="purpose" value="Marriage or public recognition"> Marriage or public recognition</label>
+              <label><input type="checkbox" name="purpose" value="Raising children and family care"> Raising children and family care</label>
+              <label><input type="checkbox" name="purpose" value="Homes and mutual support"> Homes and mutual support</label>
+              <label><input type="checkbox" name="purpose" value="A group business or cooperative"> A group business or cooperative</label>
+              <label><input type="checkbox" name="purpose" value="Cross-border life and travel"> Cross-border life and travel</label>
+              <label><input type="checkbox" name="purpose" value="Individual freedom and shared joy"> Individual freedom and shared joy</label>
+            </div>
+          </fieldset>
+          <fieldset class="lab-step" data-lab-step="2">
+            <legend>Who and where are part of this sketch?</legend>
+            <label class="field-label">Adults involved or being considered <input type="number" name="adults" min="3" step="1" placeholder="No preset maximum"></label>
+            <label class="field-label">Home pattern <select name="homes"><option>Still open</option><option>One shared home</option><option>Two connected homes</option><option>A local network of homes</option><option>Homes across countries</option></select></label>
+            <label class="field-label">Children and future children <select name="children"><option>Part of the conversation</option><option>Central to the family vision</option><option>Not currently planned</option><option>Already part of the group</option><option>Different adults hold different hopes</option></select></label>
+            <label class="field-label">Places to check (country, region, local or customary authority) <input type="text" name="places" placeholder="For example: home, destination, place of a shared asset"></label>
+          </fieldset>
+          <fieldset class="lab-step" data-lab-step="3">
+            <legend>Which commitments need separate decisions?</legend>
+            <div class="choice-grid">
+              <label><input type="checkbox" name="layers" value="Marriage, recognition and consent"> Marriage, recognition and consent</label>
+              <label><input type="checkbox" name="layers" value="Parenting, guardianship and care"> Parenting, guardianship and care</label>
+              <label><input type="checkbox" name="layers" value="Time, rest, intimacy and privacy"> Time, rest, intimacy and privacy</label>
+              <label><input type="checkbox" name="layers" value="Bills, property, debt and exit"> Bills, property, debt and exit</label>
+              <label><input type="checkbox" name="layers" value="Group enterprise, ownership and work"> Group enterprise, ownership and work</label>
+              <label><input type="checkbox" name="layers" value="Travel, residence and law of the land"> Travel, residence and law of the land</label>
+            </div>
+          </fieldset>
+          <fieldset class="lab-step" data-lab-step="4">
+            <legend>What needs evidence before a decision?</legend>
+            <label class="field-label">First bill, agreement or business document to review <input type="text" name="document" placeholder="A title only; keep account details out"></label>
+            <label class="field-label">A term, renewal, fee or exit condition to check <input type="text" name="term" placeholder="What needs a closer read?"></label>
+            <label class="field-label">A local legal or cultural question <textarea name="legalQuestion" rows="3" placeholder="What source and authority could answer it?"></textarea></label>
+            <label class="field-label">Source to check and date, if known <input type="text" name="source" placeholder="Unknown is a valid starting point"></label>
+          </fieldset>
+          <fieldset class="lab-step" data-lab-step="5">
+            <legend>Write the next honest conversation</legend>
+            <label class="field-label">An opening sentence <textarea name="conversation" rows="4" placeholder="What would we each need to know before making a shared commitment?"></textarea></label>
+            <label class="field-label">A principle nobody should lose <input type="text" name="principle" placeholder="For example: each person can keep independent resources"></label>
+          </fieldset>
+          <div class="lab-actions"><button class="button button-outline" type="button" data-lab-back disabled>Back</button><button class="button button-primary" type="button" data-lab-next>Next question</button></div>
+        </form>
+        <aside class="lab-summary">
+          <span class="evidence-label proposal-label">Private local sketch</span>
+          <h2 tabindex="-1" data-lab-summary-heading>Your group starting point</h2>
+          <div data-lab-output><p>Your choices will form a conversation and research brief here.</p></div>
+          <button class="button button-light" type="button" data-lab-copy hidden>Copy as Markdown</button>
+          <p class="privacy-note">Nothing is sent from this form. Refreshing the page clears the sketch.</p>
+        </aside>
       </div>
-      <div class="wrap prose-intro">
-        <h2>A sketch is an invitation to think together</h2>
-        <p class="large-copy">It is not a test, a matching score or an authority over anyone's feelings. The adults involved remain the source of their own choices, and children remain people whose interests deserve direct attention.</p>
+    </section>
+
+    <section class="content-section section-cream">
+      <div class="wrap prose-intro"><h2>Move from a sketch to a checked plan</h2><p class="large-copy">Use the copied brief to review the real documents with the people involved. Compare terms and dates in <a href="https://github.com/auraofintelligence/household-bill-check">Household Bill Check</a>; take each place-specific question to the <a href="world-atlas.html">global Atlas method</a>; use <a href="https://github.com/auraofintelligence/australian-legal-engine">Australian Legal Engine</a> only with sources you have selected and checked. This page does not send the brief to any service.</p></div>
+      <div class="wrap source-repo-grid">
+        <article><h3><a href="https://github.com/auraofintelligence/australian-law-2012-lukes-relevance">Australian Law 2012: Luke’s Relevance</a></h3><p>Start with whose situation the law is relevant to, then sort a private brief before seeking a source.</p></article>
+        <article><h3><a href="https://github.com/auraofintelligence/household-bill-check">Household Bill Check</a></h3><p>Track costs, clauses, renewals and cancellation in the actual agreements. The Minjerribah mutuals experiment is a local example, not a global default.</p></article>
+        <article><h3><a href="https://github.com/auraofintelligence/world-travel-patterns">World Travel Patterns</a></h3><p>Place each move and family question within its country, region and local context, leaving unknowns visible.</p></article>
+        <article><h3><a href="https://github.com/auraofintelligence/australian-legal-engine">Australian Legal Engine</a></h3><p>Link a later research brief to exact sources and versions. It does not fetch all current laws automatically.</p></article>
       </div>
+      <div class="wrap source-callout"><p><strong>From Luke’s Australian work:</strong> these original systems can be forked and customised for a local non-commercial setting with attribution under their stated licences. Commercial, corporate, institutional, government, startup, agency or employer use requires a separate written agreement with Luke Nathan Hayes. Check the <a href="LICENSE">site licence</a> and the linked repositories’ licences.</p></div>
     </section>`
   },
   {
@@ -713,6 +725,7 @@ const readingOrder = [
   ['ai-and-sovereignty.html', "AI and self-sovereignty"],
   ['possible-futures.html', "Possible futures"],
   ['research-method.html', "Research method"],
+  ['world-atlas.html', "World Law Atlas"],
   ['household-lab.html', "Household Lab"],
   ['music.html', "Music"],
   ['documents.html', "Document library"],
@@ -729,6 +742,7 @@ const primaryLinks = [
   ['ai-and-sovereignty.html', "AI and self-sovereignty"],
   ['possible-futures.html', "Possible futures"],
   ['research-method.html', "Research method"],
+  ['world-atlas.html', "World Law Atlas"],
   ['household-lab.html', "Household Lab"],
   ['music.html', "Music"],
   ['documents.html', "Documents"],
@@ -753,7 +767,8 @@ const footerGroups = [
     ['possible-futures.html', 'Possible futures'],
     ['un-of-love.html', 'United Nations of Love'],
     ['gajra-earth.html', 'GAJRA Earth'],
-    ['research-method.html', 'Research method']
+    ['research-method.html', 'Research method'],
+    ['world-atlas.html', 'World Law Atlas']
   ]],
   ['Sources', [
     documents,
@@ -786,7 +801,7 @@ ${links}
 function renderFooter(route, rootPath) {
   const index = readingOrder.findIndex(([href]) => href === route);
   const previous = readingOrder[index - 1];
-  const next = readingOrder[index + 1];
+  const next = index < 0 ? undefined : readingOrder[index + 1];
   const sectionLinks = footerGroups.map(([heading, links]) => `      <div>
         <h2>${escapeXml(heading)}</h2>
 ${links.map(([href, label]) => `        <a href="${href.startsWith('https:') ? href : rootPath + href}">${escapeXml(label)}</a>`).join('\n')}
@@ -823,7 +838,6 @@ function renderPage(page) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#151532">
-  ${page.slug === 'world-atlas' ? '<meta name="robots" content="noindex, follow">' : ''}
   <meta name="description" content="${page.description}">
   <link rel="canonical" href="https://globalgroupmarriages.com/${page.slug}.html">
   <meta property="og:title" content="${page.title} | Global Group Marriages">
@@ -840,7 +854,7 @@ function renderPage(page) {
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/styles.css?v=${assetVersion}">
-  ${page.script ? `<script src="${page.script}?v=20261122" defer></script>` : ''}
+  ${page.script ? `<script src="${page.script}?v=${assetVersion}" defer></script>` : ''}
   <script src="assets/site.js?v=${assetVersion}" defer></script>
 </head>
 <body class="page-${page.slug}">

@@ -678,3 +678,12 @@ main [id] { scroll-margin-top: 6rem; }
 .song-context { margin-top: 1.6rem; padding: 1.1rem 1.3rem; border-inline-start: 4px solid var(--coral); background: rgba(255,255,255,0.52); }
 .song-context p { margin: 0; }
 .song-context a { font-weight: 750; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+
+/* Global research and household source system cards. */
+.atlas-lenses { margin-block-start: clamp(2rem, 4vw, 4rem); }
+.source-repo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-block: clamp(1.5rem, 3vw, 3rem); }
+.source-repo-grid article { min-width: 0; padding: clamp(1.4rem, 3vw, 2.3rem); border: 1px solid rgba(117,75,135,0.2); border-radius: 0.5rem 1.5rem 0.5rem 0.5rem; background: #fffdf8; box-shadow: 0 12px 28px rgba(21,21,50,0.08); overflow-wrap: anywhere; }
+.source-repo-grid h3 { margin-block: 0 0.7rem; }
+.source-repo-grid p { margin-block: 0 0.8rem; }
+.source-repo-grid a { text-underline-offset: 0.2em; }
+@media (max-width: 720px) { .source-repo-grid { grid-template-columns: 1fr; } }

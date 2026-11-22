@@ -125,7 +125,10 @@ for (const file of htmlFiles) {
 
   const journeys = [...html.matchAll(/<nav\b[^>]*\bclass="page-journey(?:\s[^"]*)?"[^>]*>[\s\S]*?<\/nav>/g)];
   if (!sitemapPages.has(relative)) {
-    if (journeys.length) errors.push(`${relative}: footer navigation page is missing from the sitemap`);
+    if (relative.startsWith('countries/') && requiredPages.includes(relative)) {
+      if (!/<meta name="robots" content="noindex, follow">/.test(html)) errors.push(`${relative}: archived guide needs noindex`);
+      if (journeys.length !== 1 || !journeys[0][0].includes('Return to</span><strong>Home')) errors.push(`${relative}: archived guide should return to Home`);
+    } else if (journeys.length) errors.push(`${relative}: footer navigation page is missing from the sitemap`);
     continue;
   }
   const footer = html.match(/<footer\b[^>]*>[\s\S]*?<\/footer>/)?.[0];

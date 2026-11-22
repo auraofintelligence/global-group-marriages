@@ -22,8 +22,8 @@ Global Group Marriages is a framework for independent groups to explore love, fa
 - research on why family formation feels harder for many people
 - a practical global group-marriage framework
 - explorable relationship constellations
-- a private, browser-only household design lab
-- a source-led World Law Atlas with initial country guides
+- a private, browser-only global group planning and research brief
+- a global World Law Atlas method for marriage, families, self sovereignty, group enterprise and law of the land
 - stories and possible futures
 - the United Nations of Love proposal for contributing to world peace through Joyful Responsible Abundance
 - a dedicated connection to the two GAJRA Earth public worlds
@@ -91,7 +91,7 @@ npm run build
 npm run check
 ```
 
-`tools/build-site.mjs` renders the research pages, prospectus, AI section, country guides and sitemap. The homepage, document library and references page are maintained directly.
+`tools/build-site.mjs` renders the research pages, prospectus, AI section, global Atlas method, Household Lab, archived country drafts and sitemap. The homepage, document library and references page are maintained directly. The six country drafts stay out of navigation and the sitemap pending fresh review.
 
 ## Public site
 
@@ -100,3 +100,14 @@ npm run check
 ## Licence
 
 This project uses the [Strange But True Public Source Licence](LICENSE).
+
+## Global Atlas and Household Lab source systems
+
+These pages adapt relationships between four Australian-origin projects by Luke Nathan Hayes. They do not constitute a complete global legal database or personalised legal advice.
+
+- [Australian Law 2012: Luke's Relevance](https://github.com/auraofintelligence/australian-law-2012-lukes-relevance)
+- [Australian Legal Engine](https://github.com/auraofintelligence/australian-legal-engine)
+- [Household Bill Check](https://github.com/auraofintelligence/household-bill-check)
+- [World Travel Patterns](https://github.com/auraofintelligence/world-travel-patterns)
+
+The original repositories permit attributed non-commercial adaptation under their stated licences. Commercial use requires a separate written agreement with Luke.
