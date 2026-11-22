@@ -1,8 +1,6 @@
 # Global Group Marriages
 
-Global Group Marriages is a highly visual, multi-page public exploration of larger families, shared love, parenting, care, resources and self-sovereignty.
-
-The site is openly pro-group-marriage. It presents group marriage as an additional framework people may consider alongside other relationship and family forms.
+Global Group Marriages is Luke Nathan Hayes's invitation to build businesses and explore a shared life across countries. The site sets out the November 2026 prospectus and the research behind it, including family arrangements, law, shared enterprises and practical control of AI.
 
 <!-- github-organisation:start -->
 
@@ -19,7 +17,10 @@ The site is openly pro-group-marriage. It presents group marriage as an addition
 
 ## What is here
 
-- a clear account of why family formation feels harder for many people
+- the November 2026 business prospectus and its discussion of shared work, ownership and care
+- the AI buildout, possible superintelligence and ways people could keep control of their data and decisions
+- a downloadable document library, with references and image credits
+- research on why family formation feels harder for many people
 - a practical global group-marriage framework
 - explorable relationship constellations
 - a private, browser-only household design lab
@@ -28,12 +29,16 @@ The site is openly pro-group-marriage. It presents group marriage as an addition
 - a dedicated U.N. of Love thought experiment
 - a dedicated connection to the two GAJRA Earth public worlds
 - a visible research method separating present evidence, proposed pathways and imagination
-- a unique generated hero image for every page
-- a royal, motion-led interface built with HTML, CSS and vanilla JavaScript, with no SVG assets
+- AI-generated editorial images and an icon sheet, plus the earlier concept artwork
+- a static site built with HTML, CSS and vanilla JavaScript
 
 ## Explore the current public v2 site
 
 - [Home](https://auraofintelligence.github.io/global-group-marriages/)
+- [Business Prospectus](https://auraofintelligence.github.io/global-group-marriages/prospectus.html)
+- [AI and Self-sovereignty](https://auraofintelligence.github.io/global-group-marriages/ai-and-sovereignty.html)
+- [Document Library](https://auraofintelligence.github.io/global-group-marriages/documents.html)
+- [References and Image Credits](https://auraofintelligence.github.io/global-group-marriages/references.html)
 - [Why now](https://auraofintelligence.github.io/global-group-marriages/why-now.html)
 - [Framework](https://auraofintelligence.github.io/global-group-marriages/framework.html)
 - [Constellations](https://auraofintelligence.github.io/global-group-marriages/constellations.html)
@@ -86,6 +91,8 @@ The site has no external package dependencies.
 npm run build
 npm run check
 ```
+
+`tools/build-site.mjs` renders the research pages, prospectus, AI section, country guides and sitemap. The homepage, document library and references page are maintained directly.
 
 ## Public site
 

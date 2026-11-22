@@ -2,19 +2,21 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { countries } from '../content/countries.mjs';
+import { prospectusPages } from '../content/prospectus.mjs';
 
 const toolDirectory = path.dirname(fileURLToPath(import.meta.url));
 const rootDirectory = path.resolve(toolDirectory, '..');
 const cleanGeneratedText = (text) => text.replace(/[ \t]+$/gm, '');
 
 const pages = [
+  ...prospectusPages,
   {
     slug: 'why-now',
     shortTitle: 'Why now',
     title: 'Why family formation feels harder',
     description: 'Current evidence on fertility intentions, cost, housing, work, uncertainty and the search for suitable partners.',
     heading: 'People want families. The systems around them are getting harder to carry.',
-    lead: 'The question is not whether family remains possible. It does. The question is whether one inherited structure should carry every hope for love, children, care, housing and security.',
+    lead: 'Love, parenting, care, housing and financial security place many demands on a household. What could families do differently if more adults chose to share the work?',
     heroAlt: 'Concept artwork of adults considering family life beside a city, home and changing climate at dawn.',
     body: `
     <section class="content-section section-cream">
@@ -48,13 +50,14 @@ const pages = [
     <section class="content-section section-sand">
       <div class="wrap prose-intro">
         <span class="evidence-label proposal-label">Proposed pathway</span>
-        <h2>Change the load-bearing structure</h2>
+        <h2>Share the practical work of family life</h2>
         <p class="large-copy">A larger marriage does not remove cost, grief, conflict or uncertainty. It changes how many adults meet them together. More incomes, more carers, more skills and more enduring relationships create a different starting equation.</p>
       </div>
       <div class="wrap statement-panel">
         <p>Global group marriage is an additional framework for people who see strength, love and possibility in a larger family constellation.</p>
         <a class="button button-primary" href="framework.html">See how the framework works</a>
       </div>
+      <div class="wrap link-pair"><a class="button button-outline" href="prospectus.html">Read Luke’s invitation</a></div>
     </section>`
   },
   {
@@ -62,8 +65,8 @@ const pages = [
     shortTitle: 'The framework',
     title: 'How global group marriage works',
     description: 'A practical pro-group-marriage framework for sharing love, parenting, money, time, care and risk.',
-    heading: 'Add adults, not pressure.',
-    lead: 'Global group marriage begins with a simple possibility: three or more adults may choose to understand their relationships as one larger marriage and deliberately build a family around it.',
+    heading: 'How adults could build a larger family together',
+    lead: 'Three or more adults may choose to understand their relationships as one larger marriage and deliberately build a family around it.',
     heroAlt: 'Concept artwork of several adults weaving colourful fabric together around a household table while children play nearby.',
     body: `
     <section class="content-section section-cream">
@@ -74,7 +77,7 @@ const pages = [
       </div>
       <div class="wrap principle-grid">
         <article class="idea-card"><span>01</span><h3>Love is not a ration</h3><p>Affection and intimacy grow through attention, honesty and practice. A larger family does not require every bond to look identical.</p></article>
-        <article class="idea-card"><span>02</span><h3>Care has redundancy</h3><p>Illness, newborn nights, paid work, school runs and elder care no longer fall across one narrow bridge.</p></article>
+        <article class="idea-card"><span>02</span><h3>More people can share care</h3><p>Illness, newborn nights, paid work, school runs and elder care no longer fall across one narrow bridge.</p></article>
         <article class="idea-card"><span>03</span><h3>Children gain a village at home</h3><p>More committed adults may bring continuity, varied skills, wider culture and more available attention to daily family life.</p></article>
         <article class="idea-card"><span>04</span><h3>Adults remain self-sovereign</h3><p>The group is an agreement among whole people. Individual voice, privacy, property, friendships and freedom of conscience remain real.</p></article>
         <article class="idea-card"><span>05</span><h3>Difference becomes useful</h3><p>One person may love cooking, another numbers, another teaching, another travel. Complementarity becomes household capacity.</p></article>
@@ -102,7 +105,10 @@ const pages = [
         <div><h2>One framework. Many constellations.</h2></div>
         <div class="lead-copy">
           <p>Group marriage does not prescribe one number of people, one gender balance, one sexuality, one home or one division of roles. The meaningful question is whether the relationships form a capable, conscious family.</p>
-          <a class="button button-primary" href="constellations.html">Explore relationship constellations</a>
+          <div class="button-row">
+            <a class="button button-primary" href="constellations.html">Explore relationship constellations</a>
+            <a class="button button-outline" href="prospectus.html#shared-life">Read about sharing a life</a>
+          </div>
         </div>
       </div>
     </section>`
@@ -342,15 +348,15 @@ const pages = [
     <section class="content-section section-cream">
       <div class="wrap prose-intro">
         <h2>Sovereignty grows through relationship</h2>
-        <p class="large-copy">Self-sovereignty is not isolation. It is the capacity to meet others as a person with a voice, a body, a history, private interior space and real influence over the life being built together.</p>
+        <p class="large-copy">Self-sovereignty means keeping your voice, privacy and ability to make choices while you build a life with others.</p>
       </div>
       <div class="wrap principle-grid">
         <article class="idea-card"><span>01</span><h3>Individual voice</h3><p>Each adult speaks for their own desires, boundaries, health, friendships, work and conscience.</p></article>
         <article class="idea-card"><span>02</span><h3>Relational agreements</h3><p>Every bond develops its own language for time, intimacy, disclosure, care and change.</p></article>
         <article class="idea-card"><span>03</span><h3>Household voice</h3><p>Shared decisions include the people who carry their effects, with clear ways to slow down and think again.</p></article>
-        <article class="idea-card"><span>04</span><h3>Children as people</h3><p>Children are not relationship glue or future labour. Their safety, attachment, development and emerging voice shape family decisions.</p></article>
+        <article class="idea-card"><span>04</span><h3>Children’s welfare</h3><p>Family decisions give weight to children’s safety, trusted relationships, development and growing ability to express what they want.</p></article>
         <article class="idea-card"><span>05</span><h3>Real privacy</h3><p>A loving family has shared life and private rooms, conversations, friendships, devices, thoughts and moments of solitude.</p></article>
-        <article class="idea-card"><span>06</span><h3>Living consent</h3><p>Consent lives in words, actions, context and the continuing freedom to choose. It is a relationship practice, not a one-time form.</p></article>
+        <article class="idea-card"><span>06</span><h3>Ongoing consent</h3><p>Consent depends on the situation and the continuing freedom to change your mind. People can keep discussing what they want as their lives change.</p></article>
       </div>
     </section>
 
@@ -358,8 +364,8 @@ const pages = [
       <div class="wrap split-intro">
         <div><h2>Make power visible enough to work with</h2></div>
         <div class="lead-copy">
-          <p>Money, housing, age, health, confidence, migration status, fertility, language and social standing affect how free a choice feels. Intelligent families name those differences and design counterweights.</p>
-          <p>Independent money, private support networks, written property interests, separate legal advice and realistic exit plans are not signs of weak love. They make chosen interdependence more truthful.</p>
+          <p>Money, housing, age, health, migration status, fertility, language and social standing affect how freely someone can choose. A household can acknowledge those differences and work out how everyone gets a say.</p>
+          <p>Independent money, private support networks, written property interests, separate legal advice and realistic exit plans help people choose when and how to rely on one another.</p>
         </div>
       </div>
       <div class="wrap care-rhythm">
@@ -372,10 +378,14 @@ const pages = [
 
     <section class="content-section section-sand">
       <div class="wrap split-intro">
-        <div><h2>Change does not erase the family that was real</h2></div>
+        <div><h2>Making room for relationships to change</h2></div>
         <div class="lead-copy">
-          <p>A relationship may change form while parenting, friendship, housing, property and care continue. Designing transitions early gives the family more graceful options later.</p>
-          <a class="text-link" href="https://auraofintelligence.github.io/grey-area-commons/">Explore the adult-only Grey Area Commons reflection tools</a>
+          <p>A relationship may change while parenting, friendship, housing, property and care continue. Talking through those possibilities early gives people more options if they need to change their arrangements.</p>
+          <p>Portable records and clear data permissions can help people carry their knowledge, choices and agreed responsibilities through a change in household, device or provider.</p>
+          <div class="editorial-links">
+            <a href="ai-and-sovereignty.html#aura">How an Aura could support personal control</a>
+            <a href="https://auraofintelligence.github.io/grey-area-commons/">Adult reflection tools at Grey Area Commons</a>
+          </div>
         </div>
       </div>
     </section>`
@@ -386,7 +396,7 @@ const pages = [
     title: 'Stories and possible futures',
     description: 'Human-scale stories that make group marriage tangible through ordinary homes, children, travel, conflict, care and celebration.',
     heading: 'The future becomes thinkable when somebody lives through a Tuesday.',
-    lead: 'These scenes are imagination, not prediction. They bring the proposal down from institutions and diagrams into breakfasts, school runs, bedrooms, budgets and difficult conversations.',
+    lead: 'These imagined scenes explore what shared life could feel like through breakfasts, school runs, budgets and difficult conversations.',
     heroAlt: 'Concept artwork showing one multi-adult family sharing care, work and everyday life across the connected rooms of a warm home.',
     body: `
     <section class="content-section section-cream">
@@ -421,12 +431,25 @@ const pages = [
 
     <section class="content-section section-indigo">
       <div class="wrap split-intro">
-        <div><h2>Tell the life, not just the premise</h2></div>
+        <div><h2>Writing about the whole of a life</h2></div>
         <div class="lead-copy">
           <p>Useful stories include delight, boredom, attraction, jealousy, competence, illness, money, travel, culture, children, ageing and repair. They let readers test the idea against lived texture.</p>
           <a class="text-link aqua-link" href="https://auraofintelligence.github.io/australian-sire-story-forge/">Visit the Australian Sire Story Forge</a>
         </div>
       </div>
+    </section>
+
+    <section class="content-section section-cream">
+      <div class="wrap section-heading">
+        <h2>Looking across generations and beyond Earth</h2>
+        <p>These are Luke’s long-range proposals and interpretations from the prospectus. They carry the same question about continuity from a household to a community and further.</p>
+      </div>
+      <div class="wrap compact-grid">
+        <article><h3>Keep people and knowledge safe</h3><p>The Silica Citadel plan explores how a settlement could keep food, water, energy, repairs, manufacturing and shared knowledge available through prolonged disruption. Grain by Grain begins at a local scale with a ferry terminal, workshops and energy.</p><p><a class="text-link" href="https://auraofintelligence.github.io/grain-by-grain/">Explore Grain by Grain</a></p></article>
+        <article><h3>Learn to work off Earth</h3><p>Virtual Solar Swarm lets people explore how a fleet of spacecraft could observe the Sun and send information home. Luke’s wider proposal considers off-world habitats and ways to sustain life and work across generations.</p><p><a class="text-link" href="https://auraofintelligence.github.io/virtual-solar-swarm/">Explore Virtual Solar Swarm</a></p></article>
+        <article><h3>Imagine contact across worlds</h3><p>Luke believes there are communities and other intelligences beyond Earth, and assigns a high probability to contact by November 2031. This is his personal interpretation and forecast. He explores what lasting relationships, family and cooperation could mean if contact took place.</p><p><a class="text-link" href="https://science.nasa.gov/uap/faqs/">NASA’s UAP research and evidence FAQ</a></p></article>
+      </div>
+      <div class="wrap link-pair"><a class="button button-outline" href="documents.html">Read the full prospectus</a></div>
     </section>
 
     <section class="content-section section-sand">
@@ -491,6 +514,10 @@ const pages = [
     <section class="content-section section-cream">
       <div class="wrap source-callout">
         <p><strong>Country-law checkpoint:</strong> initial guides were checked against official sources on 29 August 2026. They are public legal information, not advice for a particular person or household.</p>
+      </div>
+      <div class="wrap link-pair">
+        <a class="button button-outline" href="references.html">Explore the references and image credits</a>
+        <a class="button button-outline" href="documents.html">Browse the document library</a>
       </div>
     </section>`
   },
@@ -592,6 +619,7 @@ const pages = [
         <div class="lead-copy">
           <p>A gajra is made through relationship. Each flower remains itself while the thread creates a larger form. Global group marriage brings that image into the household: many adults, many bonds, one consciously tended family.</p>
           <p>The U.N. of Love stretches the same principle across culture and future generations. GAJRA Earth carries it out to the planetary scale.</p>
+          <p>The <a href="prospectus.html#creative-work">prospectus connects creative work with the proposed 2035 gathering</a>, three days of music, art and votes on values led by communities that choose to participate.</p>
         </div>
       </div>
       <div class="wrap gajra-link-grid">
@@ -661,6 +689,7 @@ function escapeXml(value) {
 }
 
 function renderPage(page, index) {
+  const heroImage = page.heroImage ?? `hero-${page.slug}.webp`;
   const previous = index > 0 ? pages[index - 1] : null;
   const next = index < pages.length - 1 ? pages[index + 1] : null;
   const previousLink = previous
@@ -682,31 +711,31 @@ function renderPage(page, index) {
   <meta property="og:description" content="${page.description}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://auraofintelligence.github.io/global-group-marriages/${page.slug}.html">
-  <meta property="og:image" content="https://auraofintelligence.github.io/global-group-marriages/assets/images/hero-${page.slug}.webp">
+  <meta property="og:image" content="https://auraofintelligence.github.io/global-group-marriages/assets/images/${heroImage}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${page.title} | Global Group Marriages">
   <meta name="twitter:description" content="${page.description}">
-  <meta name="twitter:image" content="https://auraofintelligence.github.io/global-group-marriages/assets/images/hero-${page.slug}.webp">
+  <meta name="twitter:image" content="https://auraofintelligence.github.io/global-group-marriages/assets/images/${heroImage}">
   <title>${page.title} | Global Group Marriages</title>
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="assets/styles.css?v=20260829-royal">
-  ${page.script ? `<script src="${page.script}?v=20260829-royal" defer></script>` : ''}
-  <script src="assets/site.js?v=20260829-royal" defer></script>
+  <link rel="stylesheet" href="assets/styles.css?v=20261122">
+  ${page.script ? `<script src="${page.script}?v=20261122" defer></script>` : ''}
+  <script src="assets/site.js?v=20261122" defer></script>
 </head>
 <body class="page-${page.slug}">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div data-site-header></div>
   <main id="main-content">
     <section class="page-hero" aria-labelledby="page-title">
-      <img class="page-hero-image" src="assets/images/hero-${page.slug}.webp" alt="${page.heroAlt}" fetchpriority="high" decoding="async">
+      <img class="page-hero-image" src="assets/images/${heroImage}" alt="${page.heroAlt}" fetchpriority="high" decoding="async">
       <div class="hero-shade"></div>
       <div class="wrap page-hero-content">
         <h1 id="page-title">${page.heading}</h1>
         <p>${page.lead}</p>
       </div>
-      <p class="concept-art-note">Concept artwork</p>
+      <p class="concept-art-note">${page.imageNote ?? 'Concept artwork'}</p>
     </section>
     ${page.body}
     <nav class="page-journey wrap" aria-label="Continue through the site">
@@ -760,8 +789,8 @@ function renderCountryPage(country, index) {
   <link rel="icon" href="../assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="../assets/styles.css?v=20260829-royal">
-  <script src="../assets/site.js?v=20260829-royal" defer></script>
+  <link rel="stylesheet" href="../assets/styles.css?v=20261122">
+  <script src="../assets/site.js?v=20261122" defer></script>
 </head>
 <body class="country-page country-${country.slug}">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -844,6 +873,8 @@ for (const [index, country] of countries.entries()) {
 const sitemapEntries = [
   '',
   ...pages.map((page) => `${page.slug}.html`),
+  'documents.html',
+  'references.html',
   ...countries.map((country) => `countries/${country.slug}.html`)
 ]
   .map((pathname) => `  <url><loc>https://auraofintelligence.github.io/global-group-marriages/${escapeXml(pathname)}</loc></url>`)

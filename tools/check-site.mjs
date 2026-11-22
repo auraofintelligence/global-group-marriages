@@ -51,7 +51,14 @@ const requiredImages = [
   'assets/images/social-preview.webp'
 ];
 
-for (const relative of [...requiredPages, ...requiredImages, 'LICENSE']) {
+const prospectusPages = ['prospectus.html', 'ai-and-sovereignty.html', 'documents.html', 'references.html'];
+const pageIds = new Map();
+for (const file of htmlFiles) {
+  const html = await readFile(file, 'utf8');
+  pageIds.set(file, new Set([...html.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1])));
+}
+
+for (const relative of [...requiredPages, ...prospectusPages, ...requiredImages, 'LICENSE']) {
   if (!relativeFiles.includes(relative)) errors.push(`Missing required file: ${relative}`);
 }
 
@@ -71,6 +78,7 @@ for (const file of htmlFiles) {
   const imagesWithoutAlt = [...html.matchAll(/<img\b[^>]*>/g)].filter((match) => !/\salt="[^"]*"/.test(match[0]));
   if (imagesWithoutAlt.length) errors.push(`${relative}: image missing alt attribute`);
   if (/\[cite\s*:/i.test(html)) errors.push(`${relative}: unresolved citation marker`);
+  if (/(?:\u2014|&mdash;|&#(?:8212|x2014);)/i.test(html)) errors.push(`${relative}: replace em dashes in site copy`);
   if (/\b(?:blockchain|cryptocurrency|wallet)\b/i.test(html)) errors.push(`${relative}: excluded financial-system language`);
   if (/\bIsrael\b/i.test(html)) errors.push(`${relative}: excluded country name in OECD comparison`);
   if (/\.svg(?:[?#"'])/i.test(html)) errors.push(`${relative}: SVG reference`);
@@ -91,6 +99,10 @@ for (const file of htmlFiles) {
     try {
       const targetStat = await stat(target);
       if (targetStat.isDirectory()) await access(path.join(target, 'index.html'));
+      const fragment = link.split('#')[1];
+      if (fragment && pageIds.has(target) && !pageIds.get(target).has(decodeURIComponent(fragment))) {
+        errors.push(`${relative}: broken page anchor ${link}`);
+      }
     } catch {
       errors.push(`${relative}: broken local reference ${link}`);
     }

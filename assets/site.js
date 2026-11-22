@@ -13,14 +13,13 @@
           </a>
           <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
           <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-            <a href="${rootPath}why-now.html">Why now</a>
-            <a href="${rootPath}framework.html">Framework</a>
-            <a href="${rootPath}constellations.html">Constellations</a>
-            <a href="${rootPath}world-atlas.html">World atlas</a>
-            <a class="nav-highlight" href="${rootPath}household-lab.html">Household Lab</a>
-            <a href="${rootPath}un-of-love.html">U.N. of Love</a>
-            <a href="${rootPath}gajra-earth.html">GAJRA Earth</a>
-            <a href="${rootPath}research-method.html">Research</a>
+            <a href="${rootPath}prospectus.html">Prospectus</a>
+            <a href="${rootPath}framework.html">Family framework</a>
+            <a href="${rootPath}ai-and-sovereignty.html">AI and self-sovereignty</a>
+            <a href="${rootPath}world-atlas.html">World Law Atlas</a>
+            <a href="${rootPath}household-lab.html">Household Lab</a>
+            <a href="${rootPath}documents.html">Documents</a>
+            <a href="${rootPath}references.html">References</a>
           </nav>
         </div>
       </header>`;
@@ -75,8 +74,10 @@
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     nav.querySelectorAll('a').forEach((link) => {
       const linkPage = link.getAttribute('href').split('/').pop();
-      if (linkPage === currentPage || (document.body.classList.contains('country-page') && linkPage === 'world-atlas.html')) {
+      if (linkPage === currentPage) {
         link.setAttribute('aria-current', 'page');
+      } else if (document.body.classList.contains('country-page') && linkPage === 'world-atlas.html') {
+        link.setAttribute('aria-current', 'location');
       }
     });
 
@@ -112,20 +113,30 @@
         <div class="wrap footer-grid">
           <div>
             <p class="footer-brand">Global Group Marriages</p>
-            <p>A pro-group-marriage exploration of larger families, shared care and self-sovereign love.</p>
+            <p>An invitation to build businesses and explore a shared life across countries.</p>
+            <a href="${rootPath}prospectus.html">Read the prospectus</a>
           </div>
           <div>
-            <h2>Explore</h2>
-            <a href="${rootPath}framework.html">The framework</a>
-            <a href="${rootPath}world-atlas.html">World atlas</a>
+            <h2>Families and law</h2>
+            <a href="${rootPath}why-now.html">Why now</a>
+            <a href="${rootPath}framework.html">Family framework</a>
+            <a href="${rootPath}constellations.html">Relationship constellations</a>
+            <a href="${rootPath}world-atlas.html">World Law Atlas</a>
             <a href="${rootPath}household-lab.html">Household Lab</a>
+            <a href="${rootPath}sovereignty-care.html">Consent and care</a>
+          </div>
+          <div>
+            <h2>Ideas and research</h2>
+            <a href="${rootPath}ai-and-sovereignty.html">AI and self-sovereignty</a>
+            <a href="${rootPath}possible-futures.html">Possible futures</a>
             <a href="${rootPath}un-of-love.html">U.N. of Love</a>
             <a href="${rootPath}gajra-earth.html">GAJRA Earth</a>
+            <a href="${rootPath}research-method.html">Research method</a>
           </div>
           <div>
-            <h2>Principles</h2>
-            <p>Love, play, learn, teach.</p>
-            <p>Imagine, design, create, share.</p>
+            <h2>Sources</h2>
+            <a href="${rootPath}documents.html">Document library</a>
+            <a href="${rootPath}references.html">References and image credits</a>
             <a href="${rootPath}LICENSE">Strange But True Public Source Licence</a>
           </div>
         </div>
