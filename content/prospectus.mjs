@@ -27,16 +27,22 @@ export const prospectusPages = [
     </section>
 
     <section class="content-section section-sand" aria-labelledby="shared-life">
-      <div class="wrap section-heading">
-        <h2 id="shared-life">How we could share a life</h2>
-        <p>We could share one home, keep several homes, spend time together on return visits or take on care and parenting commitments. The people involved decide how friendship, intimacy, family and work fit together.</p>
-        <p>I'm heterosexual and I'm inviting women to explore a romantic relationship with me. I'll leave it to the women in the group to invite any men they'd like to bring in. We'd decide together who joins, and each person would choose their own relationships.</p>
+      <div class="wrap split-intro">
+        <div class="lead-copy">
+          <h2 id="shared-life">How we could share a life</h2>
+          <p>We could share one home, keep several homes, spend time together on return visits or take on care and parenting commitments. The people involved decide how friendship, intimacy, family and work fit together.</p>
+          <p>I'm heterosexual and I'm inviting women to explore a romantic relationship with me. I'll leave it to the women in the group to invite any men they'd like to bring in. We'd decide together who joins, and each person would choose their own relationships.</p>
+        </div>
+        <figure class="editorial-photo full-art">
+          <img src="assets/images/hero-framework.webp" alt="A group gathers around a long table while children play nearby." width="1915" height="821" loading="lazy" decoding="async">
+          <figcaption>AI-generated scene of a household making plans together.</figcaption>
+        </figure>
       </div>
       <div class="wrap compact-grid">
-        <article><h3>Home and care</h3><p>Talk about where you want to live, how time and costs could be shared, and what would happen through illness, caring responsibilities, a move or a change in income.</p></article>
-        <article><h3>Personal choice</h3><p>Romance, sex and living together are choices of the people directly involved. Each person can keep their own income, private space and independent work. People can revisit commitments as circumstances change.</p></article>
-        <article><h3>Children and continuity</h3><p>Decisions about children need to serve their welfare and follow the law that applies. Adults can discuss trusted relationships, daily care, culture, schooling and how to preserve stability through change.</p></article>
-        <article><h3>Work and relationships</h3><p>Pay, access to work and ownership follow the agreed commercial terms. If a relationship changes, the people involved can review their business arrangements and look after the people and responsibilities affected.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Home and care</h3><p>Talk about where you want to live, how time and costs could be shared, and what would happen through illness, caring responsibilities, a move or a change in income.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/aura.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Personal choice</h3><p>Romance, sex and living together are choices of the people directly involved. Each person can keep their own income, private space and independent work. People can revisit commitments as circumstances change.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/documents.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Children and continuity</h3><p>Decisions about children need to serve their welfare and follow the law that applies. Adults can discuss trusted relationships, daily care, culture, schooling and how to preserve stability through change.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Work and relationships</h3><p>Pay, access to work and ownership follow the agreed commercial terms. If a relationship changes, the people involved can review their business arrangements and look after the people and responsibilities affected.</p></article>
       </div>
       <div class="wrap link-pair">
         <a class="button button-outline" href="constellations.html">Explore relationship patterns</a>
@@ -45,15 +51,21 @@ export const prospectusPages = [
     </section>
 
     <section class="content-section section-indigo" aria-labelledby="shared-work">
-      <div class="wrap section-heading light-heading">
-        <h2 id="shared-work">What we could build and own</h2>
-        <p>You could bring a business you already run, lead work where you live, work jointly on a contract, or share ownership of a new enterprise. We would agree what each person contributes, earns and owns.</p>
+      <div class="wrap split-intro">
+        <div class="lead-copy light-heading">
+          <h2 id="shared-work">What we could build and own</h2>
+          <p>You could bring a business you already run, lead work where you live, work jointly on a contract, or share ownership of a new enterprise. We would agree what each person contributes, earns and owns.</p>
+        </div>
+        <figure class="editorial-photo full-art">
+          <img src="assets/images/creative-studio.webp" alt="Two women laugh beside a mixing desk and microphone." width="756" height="500" loading="lazy" decoding="async">
+          <figcaption>AI-generated scene of collaborators in a recording studio.</figcaption>
+        </figure>
       </div>
       <div class="wrap compact-grid">
-        <article><h3>Creative and visitor experiences</h3><p>Make books, music, films, exhibitions and live experiences. Local teams could lead tourism, translation, food, sport or cultural learning, with hosts setting the terms for what people can share.</p></article>
-        <article><h3>Software and equipment</h3><p>Develop AI software, personal devices or local computing services. A workshop might make parts, train a local crew to service them and help a nearby pool reuse waste heat where the location suits it.</p></article>
-        <article><h3>Care and community work</h3><p>Explore tools for care, accessible learning, continuity of records and disaster recovery. People with lived experience, specialist teams and local partners can shape work that suits their communities.</p></article>
-        <article><h3>Ownership and learning</h3><p>Mutual Futures explores business succession and shared ownership. ready SET Co-op explores paid employment, training and local enterprise. C-hours record verified voluntary contributions with no monetary equivalent or wage substitution.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/atlas.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Creative and visitor experiences</h3><p>Make books, music, films, exhibitions and live experiences. Local teams could lead tourism, translation, food, sport or cultural learning, with hosts setting the terms for what people can share.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/compute.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Software and equipment</h3><p>Develop AI software, personal devices or local computing services. A workshop might make parts, train a local crew to service them and help a nearby pool reuse waste heat where the location suits it.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Care and community work</h3><p>Explore tools for care, accessible learning, continuity of records and disaster recovery. People with lived experience, specialist teams and local partners can shape work that suits their communities.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Ownership and learning</h3><p>Mutual Futures explores business succession and shared ownership. ready SET Co-op explores paid employment, training and local enterprise. C-hours record verified voluntary contributions with no monetary equivalent or wage substitution.</p></article>
       </div>
       <div class="wrap link-pair">
         <a class="button button-light" href="ai-and-sovereignty.html">Explore AI and local ownership</a>
@@ -96,7 +108,7 @@ export const prospectusPages = [
 
     <section class="content-section section-cream" aria-labelledby="creative-work">
       <div class="wrap split-intro">
-        <figure class="editorial-photo">
+        <figure class="editorial-photo full-art">
           <img src="assets/images/inland-festival.webp" alt="Two women talk in the middle of a festival in a mountain valley." loading="lazy" decoding="async" width="756" height="500">
           <figcaption>AI-generated illustration of an inland arts and music festival.</figcaption>
         </figure>
@@ -118,10 +130,10 @@ export const prospectusPages = [
         <p>The prospectus discusses commercial arrangements. Marital status and family responsibilities are governed by the laws that apply. The form of each agreement depends on the activity and where people live, work or hold assets.</p>
       </div>
       <div class="wrap compact-grid">
-        <article><h3>Purpose and authority</h3><p>Agree on which work to do, who leads, who can sign or spend, and how people can join or leave.</p></article>
-        <article><h3>Pay, costs and ownership</h3><p>Work out payment, expenses, accounts, profits or losses, and what people own individually or together.</p></article>
-        <article><h3>Work and records</h3><p>Write down who owns new work, what people can use later, who can access shared records and what an AI agent can do.</p></article>
-        <article><h3>Legal form and changes</h3><p>Review contracts, joint ventures, companies and co-operatives with advice for the places involved. Plan for a move, departure, illness, death or unfinished work.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Purpose and authority</h3><p>Agree on which work to do, who leads, who can sign or spend, and how people can join or leave.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Pay, costs and ownership</h3><p>Work out payment, expenses, accounts, profits or losses, and what people own individually or together.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/documents.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Work and records</h3><p>Write down who owns new work, what people can use later, who can access shared records and what an AI agent can do.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/atlas.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Legal form and changes</h3><p>Review contracts, joint ventures, companies and co-operatives with advice for the places involved. Plan for a move, departure, illness, death or unfinished work.</p></article>
       </div>
       <div class="wrap link-pair">
         <a class="button button-outline" href="https://github.com/auraofintelligence/australian-legal-engine">Australian Legal Engine</a>
@@ -147,13 +159,16 @@ export const prospectusPages = [
     description: 'The physical buildout of AI, Luke Nathan Hayes’s superintelligence forecast, and what it could take for people and communities to keep control of their data and tools.',
     heading: 'Who gets to own and shape the AI we depend on?',
     lead: 'AI depends on physical equipment, energy and people who can keep it running. That affects what families, businesses and communities can decide for themselves.',
-    heroImage: 'compute-racks.webp',
-    heroAlt: 'An aisle between server racks, with copper cooling pipes along one side.',
-    imageNote: 'AI-generated illustration',
+    heroImage: 'aura-digital-twin.webp',
+    heroAlt: 'People around a table with a glowing human digital twin and panels for personal memories and projects.',
+    imageNote: 'Digital twin concept artwork from Aura of Intelligence',
     body: `
     <section class="content-section section-cream" aria-labelledby="buildout">
       <div class="wrap split-intro">
-        <div><h2 id="buildout">What it takes to build AI</h2></div>
+        <div>
+          <img class="section-icon" src="assets/images/icons/compute.webp" alt="" width="80" height="80" loading="lazy" decoding="async">
+          <h2 id="buildout">What it takes to build AI</h2>
+        </div>
         <div class="lead-copy">
           <p>The global buildout needs chips, data centres, electricity, cooling, minerals, factories and robotics. It also needs people who can make, install, connect and repair the equipment. Large providers can put equipment and data together on a scale few individual communities can match.</p>
           <p>Some AI developers release the settings their models learnt in training. These are called open weights. Where the licence and equipment allow, people can run a copy on computers they control. That gives a household, business or community another way to decide where its information goes.</p>
@@ -171,42 +186,62 @@ export const prospectusPages = [
         <p>By superintelligence I mean AI that substantially exceeds human capability across many fields. I expect it to emerge. My estimate as of November 2026 is within six months, around May 2027.</p>
       </div>
       <div class="wrap compact-grid">
-        <article><h3>What it could change</h3><p>More capable AI could speed up science, engineering and the development of further AI. It could also give people who control the systems more influence over work, income, public services and the choices available to others.</p></article>
-        <article><h3>What we can do now</h3><p>Build businesses that can keep using their records and equipment as tools change. Give people control over who can act for them. Develop the skills to maintain the infrastructure we depend on.</p></article>
+        <article><img class="section-icon" src="assets/images/icons/atlas.webp" alt="" width="80" height="80" loading="lazy" decoding="async"><h3>What it could change</h3><p>More capable AI could speed up science and engineering. Control of those systems may bring more influence over work, income and public services.</p></article>
+        <article><img class="section-icon" src="assets/images/icons/agreements.webp" alt="" width="80" height="80" loading="lazy" decoding="async"><h3>What we can do now</h3><p>Keep business records usable as tools change, decide who can act for you and develop the skills to maintain shared equipment.</p></article>
       </div>
     </section>
 
     <section class="content-section section-sand" aria-labelledby="aura">
       <div class="wrap split-intro">
-        <figure class="editorial-photo">
-          <img src="assets/images/aura-workshop.webp" alt="Two women look at a laptop beside a small computer in a light-filled workshop." loading="lazy" decoding="async" width="756" height="500">
-          <figcaption>AI-generated illustration of a personal computing workshop.</figcaption>
+        <figure class="editorial-photo full-art">
+          <img src="assets/images/aura-builder-silhouette.webp" alt="A digital human silhouette with seven coloured chakra centres and rings around the head." loading="lazy" decoding="async" width="1200" height="1200">
+          <figcaption>Seven chakra centres in the <a href="https://auraofintelligence.github.io/aura-builder.html">Aura Builder</a>.</figcaption>
         </figure>
         <div class="lead-copy">
           <h2 id="aura">Aura of Intelligence in shared life</h2>
-          <p>Aura of Intelligence is the personal AI environment at the centre of this proposal. Your Aura would connect your memories, projects, values, skills and practical knowledge with the AI tools you choose. Its digital twin would be a record and model of the parts of your life you choose to keep. You could take a usable copy of your records with you when you change device, AI provider or country.</p>
-          <p>Level Zero is your own private space. You choose what to collect, which parts to share, who can use them and when an agent needs your approval. You should be able to check access, correct a record, take a usable copy and withdraw access where practicable.</p>
-          <p>People could keep an agreed shared record for a household or business. For example, a care plan could include what a person wants their supporters to know, and a business record could hold the terms for paying contributors and using each other’s work.</p>
-          <h3>Aura Genesis Protocol</h3>
-          <p>Genesis is a proposed opt-in programme for adults who want to develop a more detailed personal twin and learn to work with it. Participants would choose which measurements and experiences to record and learn through practice, reflection and correction. An everyday Aura could develop independently of Genesis.</p>
-          <h3>Verse Box</h3>
-          <p>The Verse Box is a proposed portable station using suitable reused equipment. It would offer a practical way to try building a personal Aura and start with an everyday learning or creative project. You would decide which devices and services to use for the Aura you take forward and which information to keep in your own private environment.</p>
+          <p>Aura of Intelligence is the personal AI environment at the centre of this proposal. Your digital twin would connect the memories, projects, values and skills you choose to record with the AI tools you use. You could take a usable copy when you change device, provider or country.</p>
+          <div class="aura-use-list">
+            <div><img class="section-icon" src="assets/images/icons/aura.webp" alt="" width="80" height="80" loading="lazy" decoding="async"><div><h3>Level Zero</h3><p>Choose what stays private, who can see what you share and when an AI agent needs your approval. Check access, make corrections and withdraw access where practicable.</p></div></div>
+            <div><img class="section-icon" src="assets/images/icons/households.webp" alt="" width="80" height="80" loading="lazy" decoding="async"><div><h3>A shared record</h3><p>A household could keep a care plan with the person's consent. A business could record how contributors are paid and how their work is used.</p></div></div>
+          </div>
           <div class="editorial-links">
             <a href="https://auraofintelligence.github.io/">Aura of Intelligence</a>
-            <a href="https://auraofintelligence.github.io/aura-genesis-geode-atlas/index.html">Aura Genesis Protocol</a>
-            <a href="https://auraofintelligence.github.io/aura-verse-box/">Verse Box</a>
             <a href="sovereignty-care.html">Sovereignty and care</a>
           </div>
         </div>
       </div>
+      <div class="wrap compact-grid visual-pair">
+        <article>
+          <figure class="editorial-photo full-art">
+            <img src="assets/images/aura-genesis-geode.webp" alt="The Aura Genesis Geode concept with a reflection display and wearable equipment." loading="lazy" decoding="async" width="1672" height="941">
+            <figcaption>Concept artwork from the <a href="https://auraofintelligence.github.io/aura-genesis-geode-atlas/genesis.html">Aura Genesis Geode Atlas</a>.</figcaption>
+          </figure>
+          <h3>Aura Genesis Protocol</h3>
+          <p>Genesis is a proposed opt-in programme for adults who want to develop a more detailed personal twin. You would choose which experiences and measurements to record and learn through practice and reflection. You can also build an Aura independently of Genesis.</p>
+        </article>
+        <article>
+          <figure class="editorial-photo full-art">
+            <img src="assets/images/verse-box.webp" alt="A plywood booth with plum acoustic panels and a screen showing nested rainbow horn-torus shapes." loading="lazy" decoding="async" width="1774" height="887">
+            <figcaption>Concept artwork from the <a href="https://auraofintelligence.github.io/aura-verse-box/">Verse Box site</a>.</figcaption>
+          </figure>
+          <h3>Verse Box</h3>
+          <p>The Verse Box is a proposed portable station made with suitable reused equipment. You could try a creative or learning project as you build a personal Aura, then decide what to keep and which tools to carry forward.</p>
+        </article>
+      </div>
     </section>
 
     <section class="content-section section-cream" aria-labelledby="missing-middle">
-      <div class="wrap section-heading">
-        <h2 id="missing-middle">From your device to shared computing</h2>
-        <p>A person could keep private records on their own device and send a larger, approved job to a shared computer. For example, a community organisation could use a nearby computer to transcribe a public meeting.</p>
+      <div class="wrap split-intro">
+        <figure class="editorial-photo full-art">
+          <img src="assets/images/community-compute-rack.webp" alt="Technicians inspect a single computer rack and its cooling pipes in a coastal workspace." loading="lazy" decoding="async" width="1825" height="862">
+          <figcaption>Single-rack concept from the <a href="https://auraofintelligence.github.io/ready-set-co-op-cultural-intelligence-node/node.html">Cultural Intelligence Node</a> and <a href="https://auraofintelligence.github.io/installing-the-missing-middle/installation.html">Installing the Missing Middle</a>.</figcaption>
+        </figure>
+        <div class="lead-copy">
+          <h2 id="missing-middle">From your device to shared computing</h2>
+          <p>Keep private records on your own device and send larger jobs to a shared computer when you approve them. A community organisation could use a nearby rack to transcribe a public meeting.</p>
+        </div>
       </div>
-      <div class="wrap compact-grid">
+      <div class="wrap compact-grid visual-pair">
         <article><h3>3,000 rack-equivalents</h3><p>The Australian Missing Middle proposal models one standard server rack-equivalent per 10,000 people in a future population of 30 million. A separate global comparison in the prospectus looks at about 44,000 sites.</p></article>
         <article><h3>Local ownership and upkeep</h3><p>Local organisations could use and progressively own equipment. Each site would need power, cooling, connections, maintenance and people trained to keep it running. A pool or other nearby facility could reuse the heat where practical.</p></article>
       </div>
@@ -218,14 +253,51 @@ export const prospectusPages = [
 
     <section class="content-section section-indigo" aria-labelledby="machines">
       <div class="wrap section-heading light-heading">
-        <h2 id="machines">Large data centres and machines that move</h2>
-        <p>Power, ownership and the ability to intervene matter for AI in data centres, workshops and vehicles.</p>
+        <h2 id="machines">Rockets, satellites and machines that move</h2>
+        <p>These four technologies show how computing reaches beyond the screen into transport, workshops and communications.</p>
       </div>
-      <div class="wrap compact-grid">
+      <div class="wrap compact-grid technology-grid">
+        <article>
+          <figure class="editorial-photo technology-photo">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Ship_39_in_Megabay_2%2C_Starbase%2C_Texas_%28cropped%29.jpg/960px-Ship_39_in_Megabay_2%2C_Starbase%2C_Texas_%28cropped%29.jpg?utm_campaign=index&amp;utm_content=thumbnail&amp;utm_source=commons.wikimedia.org" alt="The black heat shield of Starship's Ship 39 upper stage inside a Starbase hangar." loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            <figcaption>Ship 39 during assembly. <a class="aqua-link" href="https://commons.wikimedia.org/wiki/File:Ship_39_in_Megabay_2,_Starbase,_Texas_(cropped).jpg">Alexander Kubitza, US Navy</a>, public domain.</figcaption>
+          </figure>
+          <h3>Starship Flight 15</h3>
+          <p>In November 2026, Ship 42 reached orbit, deployed Starlink satellites and became the first Starship upper stage caught by the launch tower. Recovering it from orbit was a milestone towards full reuse.</p>
+          <p><a class="text-link aqua-link" href="https://www.spacex.com/launches/starship-flight-15">SpaceX Flight 15 mission</a> · <a class="text-link aqua-link" href="https://www.space.com/space-exploration/launches-spacecraft/spacex-chopsticks-catch-starship-upper-stage-flight-14">See the Ship 42 catch</a></p>
+        </article>
+        <article>
+          <figure class="editorial-photo technology-photo">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Starlink_Dish_20250111_101122.jpg/960px-Starlink_Dish_20250111_101122.jpg?utm_campaign=index&amp;utm_content=thumbnail&amp;utm_source=commons.wikimedia.org" alt="A flat Starlink satellite terminal mounted above the deck of a ship." loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            <figcaption>Starlink terminal at sea. <a class="aqua-link" href="https://commons.wikimedia.org/wiki/File:Starlink_Dish_20250111_101122.jpg">Ka23 13</a>, <a class="aqua-link" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</figcaption>
+          </figure>
+          <h3>Starlink</h3>
+          <p>Low Earth orbit satellites can connect places where ground-based networks are hard to reach. A ship or remote household can use a terminal to connect to the network.</p>
+          <p><a class="text-link aqua-link" href="https://www.starlink.com/technology">How Starlink works</a></p>
+        </article>
+        <article>
+          <figure class="editorial-photo technology-photo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Waymo_Jaguar_I-Pace_in_San_Francisco.jpg?utm_campaign=index&amp;utm_content=original&amp;utm_source=commons.wikimedia.org" alt="A Waymo Jaguar robotaxi with roof-mounted sensors in San Francisco." loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            <figcaption>Waymo robotaxi in San Francisco. <a class="aqua-link" href="https://commons.wikimedia.org/wiki/File:Waymo_Jaguar_I-Pace_in_San_Francisco.jpg">TaurusEmerald</a>, <a class="aqua-link" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</figcaption>
+          </figure>
+          <h3>Robotaxis</h3>
+          <p>Driverless vehicles such as Waymo's use sensors and software to navigate within their operating areas. Passengers and cities need clear ways to get help or report problems.</p>
+          <p><a class="text-link aqua-link" href="https://waymo.com/faq/">Waymo FAQ</a></p>
+        </article>
+        <article>
+          <figure class="editorial-photo technology-photo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Unitree_G1.jpg" alt="A silver and black Unitree G1 humanoid robot standing at a technology expo." loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            <figcaption>Unitree G1 at an expo. <a class="aqua-link" href="https://commons.wikimedia.org/wiki/File:Unitree_G1.jpg">Sayanesy</a>, <a class="aqua-link" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>.</figcaption>
+          </figure>
+          <h3>Humanoid robots</h3>
+          <p>Unitree's G1 is a humanoid robot. Other designs, such as Agility Robotics' Digit, move containers in warehouses. Operators need clear limits on what a robot can do and ways to intervene safely.</p>
+          <p><a class="text-link aqua-link" href="https://www.unitree.com/g1">Unitree G1</a> · <a class="text-link aqua-link" href="https://www.sec.gov/Archives/edgar/data/2074973/000121390026120842/ea0312344-s1a1_agility.htm">Agility Robotics filing</a></p>
+        </article>
+      </div>
+      <div class="wrap compact-grid visual-pair">
         <article><h3>SpaceX’s installed capacity</h3><p>SpaceX reported 1.7 gigawatts of installed AI computing capacity on 30 September 2026, up from 0.6 a year earlier. Its measure adds the rated power of installed AI chips. Electricity actually used depends on the workload and also includes cooling and other facility equipment.</p><p><a class="text-link aqua-link" href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm">Read the September 2026 filing</a></p></article>
         <article><h3>Computer systems in orbit</h3><p>SpaceX’s orbital proposal would use solar panels to power computers on satellites, radiators to release heat and laser links to move data. It is a long-term plan that depends on manufacturing, launches and reliable operation in orbit.</p><p><a class="text-link aqua-link" href="https://content.spacex.com/cms-assets/assets/SpaceX%20IPO%20Roadshow.pdf">Read the SpaceX roadshow</a></p></article>
-        <article><h3>Robots and driverless transport</h3><p>Robots such as Agility Robotics’ Digit can move containers in warehouses. Driverless vehicles such as Waymo’s use sensors and software to navigate within their operating areas. People and businesses will need ways to decide what machines do and intervene when something goes wrong.</p><p><a class="text-link aqua-link" href="https://www.sec.gov/Archives/edgar/data/2074973/000121390026120842/ea0312344-s1a1_agility.htm">Agility Robotics filing</a> · <a class="text-link aqua-link" href="https://waymo.com/faq/">Waymo FAQ</a></p></article>
-        <article><h3>Working across borders</h3><p>People need ways to report failures, resolve disputes and have a say in where powerful systems are used. Communities can start by agreeing who can act on shared information, how to withdraw permissions and how everyone affected can be heard.</p><p><a class="text-link aqua-link" href="https://www.un.org/en/global-issues/artificial-intelligence">United Nations dialogue on AI</a> · <a class="text-link aqua-link" href="https://auraofintelligence.github.io/UNGA81-Luke-Hayes/futures.html#what-makes-anyone-want-the-game-to-continue">Luke’s UNGA81 proposal on why people would want a shared future to continue</a></p></article>
+        <article><img class="section-icon" src="assets/images/icons/atlas.webp" alt="" width="80" height="80" loading="lazy" decoding="async"><h3>Working across borders</h3><p>Agree on who can act on shared information, how people can withdraw permission and how to handle complaints.</p><p><a class="text-link aqua-link" href="https://www.un.org/en/global-issues/artificial-intelligence">United Nations dialogue on AI</a> · <a class="text-link aqua-link" href="https://auraofintelligence.github.io/UNGA81-Luke-Hayes/futures.html#what-makes-anyone-want-the-game-to-continue">Luke's UNGA81 proposal</a></p></article>
       </div>
     </section>
 

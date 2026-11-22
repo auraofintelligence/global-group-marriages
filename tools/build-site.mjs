@@ -27,10 +27,10 @@ const pages = [
         <p class="large-copy">The desire for children has not simply evaporated. In UNFPA's 2025 survey across 14 countries, nearly one in five reproductive-age adults expected not to have the number of children they wanted.</p>
       </div>
       <div class="wrap barrier-grid">
-        <article><h3>Cost and housing</h3><p>People described the cost of parenthood and insecure or unsuitable housing as major barriers to the families they wanted.</p></article>
-        <article><h3>Work and time</h3><p>Job insecurity, demanding work and the unequal weight of care make a two-adult household feel brittle before a child arrives.</p></article>
-        <article><h3>Finding the right people</h3><p>Lack of a suitable partner is not a side issue. The search often asks one person to match a lifetime of emotional, sexual, practical and parenting needs.</p></article>
-        <article><h3>The state of the world</h3><p>War, climate change and wider uncertainty affect how people imagine the future their children would inherit.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Cost and housing</h3><p>People described the cost of parenthood and insecure or unsuitable housing as major barriers to the families they wanted.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/documents.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Work and time</h3><p>Job insecurity, demanding work and the unequal weight of care make a two-adult household feel brittle before a child arrives.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Finding the right people</h3><p>Lack of a suitable partner is not a side issue. The search often asks one person to match a lifetime of emotional, sexual, practical and parenting needs.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/atlas.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>The state of the world</h3><p>War, climate change and wider uncertainty affect how people imagine the future their children would inherit.</p></article>
       </div>
       <div class="wrap source-callout">
         <p><strong>Source:</strong> <a href="https://www.unfpa.org/swp2025?lang=en">UNFPA, State of World Population 2025</a>. The report focuses on reproductive agency: helping people have the families they actually want.</p>
@@ -53,6 +53,12 @@ const pages = [
         <span class="evidence-label proposal-label">Proposed pathway</span>
         <h2>Share the practical work of family life</h2>
         <p class="large-copy">A larger marriage does not remove cost, grief, conflict or uncertainty. It changes how many adults meet them together. More incomes, more carers, more skills and more enduring relationships create a different starting equation.</p>
+      </div>
+      <div class="wrap inline-scene-band">
+        <figure class="editorial-photo inline-scene">
+          <img src="assets/images/hero-framework.webp" alt="Several adults work together around a household table as children play nearby." loading="lazy" decoding="async">
+          <figcaption>AI-generated illustration of adults sharing the work of a household.</figcaption>
+        </figure>
       </div>
       <div class="wrap statement-panel">
         <p>Global group marriage is an additional framework for people who see strength, love and possibility in a larger family constellation.</p>
@@ -77,12 +83,12 @@ const pages = [
         <p class="large-copy">Law currently recognises different parts of this idea in different places. The lived framework is broader: shared commitment, shared care, shared futures and a household constitution designed by the adults inside it.</p>
       </div>
       <div class="wrap principle-grid">
-        <article class="idea-card"><span>01</span><h3>Love is not a ration</h3><p>Affection and intimacy grow through attention, honesty and practice. A larger family does not require every bond to look identical.</p></article>
-        <article class="idea-card"><span>02</span><h3>More people can share care</h3><p>Illness, newborn nights, paid work, school runs and elder care no longer fall across one narrow bridge.</p></article>
-        <article class="idea-card"><span>03</span><h3>Children gain a village at home</h3><p>More committed adults may bring continuity, varied skills, wider culture and more available attention to daily family life.</p></article>
-        <article class="idea-card"><span>04</span><h3>Adults remain self-sovereign</h3><p>The group is an agreement among whole people. Individual voice, privacy, property, friendships and freedom of conscience remain real.</p></article>
-        <article class="idea-card"><span>05</span><h3>Difference becomes useful</h3><p>One person may love cooking, another numbers, another teaching, another travel. Complementarity becomes household capacity.</p></article>
-        <article class="idea-card"><span>06</span><h3>Risk is shared</h3><p>Income loss, injury, exhaustion and change still happen. A larger support network gives the family more ways to adapt.</p></article>
+        <article class="idea-card"><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Love is not a ration</h3><p>Affection and intimacy grow through attention, honesty and practice. A larger family does not require every bond to look identical.</p></article>
+        <article class="idea-card"><img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>More people can share care</h3><p>Illness, newborn nights, paid work, school runs and elder care no longer fall across one narrow bridge.</p></article>
+        <article class="idea-card"><img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Children gain a village at home</h3><p>More committed adults may bring continuity, varied skills, wider culture and more available attention to daily family life.</p></article>
+        <article class="idea-card"><img class="inline-topic-icon" src="assets/images/icons/aura.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Adults remain self-sovereign</h3><p>The group is an agreement among whole people. Individual voice, privacy, property, friendships and freedom of conscience remain real.</p></article>
+        <article class="idea-card"><img class="inline-topic-icon" src="assets/images/icons/atlas.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Difference becomes useful</h3><p>One person may love cooking, another numbers, another teaching, another travel. Complementarity becomes household capacity.</p></article>
+        <article class="idea-card"><img class="inline-topic-icon" src="assets/images/icons/documents.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Risk is shared</h3><p>Income loss, injury, exhaustion and change still happen. A larger support network gives the family more ways to adapt.</p></article>
       </div>
     </section>
 
@@ -138,27 +144,27 @@ const pages = [
 
       <div class="wrap constellation-grid" data-constellation-grid>
         <article class="constellation-card" data-tags="one-home parenting">
-          <h3>The shared home circle</h3>
+          <img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>The shared home circle</h3>
           <p>Several committed adults build one home, share daily care and raise children within the same practical rhythm.</p>
         </article>
         <article class="constellation-card" data-tags="multi-home">
-          <h3>The connected households</h3>
+          <img class="inline-topic-icon" src="assets/images/icons/atlas.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>The connected households</h3>
           <p>The marriage spans two or more homes. Time, care and resources move between them without treating distance as lesser commitment.</p>
         </article>
         <article class="constellation-card" data-tags="parenting one-home">
-          <h3>The co-parenting core</h3>
+          <img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>The co-parenting core</h3>
           <p>Parenthood and stable care form the centre while romantic and sexual bonds have their own negotiated patterns.</p>
         </article>
         <article class="constellation-card" data-tags="global multi-home">
-          <h3>The global marriage</h3>
+          <img class="inline-topic-icon" src="assets/images/icons/atlas.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>The global marriage</h3>
           <p>Partners from different countries build a cross-cultural family, sometimes across borders, languages and seasons.</p>
         </article>
         <article class="constellation-card" data-tags="multi-home parenting">
-          <h3>The village network</h3>
+          <img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>The village network</h3>
           <p>Several nearby homes share meals, childcare, transport, gardens and companionship while preserving domestic space.</p>
         </article>
         <article class="constellation-card" data-tags="global one-home">
-          <h3>The cultural garland</h3>
+          <img class="inline-topic-icon" src="assets/images/icons/aura.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>The cultural garland</h3>
           <p>A household consciously carries several cultural, spiritual or linguistic traditions and creates new rituals together.</p>
         </article>
       </div>
@@ -240,10 +246,10 @@ const pages = [
         <p>Consistency makes country differences visible without pretending that private contracts reproduce marriage.</p>
       </div>
       <div class="wrap compact-grid">
-        <article><h3>Adult status</h3><p>Marriage, civil union, customary marriage, cohabitation and offence provisions.</p></article>
-        <article><h3>Home and resources</h3><p>Property, inheritance, tax, contracts, pensions and what happens on exit.</p></article>
-        <article><h3>Children</h3><p>Parentage, parental responsibility, adoption, guardianship and child-centred orders.</p></article>
-        <article><h3>Movement and care</h3><p>Immigration sponsorship, healthcare authority and end-of-life decisions.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Adult status</h3><p>Marriage, civil union, customary marriage, cohabitation and offence provisions.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Home and resources</h3><p>Property, inheritance, tax, contracts, pensions and what happens on exit.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/documents.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Children</h3><p>Parentage, parental responsibility, adoption, guardianship and child-centred orders.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/atlas.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Movement and care</h3><p>Immigration sponsorship, healthcare authority and end-of-life decisions.</p></article>
       </div>
     </section>
 
@@ -331,6 +337,12 @@ const pages = [
     </section>
 
     <section class="content-section section-sand">
+      <div class="wrap inline-scene-band">
+        <figure class="editorial-photo inline-scene">
+          <img src="assets/images/shared-life.webp" alt="Two women look over an open map at a table." loading="lazy" decoding="async">
+          <figcaption>AI-generated illustration of a planning conversation.</figcaption>
+        </figure>
+      </div>
       <div class="wrap prose-intro">
         <h2>A sketch is an invitation to think together</h2>
         <p class="large-copy">It is not a test, a matching score or an authority over anyone's feelings. The adults involved remain the source of their own choices, and children remain people whose interests deserve direct attention.</p>
@@ -352,12 +364,12 @@ const pages = [
         <p class="large-copy">Self-sovereignty means keeping your voice, privacy and ability to make choices while you build a life with others.</p>
       </div>
       <div class="wrap principle-grid">
-        <article class="idea-card"><span>01</span><h3>Individual voice</h3><p>Each adult speaks for their own desires, boundaries, health, friendships, work and conscience.</p></article>
-        <article class="idea-card"><span>02</span><h3>Relational agreements</h3><p>Every bond develops its own language for time, intimacy, disclosure, care and change.</p></article>
-        <article class="idea-card"><span>03</span><h3>Household voice</h3><p>Shared decisions include the people who carry their effects, with clear ways to slow down and think again.</p></article>
-        <article class="idea-card"><span>04</span><h3>Children’s welfare</h3><p>Family decisions give weight to children’s safety, trusted relationships, development and growing ability to express what they want.</p></article>
-        <article class="idea-card"><span>05</span><h3>Real privacy</h3><p>A loving family has shared life and private rooms, conversations, friendships, devices, thoughts and moments of solitude.</p></article>
-        <article class="idea-card"><span>06</span><h3>Ongoing consent</h3><p>Consent depends on the situation and the continuing freedom to change your mind. People can keep discussing what they want as their lives change.</p></article>
+        <article class="idea-card"><img class="inline-topic-icon" src="assets/images/icons/aura.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Individual voice</h3><p>Each adult speaks for their own desires, boundaries, health, friendships, work and conscience.</p></article>
+        <article class="idea-card"><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Relational agreements</h3><p>Every bond develops its own language for time, intimacy, disclosure, care and change.</p></article>
+        <article class="idea-card"><img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Household voice</h3><p>Shared decisions include the people who carry their effects, with clear ways to slow down and think again.</p></article>
+        <article class="idea-card"><img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Children’s welfare</h3><p>Family decisions give weight to children’s safety, trusted relationships, development and growing ability to express what they want.</p></article>
+        <article class="idea-card"><img class="inline-topic-icon" src="assets/images/icons/documents.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Real privacy</h3><p>A loving family has shared life and private rooms, conversations, friendships, devices, thoughts and moments of solitude.</p></article>
+        <article class="idea-card"><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Ongoing consent</h3><p>Consent depends on the situation and the continuing freedom to change your mind. People can keep discussing what they want as their lives change.</p></article>
       </div>
     </section>
 
@@ -492,9 +504,9 @@ const pages = [
         <p>Each lane serves a different purpose. None needs to pretend to be another.</p>
       </div>
       <div class="wrap lane-grid">
-        <article class="lane-card reality-lane"><span class="evidence-label">Documented reality</span><h3>What is evidenced now</h3><p>Official law, government guidance, court decisions, demographic research and clearly sourced history.</p></article>
-        <article class="lane-card proposal-lane"><span class="evidence-label proposal-label">Proposed pathway</span><h3>What people could design</h3><p>Household agreements, care systems, policy reform, practical tools and testable social structures.</p></article>
-        <article class="lane-card imagination-lane"><span class="evidence-label imagination-label">Fiction and imagination</span><h3>What stretches the mind</h3><p>Stories, simulacra, future institutions and concept artwork that reveal questions before reality answers them.</p></article>
+        <article class="lane-card reality-lane"><span class="evidence-label">Documented reality</span><img class="inline-topic-icon" src="assets/images/icons/documents.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>What is evidenced now</h3><p>Official law, government guidance, court decisions, demographic research and clearly sourced history.</p></article>
+        <article class="lane-card proposal-lane"><span class="evidence-label proposal-label">Proposed pathway</span><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>What people could design</h3><p>Household agreements, care systems, policy reform, practical tools and testable social structures.</p></article>
+        <article class="lane-card imagination-lane"><span class="evidence-label imagination-label">Fiction and imagination</span><img class="inline-topic-icon" src="assets/images/icons/aura.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>What stretches the mind</h3><p>Stories, simulacra, future institutions and concept artwork that reveal questions before reality answers them.</p></article>
       </div>
     </section>
 
@@ -588,12 +600,12 @@ const pages = [
         <p class="large-copy">Not departments imposed on love, but useful names for capacities the family practises.</p>
       </div>
       <div class="wrap organ-grid">
-        <article><h3>Family Assembly</h3><p>Every adult voice and the age-appropriate voices of children enter the shared picture.</p></article>
-        <article><h3>Council of Care</h3><p>Health, rest, parenting, meals, home-making, elder care and emotional load become visible work.</p></article>
-        <article><h3>Household Economy</h3><p>Money, property, paid work, education, risk and abundance are coordinated without erasing personal resources.</p></article>
-        <article><h3>Cultural Circle</h3><p>Languages, food, stories, rituals and places of origin meet without one culture becoming the default world.</p></article>
-        <article><h3>Future Generations Council</h3><p>Pregnancy, birth, children, education and the world they inherit receive direct long-term attention.</p></article>
-        <article><h3>Chamber of Repair</h3><p>Conflict is translated, responsibility is named and relationships receive time to change course.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Family Assembly</h3><p>Every adult voice and the age-appropriate voices of children enter the shared picture.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Council of Care</h3><p>Health, rest, parenting, meals, home-making, elder care and emotional load become visible work.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/documents.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Household Economy</h3><p>Money, property, paid work, education, risk and abundance are coordinated without erasing personal resources.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/atlas.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Cultural Circle</h3><p>Languages, food, stories, rituals and places of origin meet without one culture becoming the default world.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Future Generations Council</h3><p>Pregnancy, birth, children, education and the world they inherit receive direct long-term attention.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Chamber of Repair</h3><p>Conflict is translated, responsibility is named and relationships receive time to change course.</p></article>
       </div>
     </section>
 
@@ -640,6 +652,12 @@ const pages = [
           <p>The <a href="prospectus.html#creative-work">prospectus connects creative work with the proposed 2035 gathering</a>, three days of music, art and votes on values led by communities that choose to participate.</p>
         </div>
       </div>
+      <div class="wrap inline-scene-band">
+        <figure class="editorial-photo inline-scene">
+          <img src="assets/images/inland-festival.webp" alt="Two women talk in the middle of a festival in a mountain valley." loading="lazy" decoding="async">
+          <figcaption>AI-generated illustration of a gathering for music and art.</figcaption>
+        </figure>
+      </div>
       <div class="wrap gajra-link-grid">
         <a class="gajra-link-card" href="https://auraofintelligence.github.io/gajra-earth-claude-build/">
           <span>Public world</span>
@@ -662,10 +680,10 @@ const pages = [
         <p>These ideas connect through lived principles rather than one central authority.</p>
       </div>
       <div class="wrap compact-grid">
-        <article><h3>Joyful</h3><p>Love, sexuality, play, beauty, celebration and curiosity belong in serious thinking about the future.</p></article>
-        <article><h3>Responsible</h3><p>Children, care, law, resources, power and long consequences remain part of the same picture.</p></article>
-        <article><h3>Abundant</h3><p>Value includes time, knowledge, affection, culture, creativity, nature and relationship, not only money.</p></article>
-        <article><h3>Self-sovereign</h3><p>People participate as whole intelligences, with private interiors and real agency inside the shared world.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/aura.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Joyful</h3><p>Love, sexuality, play, beauty, celebration and curiosity belong in serious thinking about the future.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Responsible</h3><p>Children, care, law, resources, power and long consequences remain part of the same picture.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/atlas.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Abundant</h3><p>Value includes time, knowledge, affection, culture, creativity, nature and relationship, not only money.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/documents.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Self-sovereign</h3><p>People participate as whole intelligences, with private interiors and real agency inside the shared world.</p></article>
       </div>
     </section>
 
@@ -862,10 +880,19 @@ ${renderFooter(route, '')}
 `;
 }
 
+const countryStatusIcons = new Map([
+  ['Adult status', 'agreements'],
+  ['Children', 'households'],
+  ['Migration', 'atlas'],
+]);
+
 function renderCountryPage(country) {
   const route = `countries/${country.slug}.html`;
   const statusCards = country.statuses
-    .map(([label, value]) => `<article><span>${label}</span><p>${value}</p></article>`)
+    .map(([label, value]) => {
+      const icon = countryStatusIcons.get(label) ?? 'documents';
+      return `<article><div class="country-status-heading"><img src="../assets/images/icons/${icon}.webp" alt="" loading="lazy" decoding="async" width="160" height="160"><span>${label}</span></div><p>${value}</p></article>`;
+    })
     .join('\n');
   const sections = country.sections
     .map((section) => `<section class="country-section"><h2>${section.title}</h2><div class="country-prose">${section.html}</div></section>`)
@@ -946,6 +973,12 @@ ${renderHeader(route, '../')}
           <p>These are the places where present law does not match a chosen multi-adult family.</p>
           <ul class="country-list">${gaps}</ul>
         </div>
+      </div>
+      <div class="wrap country-planning-visual">
+        <figure class="editorial-photo">
+          <img src="../assets/images/shared-life.webp" alt="Two women looking over a map at a kitchen table." loading="lazy" decoding="async" width="756" height="500">
+          <figcaption>Concept artwork. <a href="../household-lab.html">Use the Household Lab to work through practical arrangements together.</a></figcaption>
+        </figure>
       </div>
     </section>
 
