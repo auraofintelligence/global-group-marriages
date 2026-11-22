@@ -445,9 +445,26 @@ const pages = [
         <p>These are Luke’s long-range proposals and interpretations from the prospectus. They carry the same question about continuity from a household to a community and further.</p>
       </div>
       <div class="wrap compact-grid">
-        <article><h3>Keep people and knowledge safe</h3><p>The Silica Citadel plan explores how a settlement could keep food, water, energy, repairs, manufacturing and shared knowledge available through prolonged disruption. Grain by Grain begins at a local scale with a ferry terminal, workshops and energy.</p><p><a class="text-link" href="https://auraofintelligence.github.io/grain-by-grain/">Explore Grain by Grain</a></p></article>
+        <article><h3>Keep people and knowledge safe</h3><p>The Silica Citadel plan explores how an underground settlement could keep food, water, energy, repairs, manufacturing and shared knowledge available through prolonged disruption. Grain by Grain begins at a local scale with a ferry terminal, workshops and energy.</p><p><a class="text-link" href="https://auraofintelligence.github.io/grain-by-grain/">Explore Grain by Grain</a></p></article>
+        <figure class="editorial-photo">
+          <img src="assets/images/possible-futures-underground.webp" alt="An imagined underground civic space with shared workshops." loading="lazy" decoding="async">
+          <figcaption>An imagined Silica Citadel workshop for local repair and manufacturing.</figcaption>
+        </figure>
+        <article><h3>Imagine a society beneath the ocean</h3><p>The prospectus records Luke's belief in sub-ocean technates, technologically organised societies beneath the ocean. This artwork imagines how people might live and work in one.</p><p><a class="text-link" href="docs/global-group-marriages-business-prospectus-2026-11-22.docx" download>Download the prospectus</a></p></article>
+        <figure class="editorial-photo">
+          <img src="assets/images/possible-futures-sub-ocean.webp" alt="An imagined settlement beneath the ocean." loading="lazy" decoding="async">
+          <figcaption>An imagined sub-ocean technate.</figcaption>
+        </figure>
         <article><h3>Learn to work off Earth</h3><p>Virtual Solar Swarm lets people explore how a fleet of spacecraft could observe the Sun and send information home. Luke’s wider proposal considers off-world habitats and ways to sustain life and work across generations.</p><p><a class="text-link" href="https://auraofintelligence.github.io/virtual-solar-swarm/">Explore Virtual Solar Swarm</a></p></article>
-        <article><h3>Imagine contact across worlds</h3><p>Luke believes there are communities and other intelligences beyond Earth, and assigns a high probability to contact by November 2031. This is his personal interpretation and forecast. He explores what lasting relationships, family and cooperation could mean if contact took place.</p><p><a class="text-link" href="https://science.nasa.gov/uap/faqs/">NASA’s UAP research and evidence FAQ</a></p></article>
+        <figure class="editorial-photo">
+          <img src="assets/images/possible-futures-off-world.webp" alt="People in an imagined off-world habitat with Earth visible outside." loading="lazy" decoding="async">
+          <figcaption>An imagined habitat for living and working off Earth.</figcaption>
+        </figure>
+        <article><h3>Imagine contact across worlds</h3><p>Luke believes there are communities and other intelligences beyond Earth, and assigns a high probability to contact by November 2031. This is his personal interpretation and forecast. He explores what lasting relationships, family and cooperation could mean if contact took place.</p><p class="editorial-links"><a class="text-link" href="references.html#sky-traditions">Read the sky and origin traditions</a><a class="text-link" href="https://science.nasa.gov/uap/faqs/">NASA's UAP research and evidence FAQ</a></p></article>
+        <figure class="editorial-photo">
+          <img src="assets/images/possible-futures-visitors.webp" alt="Four women share a map at a mountain observatory at dusk." loading="lazy" decoding="async">
+          <figcaption>An imagined meeting with human-looking Nordic visitors from modern UFO folklore.</figcaption>
+        </figure>
       </div>
       <div class="wrap link-pair"><a class="button button-outline" href="documents.html">Read the full prospectus</a></div>
     </section>
