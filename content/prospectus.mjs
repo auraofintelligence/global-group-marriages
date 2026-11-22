@@ -86,7 +86,7 @@ export const prospectusPages = [
           <div class="editorial-links">
             <a href="https://github.com/auraofintelligence/world-travel-patterns">World Travel Patterns</a>
             <a href="https://www.smartraveller.gov.au/travel-essentials/getting-foreign-visa">Smartraveller visa guidance</a>
-            <a href="world-atlas.html">World Law Atlas</a>
+            <a href="research-method.html">Research method</a>
             <a href="https://www.qld.gov.au/government/strategies-initiatives/initiatives/brisbane2032/a-games-for-all-of-queensland">Queensland’s Brisbane 2032 programme</a>
           </div>
         </div>

@@ -427,7 +427,7 @@ const pages = [
         <article class="story-card">
           <p class="story-time">5:10 pm</p>
           <h3>A border shapes the evening</h3>
-          <p>Two adults cook in Brisbane while another joins from Cape Town. The law recognises only part of the relationship, but the children know exactly who will read tonight's chapter. The atlas turns a vague obstacle into a plan for evidence, visits and independent visas.</p>
+          <p>Two adults cook in Brisbane while another joins from Cape Town. The law recognises only part of the relationship, but the children know exactly who will read tonight's chapter. Careful research turns a vague obstacle into practical questions about evidence, visits and independent visas.</p>
         </article>
         <article class="story-card">
           <p class="story-time">9:30 pm</p>
@@ -507,8 +507,8 @@ const pages = [
 
     <section class="content-section section-indigo">
       <div class="wrap section-heading light-heading">
-        <h2>How the atlas is built</h2>
-        <p>The method takes inspiration from the Australian Legal Engine and Australian Visa and Activity Atlas, then repeats the source work country by country.</p>
+        <h2>How the research is built</h2>
+        <p>The method takes inspiration from the Australian Legal Engine and Australian Visa and Activity Atlas, then checks sources country by country.</p>
       </div>
       <ol class="wrap method-list">
         <li><strong>Start with the question.</strong><p>Separate marriage status, offences, contracts, property, inheritance, parentage, adoption, immigration and healthcare.</p></li>
@@ -701,27 +701,38 @@ const [home, documents, references] = [
   ['documents.html', 'Document library'],
   ['references.html', 'References and image credits']
 ];
-const mainRoutes = pages.map(({ slug, shortTitle }) => [`${slug}.html`, shortTitle]);
-const atlasEnd = mainRoutes.findIndex(([route]) => route === 'world-atlas.html') + 1;
 const readingOrder = [
-  home,
-  ...mainRoutes.slice(0, atlasEnd),
-  ...countries.map(({ slug, name }) => [`countries/${slug}.html`, name]),
-  ...mainRoutes.slice(atlasEnd),
-  ['music.html', 'Music'],
-  documents,
-  references
+  ['index.html', "Home"],
+  ['prospectus.html', "Prospectus"],
+  ['un-of-love.html', "United Nations of Love"],
+  ['why-now.html', "Why now"],
+  ['framework.html', "The framework"],
+  ['constellations.html', "Constellations"],
+  ['sovereignty-care.html', "Sovereignty and care"],
+  ['gajra-earth.html', "GAJRA Earth"],
+  ['ai-and-sovereignty.html', "AI and self-sovereignty"],
+  ['possible-futures.html', "Possible futures"],
+  ['research-method.html', "Research method"],
+  ['household-lab.html', "Household Lab"],
+  ['music.html', "Music"],
+  ['documents.html', "Document library"],
+  ['references.html', "References and image credits"]
 ];
 const primaryLinks = [
   ['prospectus.html', "Luke's prospectus"],
-  ['framework.html', 'Family framework'],
-  ['ai-and-sovereignty.html', 'Aura of Intelligence'],
-  ['world-atlas.html', 'World Law Atlas'],
-  ['household-lab.html', 'Household Lab'],
-  ['possible-futures.html', 'Possible futures'],
-  ['music.html', 'Music'],
-  ['documents.html', 'Documents'],
-  ['references.html', 'References']
+  ['un-of-love.html', "United Nations of Love"],
+  ['why-now.html', "Why now"],
+  ['framework.html', "Family framework"],
+  ['constellations.html', "Constellations"],
+  ['sovereignty-care.html', "Sovereignty and care"],
+  ['gajra-earth.html', "GAJRA Earth"],
+  ['ai-and-sovereignty.html', "AI and self-sovereignty"],
+  ['possible-futures.html', "Possible futures"],
+  ['research-method.html', "Research method"],
+  ['household-lab.html', "Household Lab"],
+  ['music.html', "Music"],
+  ['documents.html', "Documents"],
+  ['references.html', "References"]
 ];
 const footerGroups = [
   ['Aura of Intelligence', [
@@ -734,7 +745,6 @@ const footerGroups = [
     ['why-now.html', 'Why now'],
     ['framework.html', 'Family framework'],
     ['constellations.html', 'Relationship constellations'],
-    ['world-atlas.html', 'World Law Atlas'],
     ['household-lab.html', 'Household Lab'],
     ['sovereignty-care.html', 'Consent and care']
   ]],
@@ -754,8 +764,7 @@ const footerGroups = [
 
 function renderHeader(route, rootPath) {
   const links = primaryLinks.map(([href, label]) => {
-    const current = href === route ? ' aria-current="page"'
-      : rootPath && href === 'world-atlas.html' ? ' aria-current="location"' : '';
+    const current = href === route ? ' aria-current="page"' : '';
     return `          <a href="${rootPath}${href}"${current}>${escapeXml(label)}</a>`;
   }).join('\n');
   return `  <header class="site-header">
@@ -814,6 +823,7 @@ function renderPage(page) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#151532">
+  ${page.slug === 'world-atlas' ? '<meta name="robots" content="noindex, follow">' : ''}
   <meta name="description" content="${page.description}">
   <link rel="canonical" href="https://globalgroupmarriages.com/${page.slug}.html">
   <meta property="og:title" content="${page.title} | Global Group Marriages">
@@ -887,6 +897,7 @@ function renderCountryPage(country) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#151532">
+  <meta name="robots" content="noindex, follow">
   <meta name="description" content="${country.snapshot}">
   <link rel="canonical" href="https://globalgroupmarriages.com/countries/${country.slug}.html">
   <title>${country.name} | World Law Atlas | Global Group Marriages</title>
