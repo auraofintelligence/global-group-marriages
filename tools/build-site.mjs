@@ -54,12 +54,6 @@ const pages = [
         <h2>Share the practical work of family life</h2>
         <p class="large-copy">A larger marriage does not remove cost, grief, conflict or uncertainty. It changes how many adults meet them together. More incomes, more carers, more skills and more enduring relationships create a different starting equation.</p>
       </div>
-      <div class="wrap inline-scene-band">
-        <figure class="editorial-photo inline-scene">
-          <img src="assets/images/hero-framework.webp" alt="Several adults work together around a household table as children play nearby." loading="lazy" decoding="async">
-          <figcaption>AI-generated illustration of adults sharing the work of a household.</figcaption>
-        </figure>
-      </div>
       <div class="wrap statement-panel">
         <p>Global group marriage is an additional framework for people who see strength, love and possibility in a larger family constellation.</p>
         <a class="button button-primary" href="framework.html">See how the framework works</a>
@@ -74,7 +68,8 @@ const pages = [
     description: 'A practical pro-group-marriage framework for sharing love, parenting, money, time, care and risk.',
     heading: 'How adults could build a larger family together',
     lead: 'Independent groups of three or more adults can build families around the relationships they choose. Each group decides what size and shape work for them.',
-    heroAlt: 'Concept artwork of several adults weaving colourful fabric together around a household table while children play nearby.',
+    heroImage: 'framework-conversation.png',
+    heroAlt: 'Luke and one adult partner review a household calendar in a coastal home.',
     body: `
     <section class="content-section section-cream">
       <div class="wrap prose-intro">
@@ -713,6 +708,7 @@ const readingOrder = [
   ...mainRoutes.slice(0, atlasEnd),
   ...countries.map(({ slug, name }) => [`countries/${slug}.html`, name]),
   ...mainRoutes.slice(atlasEnd),
+  ['music.html', 'Music'],
   documents,
   references
 ];
@@ -723,6 +719,7 @@ const primaryLinks = [
   ['world-atlas.html', 'World Law Atlas'],
   ['household-lab.html', 'Household Lab'],
   ['possible-futures.html', 'Possible futures'],
+  ['music.html', 'Music'],
   ['documents.html', 'Documents'],
   ['references.html', 'References']
 ];

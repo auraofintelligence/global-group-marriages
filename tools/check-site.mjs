@@ -46,12 +46,18 @@ const requiredPages = [
 
 const requiredImages = [
   'assets/images/hero-home.webp',
-  ...requiredPages.slice(1, 11).map((page) => `assets/images/hero-${page.replace('.html', '')}.webp`),
+  ...requiredPages.slice(1, 11).map((page) => page === 'framework.html' ? 'assets/images/framework-conversation.png' : `assets/images/hero-${page.replace('.html', '')}.webp`),
+  'assets/images/framework-planning.webp',
+  'assets/images/prospectus-luke-family.webp',
+  'assets/images/prospectus-luke-enterprise.webp',
+  'assets/images/prospectus-luke-listening.webp',
+  'assets/images/prospectus-luke-beach.webp',
+  'assets/images/music-luke-studio.webp',
   ...requiredPages.slice(11).map((page) => `assets/images/hero-country-${path.basename(page, '.html')}.webp`),
   'assets/images/social-preview.webp'
 ];
 
-const prospectusPages = ['prospectus.html', 'ai-and-sovereignty.html', 'documents.html', 'references.html'];
+const prospectusPages = ['prospectus.html', 'ai-and-sovereignty.html', 'documents.html', 'references.html', 'music.html'];
 const sitemap = await readFile(path.join(rootDirectory, 'sitemap.xml'), 'utf8');
 const sitemapRoutes = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(([, location]) => (
   new URL(location.trim()).pathname.slice(1) || 'index.html'

@@ -6,8 +6,8 @@ export const prospectusPages = [
     description: 'Luke Nathan Hayes invites people to explore the United Nations of Love, a proposed family business and love marriage across cultures.',
     heading: 'A family business and love marriage across cultures',
     lead: 'Luke Nathan Hayes’s invitation to explore the United Nations of Love.',
-    heroImage: 'shared-life.webp',
-    heroAlt: 'Two women open a map at the table of a sunlit coastal home.',
+    heroImage: 'prospectus-luke-family.webp',
+    heroAlt: 'Luke Hayes sits with two women as they review a home plan at a coastal table.',
     imageNote: 'AI-generated illustration',
     body: `
     <section class="content-section section-cream" aria-labelledby="invitation">
@@ -36,8 +36,8 @@ export const prospectusPages = [
           <p>I want to be free to say what brings me joy and helps me live responsibly and abundantly. Everyone involved should have that same freedom to name who and what makes that kind of life possible for them.</p>
         </div>
         <figure class="editorial-photo full-art">
-          <img src="assets/images/hero-framework.webp" alt="A group gathers around a long table while children play nearby." width="1915" height="821" loading="lazy" decoding="async">
-          <figcaption>AI-generated scene of a household making plans together.</figcaption>
+          <img src="assets/images/framework-planning.webp" alt="Two adults review a calendar as they plan their shared home and commitments." loading="lazy" decoding="async">
+          <figcaption>AI-generated scene of two adults planning shared household commitments.</figcaption>
         </figure>
       </div>
       <div class="wrap compact-grid">
@@ -59,8 +59,8 @@ export const prospectusPages = [
           <p>You could bring a business you already run, lead work where you live, work jointly on a contract, or share ownership of a new enterprise. We would agree what each person contributes, earns and owns.</p>
         </div>
         <figure class="editorial-photo full-art">
-          <img src="assets/images/creative-studio.webp" alt="Two women laugh beside a mixing desk and microphone." width="756" height="500" loading="lazy" decoding="async">
-          <figcaption>AI-generated scene of collaborators in a recording studio.</figcaption>
+          <img src="assets/images/prospectus-luke-enterprise.webp" alt="Luke Hayes discusses a business plan with two collaborators." loading="lazy" decoding="async">
+          <figcaption>AI-generated scene of Luke and collaborators discussing shared enterprise.</figcaption>
         </figure>
       </div>
       <div class="wrap compact-grid">
@@ -99,7 +99,7 @@ export const prospectusPages = [
         <p>We could meet in mountain towns, cities and markets, spend time on each other's home ground and learn how people make things where they live. These AI-generated scenes imagine some of those encounters.</p>
       </div>
       <div class="wrap editorial-grid">
-        <figure class="editorial-photo travel-photo"><img src="assets/images/travel-mountain-town.webp" alt="Two women share tea on a terrace overlooking a mountain town." width="504" height="504" loading="lazy" decoding="async"><figcaption>Tea in a mountain town</figcaption></figure>
+        <figure class="editorial-photo travel-photo"><img src="assets/images/prospectus-luke-beach.webp" alt="Luke Hayes wears purple and black beachwear on the North Stradbroke Island shore." loading="lazy" decoding="async"><figcaption>A coastal day on Minjerribah</figcaption></figure>
         <figure class="editorial-photo travel-photo"><img src="assets/images/travel-clay-workshop.webp" alt="Two women hold a pottery bowl in a sunlit courtyard." width="504" height="504" loading="lazy" decoding="async"><figcaption>Making things with clay</figcaption></figure>
         <figure class="editorial-photo travel-photo"><img src="assets/images/travel-highland-terrace.webp" alt="Two women smile as one writes in a notebook above green hills." width="504" height="504" loading="lazy" decoding="async"><figcaption>Plans in the highlands</figcaption></figure>
         <figure class="editorial-photo travel-photo"><img src="assets/images/travel-desert-courtyard.webp" alt="Two women stand arm in arm in a sandstone courtyard." width="504" height="504" loading="lazy" decoding="async"><figcaption>A desert-edge courtyard</figcaption></figure>
@@ -111,8 +111,8 @@ export const prospectusPages = [
     <section class="content-section section-cream" aria-labelledby="creative-work">
       <div class="wrap split-intro">
         <figure class="editorial-photo full-art">
-          <img src="assets/images/inland-festival.webp" alt="Two women talk in the middle of a festival in a mountain valley." loading="lazy" decoding="async" width="756" height="500">
-          <figcaption>AI-generated illustration of an inland arts and music festival.</figcaption>
+          <img src="assets/images/prospectus-luke-listening.webp" alt="Luke Hayes listens to a new i C. Infinity track in a home music studio." loading="lazy" decoding="async">
+          <figcaption>AI-generated portrait of Luke Hayes listening to an i C. Infinity track.</figcaption>
         </figure>
         <div class="lead-copy">
           <h2 id="creative-work">Make things together</h2>
