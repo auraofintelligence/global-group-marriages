@@ -7,7 +7,7 @@ import { prospectusPages } from '../content/prospectus.mjs';
 const toolDirectory = path.dirname(fileURLToPath(import.meta.url));
 const rootDirectory = path.resolve(toolDirectory, '..');
 const cleanGeneratedText = (text) => text.replace(/[ \t]+$/gm, '');
-const assetVersion = '20261122-nav';
+const assetVersion = '20261122-menu';
 
 const pages = [
   ...prospectusPages,
@@ -723,10 +723,13 @@ const readingOrder = [
 ];
 const primaryLinks = [
   ['prospectus.html', 'Prospectus'],
-  ['framework.html', 'Families'],
-  ['ai-and-sovereignty.html', 'Aura'],
-  ['world-atlas.html', 'Atlas'],
-  ['documents.html', 'Library']
+  ['framework.html', 'Family framework'],
+  ['ai-and-sovereignty.html', 'Aura of Intelligence'],
+  ['world-atlas.html', 'World Law Atlas'],
+  ['household-lab.html', 'Household Lab'],
+  ['possible-futures.html', 'Possible futures'],
+  ['documents.html', 'Documents'],
+  ['references.html', 'References']
 ];
 const footerGroups = [
   ['Aura of Intelligence', [
@@ -761,7 +764,7 @@ function renderHeader(route, rootPath) {
   const links = primaryLinks.map(([href, label]) => {
     const current = href === route ? ' aria-current="page"'
       : rootPath && href === 'world-atlas.html' ? ' aria-current="location"' : '';
-    return `        <a href="${rootPath}${href}"${current}>${escapeXml(label)}</a>`;
+    return `          <a href="${rootPath}${href}"${current}>${escapeXml(label)}</a>`;
   }).join('\n');
   return `  <header class="site-header">
     <div class="site-header-inner">
@@ -769,9 +772,12 @@ function renderHeader(route, rootPath) {
         <img src="${rootPath}assets/favicon-192.png" alt="">
         <span>Global Group Marriages</span>
       </a>
-      <nav class="site-nav" aria-label="Primary navigation">
+      <details class="site-menu">
+        <summary>Menu</summary>
+        <nav class="site-nav" aria-label="Primary navigation">
 ${links}
-      </nav>
+        </nav>
+      </details>
     </div>
   </header>`;
 }

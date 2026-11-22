@@ -1,7 +1,24 @@
 (() => {
   const header = document.querySelector('.site-header');
+  const menu = document.querySelector('.site-menu');
   const floatingTop = document.querySelector('.floating-top');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  if (menu) {
+    const trigger = menu.querySelector('summary');
+    document.addEventListener('click', (event) => {
+      if (!menu.contains(event.target)) menu.open = false;
+    });
+    menu.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape' || !menu.open) return;
+      event.preventDefault();
+      menu.open = false;
+      trigger.focus();
+    });
+    menu.addEventListener('focusout', (event) => {
+      if (event.relatedTarget && !menu.contains(event.relatedTarget)) menu.open = false;
+    });
+  }
 
   if (header) {
     const progress = document.createElement('div');
