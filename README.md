@@ -1,6 +1,6 @@
 # Global Group Marriages
 
-Global Group Marriages is Luke Nathan Hayes's invitation to build businesses and explore a shared life across countries. The site sets out the November 2026 prospectus and the research behind it, including family arrangements, law, shared enterprises and practical control of AI.
+Global Group Marriages is a framework for independent groups to explore love, family and shared life, from throuples to larger groups with no fixed upper limit. The site also presents Luke Nathan Hayes's personal proposal for the United Nations of Love, a family business and love marriage across cultures.
 
 <!-- github-organisation:start -->
 
@@ -16,7 +16,7 @@ Global Group Marriages is Luke Nathan Hayes's invitation to build businesses and
 
 ## What is here
 
-- the November 2026 business prospectus and its discussion of shared work, ownership and care
+- Luke's November 2026 business prospectus and its discussion of shared work, ownership and care
 - the AI buildout, possible superintelligence and ways people could keep control of their data and decisions
 - a downloadable document library, with references and image credits
 - research on why family formation feels harder for many people
@@ -25,7 +25,7 @@ Global Group Marriages is Luke Nathan Hayes's invitation to build businesses and
 - a private, browser-only household design lab
 - a source-led World Law Atlas with initial country guides
 - stories and possible futures
-- a dedicated U.N. of Love thought experiment
+- the United Nations of Love proposal for contributing to world peace through Joyful Responsible Abundance
 - a dedicated connection to the two GAJRA Earth public worlds
 - a visible research method separating present evidence, proposed pathways and imagination
 - AI-generated editorial images and an icon sheet, plus the earlier concept artwork
@@ -47,7 +47,7 @@ Global Group Marriages is Luke Nathan Hayes's invitation to build businesses and
 - [World Law Atlas](https://globalgroupmarriages.com/world-atlas.html)
 - [GAJRA Earth](https://globalgroupmarriages.com/gajra-earth.html)
 - [Possible Futures](https://globalgroupmarriages.com/possible-futures.html)
-- [U.N. of Love](https://globalgroupmarriages.com/un-of-love.html)
+- [United Nations of Love](https://globalgroupmarriages.com/un-of-love.html)
 
 ## Connected public projects
 

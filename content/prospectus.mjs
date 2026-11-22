@@ -2,10 +2,10 @@ export const prospectusPages = [
   {
     slug: 'prospectus',
     shortTitle: 'Prospectus',
-    title: 'Global Group Marriages business prospectus',
-    description: 'Luke Nathan Hayes invites people to explore shared life across countries and discuss the businesses, travel and creative work they might build together.',
-    heading: 'Build businesses and explore a shared life across countries',
-    lead: 'An invitation from Luke Nathan Hayes on Minjerribah, Queensland.',
+    title: 'United Nations of Love business prospectus',
+    description: 'Luke Nathan Hayes invites people to explore the United Nations of Love, a proposed family business and love marriage across cultures.',
+    heading: 'A family business and love marriage across cultures',
+    lead: 'Luke Nathan Hayes’s invitation to explore the United Nations of Love.',
     heroImage: 'shared-life.webp',
     heroAlt: 'Two women open a map at the table of a sunlit coastal home.',
     imageNote: 'AI-generated illustration',
@@ -14,7 +14,8 @@ export const prospectusPages = [
       <div class="wrap split-intro">
         <div><h2 id="invitation">Why I’m inviting you</h2></div>
         <div class="lead-copy">
-          <p>I want to build businesses with women who are interested in Global Group Marriages. Consenting adults can form lasting relationships across countries and decide together how to share love, work, homes, care and resources. I want to explore that life for myself and share what we learn with others who want something similar.</p>
+          <p>I want to build the <a href="un-of-love.html">United Nations of Love</a>, a family business and love marriage across cultures. It is the group I personally want to form. The wider <a href="framework.html">Global Group Marriages framework</a> is open to many independent groups, from throuples to larger families with no fixed upper limit. Each group sets its own agreements.</p>
+          <p>I'd like this family to contribute to world peace through Joyful Responsible Abundance. We could build businesses together, make art, care for each other and create lasting ties across the places we call home.</p>
           <p>I’ve worked in trades, transport, events and web design, lived in India for long stretches, and made music about Minjerribah, where I live. People I care about live far apart. I want more time for those ties, for family, for travel and for the work we would enjoy doing together.</p>
           <p>I turn 44 on 3 December 2026. I call the year ahead <em>A Protopian Gambit</em>. For me that means putting time, work and resources into ideas that leave the people involved with more choices.</p>
           <p>Aura of Intelligence is central to what I want to build. Each person would control their own memories, values, plans and AI tools. We could share what we agree is useful for travelling, working or caring for each other. <a href="ai-and-sovereignty.html#aura">See how Aura fits into shared life</a>.</p>
@@ -31,7 +32,8 @@ export const prospectusPages = [
         <div class="lead-copy">
           <h2 id="shared-life">How we could share a life</h2>
           <p>We could share one home, keep several homes, spend time together on return visits or take on care and parenting commitments. The people involved decide how friendship, intimacy, family and work fit together.</p>
-          <p>I'm heterosexual and I'm inviting women to explore a romantic relationship with me. I'll leave it to the women in the group to invite any men they'd like to bring in. We'd decide together who joins, and each person would choose their own relationships.</p>
+          <p>I'm heterosexual. For my own romantic relationships, I want to choose women who also choose me. I encourage women in the group to get to know, vet and invite men they'd like to join. I'd have the same say as any other partner. Each person chooses their own relationships, and the people taking on shared commitments decide together who joins them.</p>
+          <p>I want to be free to say what brings me joy and helps me live responsibly and abundantly. Everyone involved should have that same freedom to name who and what makes that kind of life possible for them.</p>
         </div>
         <figure class="editorial-photo full-art">
           <img src="assets/images/hero-framework.webp" alt="A group gathers around a long table while children play nearby." width="1915" height="821" loading="lazy" decoding="async">

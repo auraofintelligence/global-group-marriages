@@ -73,7 +73,7 @@ const pages = [
     title: 'How global group marriage works',
     description: 'A practical pro-group-marriage framework for sharing love, parenting, money, time, care and risk.',
     heading: 'How adults could build a larger family together',
-    lead: 'Three or more adults may choose to understand their relationships as one larger marriage and deliberately build a family around it.',
+    lead: 'Independent groups of three or more adults can build families around the relationships they choose. Each group decides what size and shape work for them.',
     heroAlt: 'Concept artwork of several adults weaving colourful fabric together around a household table while children play nearby.',
     body: `
     <section class="content-section section-cream">
@@ -98,7 +98,7 @@ const pages = [
         <p>Romance is one layer. A durable family also makes the practical layers visible.</p>
       </div>
       <div class="wrap layer-list">
-        <article><strong>People</strong><p>Who is part of the marriage, who lives together, and how new relationships join the constellation.</p></article>
+        <article><strong>People</strong><p>Who is part of the marriage, who lives together, how people get to know prospective members and who takes part in shared decisions about joining.</p></article>
         <article><strong>Love</strong><p>How affection, sexuality, privacy, sleep, dates and changing desire are talked about without pretending every bond is equal.</p></article>
         <article><strong>Care</strong><p>How children, adults, elders, homes, meals and rest receive time and attention.</p></article>
         <article><strong>Resources</strong><p>What stays individual, what is shared, and how housing, income, debt, inheritance and work are handled.</p></article>
@@ -537,7 +537,7 @@ const pages = [
         <a href="https://www.oecd.org/en/topics/sub-issues/child-and-family-well-being.html"><strong>OECD child and family well-being</strong><span>Fertility, family and policy indicators</span></a>
         <a href="https://www.unfpa.org/swp2025?lang=en"><strong>UNFPA State of World Population 2025</strong><span>Reproductive intentions and barriers</span></a>
         <a href="https://www.un.org/en/our-work/"><strong>United Nations: Our Work</strong><span>Present UN work and institutional context</span></a>
-        <a href="https://www.un.org/en/about-us/un-charter/full-text"><strong>Charter of the United Nations</strong><span>Purposes and principles used in the U.N. of Love comparison</span></a>
+        <a href="https://www.un.org/en/about-us/un-charter/full-text"><strong>Charter of the United Nations</strong><span>Background to the name United Nations of Love</span></a>
       </div>
     </section>
 
@@ -553,92 +553,69 @@ const pages = [
   },
   {
     slug: 'un-of-love',
-    shortTitle: 'U.N. of Love',
-    title: 'The U.N. of Love',
-    description: 'A specific thought experiment comparing the present United Nations with a cross-cultural love marriage raising children together.',
-    heading: 'What if the United Nations were also one marriage?',
-    lead: 'Imagine a specific love marriage among beautiful, intelligent, sexually active adult women and men in their prime, drawn from many cultures, making and raising children together.',
-    heroAlt: 'Concept artwork of adult women and men from many cultures gathered as one loving family in a circular world pavilion, with no official emblems.',
+    shortTitle: 'United Nations of Love',
+    title: 'United Nations of Love',
+    description: 'Luke Nathan Hayes proposes a cross-cultural love marriage and family enterprise that contributes to world peace through Joyful Responsible Abundance.',
+    heading: 'United Nations of Love',
+    lead: 'The family business and love marriage across cultures that Luke Nathan Hayes wants to build.',
+    heroAlt: 'Concept artwork of adults from many cultures gathered in a circular pavilion.',
     body: `
-    <section class="content-section section-cream">
+    <section class="content-section section-cream" aria-labelledby="my-vision">
       <div class="wrap prose-intro">
-        <span class="evidence-label imagination-label">A specific thought experiment</span>
-        <h2>Take the metaphor all the way</h2>
-        <p class="large-copy">The present United Nations brings states together to maintain peace, develop friendly relations, cooperate on international problems and harmonise action. The U.N. of Love asks what those purposes reveal when the members are not states but spouses sharing bodies, homes, work, culture, sexuality and future generations.</p>
-      </div>
-      <div class="wrap source-callout">
-        <p>The U.N. of Love is not affiliated with the United Nations and is not proposed as its replacement. It is a mind-stretching marriage thought experiment placed beside the wider GAJRA Earth vision.</p>
+        <h2 id="my-vision">The family I want to build</h2>
+        <p class="large-copy">I'd like to build a family with people from different cultures who choose to share love, care and enterprise. We'd work out what we want to make together and what each person wants to pursue in their own life.</p>
+        <p>This is my proposal within the wider <a href="framework.html">Global Group Marriages framework</a>. Other people can form their own groups, starting with a throuple and growing to whatever size works for them. This kind of marriage will suit some people and add one more possibility to the many ways families already live.</p>
       </div>
     </section>
 
-    <section class="content-section section-indigo">
+    <section class="content-section section-indigo" aria-labelledby="choosing-each-other">
       <div class="wrap section-heading light-heading">
-        <h2>Two kinds of union</h2>
-        <p>The comparison is deliberately exact enough to produce new questions.</p>
+        <h2 id="choosing-each-other">We choose each other</h2>
+        <p>I want to be free to say who and what brings me joy and helps me live responsibly and abundantly. Everyone involved gets to define that for themselves.</p>
       </div>
-      <div class="wrap comparison-wrap">
-        <table class="comparison-table">
-          <thead><tr><th>Present United Nations</th><th>U.N. of Love</th></tr></thead>
-          <tbody>
-            <tr><td>193 member states</td><td>A specific constellation of self-sovereign adult spouses</td></tr>
-            <tr><td>A Charter between nations</td><td>A living marriage covenant between people</td></tr>
-            <tr><td>Diplomatic and institutional relationships</td><td>Romantic, sexual, familial, cultural and creative relationships</td></tr>
-            <tr><td>International cooperation</td><td>One cross-cultural household cooperating every day</td></tr>
-            <tr><td>Peace, security and mediation</td><td>Intimate diplomacy, conflict repair and protection of belonging</td></tr>
-            <tr><td>Budgets, agencies and programmes</td><td>Pooled time, care, income, housing, skills and attention</td></tr>
-            <tr><td>Future generations as a policy responsibility</td><td>Their own children as loved people present in the room</td></tr>
-            <tr><td>Knowledge gathered from institutions</td><td>Collective intelligence grown through shared life</td></tr>
-          </tbody>
-        </table>
+      <div class="wrap compact-grid">
+        <article><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>My romantic relationships</h3><p>I want to choose the women who also choose me. Each person has the same freedom to choose their own partners.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>How the group grows</h3><p>I encourage women in the group to vet and invite men they'd like to join. I'd have the same say as any other partner. The people taking on each shared commitment decide together, on equal terms.</p></article>
       </div>
-      <p class="wrap table-source">Present UN purposes: <a href="https://www.un.org/en/about-us/un-charter/full-text">Charter of the United Nations, Article 1</a>. Membership figure: <a href="https://www.un.org/en/about-us/membership-of-principal-un-organs">United Nations membership of principal organs</a>.</p>
     </section>
 
-    <section class="content-section section-sand">
+    <section class="content-section section-sand" aria-labelledby="shared-practice">
       <div class="wrap prose-intro">
-        <h2>The organs of an intimate union</h2>
-        <p class="large-copy">Not departments imposed on love, but useful names for capacities the family practises.</p>
+        <h2 id="shared-practice">What we'd take care of together</h2>
       </div>
       <div class="wrap organ-grid">
-        <article><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Family Assembly</h3><p>Every adult voice and the age-appropriate voices of children enter the shared picture.</p></article>
-        <article><img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Council of Care</h3><p>Health, rest, parenting, meals, home-making, elder care and emotional load become visible work.</p></article>
-        <article><img class="inline-topic-icon" src="assets/images/icons/documents.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Household Economy</h3><p>Money, property, paid work, education, risk and abundance are coordinated without erasing personal resources.</p></article>
-        <article><img class="inline-topic-icon" src="assets/images/icons/atlas.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Cultural Circle</h3><p>Languages, food, stories, rituals and places of origin meet without one culture becoming the default world.</p></article>
-        <article><img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Future Generations Council</h3><p>Pregnancy, birth, children, education and the world they inherit receive direct long-term attention.</p></article>
-        <article><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Chamber of Repair</h3><p>Conflict is translated, responsibility is named and relationships receive time to change course.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Family decisions</h3><p>Hear from everyone affected, including children in ways that suit their age.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Everyday care</h3><p>Make time for rest, meals, health and the people who need support.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/documents.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Family enterprise</h3><p>Agree on pay, ownership, risk and what each person wants to keep independent.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/atlas.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Culture and hospitality</h3><p>Make room for each other's languages, food, stories and occasions.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/households.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Future generations</h3><p>Think about the care, education and relationships that children can count on over time.</p></article>
+        <article><img class="inline-topic-icon" src="assets/images/icons/agreements.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><h3>Making things right</h3><p>Listen when something hurts, take responsibility and revisit agreements when life changes.</p></article>
       </div>
     </section>
 
-    <section class="content-section section-cream">
+    <section class="content-section section-cream" aria-labelledby="peace">
       <div class="wrap split-intro">
-        <div><h2>A day changes the comparison</h2></div>
+        <figure class="editorial-photo full-art">
+          <img src="assets/images/inland-festival.webp" alt="Two women talking at an arts gathering in a mountain valley." loading="lazy" decoding="async" width="756" height="500">
+          <figcaption>AI-generated illustration of a gathering for music and art.</figcaption>
+        </figure>
         <div class="lead-copy">
-          <p>The present UN may negotiate food systems. The marriage grows food, cooks dinner and notices who has not eaten.</p>
-          <p>The present UN debates displacement. The marriage feels borders when a spouse cannot travel home.</p>
-          <p>The present UN speaks for future generations. The marriage wakes at 2 am with one of them.</p>
-          <p>The present UN convenes cultures. The marriage discovers whether several cultures can share one kitchen, calendar, body of rituals and lineage of children.</p>
+          <h2 id="peace">A cultural contribution to world peace</h2>
+          <p>The name draws on the idea of coming together across borders. Our contribution would come through Joyful Responsible Abundance in daily life. We'd share food and hospitality, make music and stories, build businesses and keep turning up for people across cultures.</p>
+          <p>I'd like us to see how close we can come to unconditional love by caring about each other through change. Each person would keep the freedom to set boundaries, choose their relationships and decide which commitments they want to make.</p>
+          <div class="editorial-links">
+            <a href="prospectus.html">Read my business prospectus</a>
+            <a href="gajra-earth.html">Explore the wider GAJRA Earth vision</a>
+          </div>
         </div>
       </div>
-    </section>
-
-    <section class="content-section section-indigo">
-      <div class="wrap prose-intro">
-        <h2>Questions worth carrying out of the experiment</h2>
-      </div>
-      <div class="wrap question-stack">
-        <p>What would diplomacy become if nobody could leave the consequences in another country?</p>
-        <p>What would collective intelligence become if it included desire, birth, jealousy, tenderness, sleep and daily care?</p>
-        <p>What would peace mean if it had to be practised between breakfast and bedtime?</p>
-        <p>What kind of children might grow from a family that treats cultural difference as inherited wealth?</p>
-      </div>
-      <div class="wrap centred-action"><a class="button button-light" href="gajra-earth.html">Continue into GAJRA Earth</a></div>
     </section>`
   },
   {
     slug: 'gajra-earth',
     shortTitle: 'GAJRA Earth',
     title: 'GAJRA Earth',
-    description: 'How Global Group Marriages and the U.N. of Love connect to GAJRA Earth and the wider Aura of Intelligence project constellation.',
+    description: 'How Global Group Marriages and Luke Nathan Hayes’s United Nations of Love proposal connect to GAJRA Earth and Aura of Intelligence.',
     heading: 'A family constellation inside a planetary garland.',
     lead: 'GAJRA Earth imagines joyful responsible abundance: distinct people, cultures, places and intelligences held in relationship without being made the same.',
     heroAlt: 'Concept artwork of a diverse multi-adult family weaving a real flower garland together in a planetary garden at sunrise.',
@@ -647,8 +624,8 @@ const pages = [
       <div class="wrap split-intro">
         <div><h2>The garland holds distinct flowers</h2></div>
         <div class="lead-copy">
-          <p>A gajra is made through relationship. Each flower remains itself while the thread creates a larger form. Global group marriage brings that image into the household: many adults, many bonds, one consciously tended family.</p>
-          <p>The U.N. of Love stretches the same principle across culture and future generations. GAJRA Earth carries it out to the planetary scale.</p>
+          <p>In a gajra, each flower keeps its identity while the thread holds them together. Global Group Marriages brings that idea to many independent families, each with its own bonds and agreements.</p>
+          <p>Luke's <a href="un-of-love.html">United Nations of Love</a> would bring people from different cultures together in a family and shared enterprise. GAJRA Earth opens up cooperation across cultures to anyone who wants to take part in its wider work.</p>
           <p>The <a href="prospectus.html#creative-work">prospectus connects creative work with the proposed 2035 gathering</a>, three days of music, art and votes on values led by communities that choose to participate.</p>
         </div>
       </div>
@@ -740,7 +717,7 @@ const readingOrder = [
   references
 ];
 const primaryLinks = [
-  ['prospectus.html', 'Prospectus'],
+  ['prospectus.html', "Luke's prospectus"],
   ['framework.html', 'Family framework'],
   ['ai-and-sovereignty.html', 'Aura of Intelligence'],
   ['world-atlas.html', 'World Law Atlas'],
@@ -767,7 +744,7 @@ const footerGroups = [
   ['Ideas and research', [
     ['ai-and-sovereignty.html', 'AI and self-sovereignty'],
     ['possible-futures.html', 'Possible futures'],
-    ['un-of-love.html', 'U.N. of Love'],
+    ['un-of-love.html', 'United Nations of Love'],
     ['gajra-earth.html', 'GAJRA Earth'],
     ['research-method.html', 'Research method']
   ]],
@@ -817,8 +794,8 @@ ${links.map(([href, label]) => `        <a href="${href.startsWith('https:') ? h
     <div class="wrap footer-grid">
       <div>
         <p class="footer-brand">Global Group Marriages</p>
-        <p>An invitation to build businesses and explore a shared life across countries.</p>
-        <a href="${rootPath}prospectus.html">Read the prospectus</a>
+        <p>A framework for independent groups to explore love, family and shared life.</p>
+        <a href="${rootPath}prospectus.html">Read Luke's prospectus</a>
       </div>
 ${sectionLinks}
     </div>
